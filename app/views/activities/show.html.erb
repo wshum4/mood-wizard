@@ -1,0 +1,9 @@
+<% @activities.each do |activity| %>
+  <h1>activity.name</h1>
+
+  <p>Company Name:<%= activity.company_name %></p>
+  <p>Address:<%= activity.address %></p>
+  <p>Duration:<%= activity.duration %></p>
+  <p>Time:<%= activity.start_time %></p>
+  <p>Price:<%= activity.price %></p>
+<% end %>
