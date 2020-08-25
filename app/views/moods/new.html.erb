@@ -1,0 +1,13 @@
+<%= simple_form_for(@mood) do |f| %>
+  <%= f.input :happy_sad, label: "Happy vs Sad", collection: 0..10 %>
+  <%= f.input :calm_angry, label: "Calm vs Angry", collection: 0..10 %>
+  <%= f.input :highenergy_lowenergy, label: "High vs Low Energy", collection: 0..10 %>
+  <%= f.input :social_anxious, label: "Social vs Anxious", collection: 0..10 %>
+  
+  <input type="radio" id="activity" name="type" value="activity">
+  <label for="activity">Activity</label>
+  <input type="radio" id="medium" name="type" value="medium">
+  <label for="medium">Medium</label><br>
+  
+  <%= f.submit "Submit" %>
+<% end %>
