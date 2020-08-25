@@ -5,4 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :moods
   has_many :actions, through: :user_actions
+
+  def last_mood
+    User.moods.last
+  end
 end
