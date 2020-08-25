@@ -6,13 +6,12 @@ class MoodsController < ApplicationController
 
   def create
     @mood = Mood.new(mood_params)
-    puts mood_params
     @mood.user = current_user
     authorize(@mood)
     if @mood.save
-      if params[:type] == "activity"
+      if params[:type] == "Activity"
         redirect_to activities_path
-      elsif params[:type] == "medium"
+      elsif params[:type] == "Medium"
         redirect_to mediums_path
       end
     else
