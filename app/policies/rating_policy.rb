@@ -1,4 +1,4 @@
-class MediumsPolicy < ApplicationPolicy
+class RatingPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all
