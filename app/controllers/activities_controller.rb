@@ -5,6 +5,6 @@ class ActivitiesController < ApplicationController
 
   def show
     @activity = Action.find(params[:id])
-    authorize @activity
+    authorize (@activity)
   end
 end
