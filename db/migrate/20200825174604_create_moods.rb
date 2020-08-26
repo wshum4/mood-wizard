@@ -1,10 +1,10 @@
 class CreateMoods < ActiveRecord::Migration[6.0]
   def change
     create_table :moods do |t|
-      t.integer :happy_sad
-      t.integer :calm_angry
-      t.integer :highenergy_lowenergy
-      t.integer :social_anxious
+      t.integer :sad_happy
+      t.integer :angry_calm
+      t.integer :lowenergy_highenergy
+      t.integer :anxious_social
       t.references :user, null: false, foreign_key: true
 
       t.timestamps

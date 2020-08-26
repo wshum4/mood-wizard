@@ -18,11 +18,11 @@ ActiveRecord::Schema.define(version: 2020_08_25_210730) do
   create_table "actions", force: :cascade do |t|
     t.string "name"
     t.string "url"
-    t.string "type"
-    t.integer "happy_sad"
-    t.integer "calm_angry"
-    t.integer "highenergy_lowenergy"
-    t.integer "social_anxious"
+    t.string "action_type"
+    t.integer "sad_happy", array: true
+    t.integer "angry_calm", array: true
+    t.integer "lowenergy_highenergy", array: true
+    t.integer "anxious_social", array: true
     t.time "duration"
     t.string "time_of_day", array: true
     t.datetime "start_time"
@@ -36,10 +36,10 @@ ActiveRecord::Schema.define(version: 2020_08_25_210730) do
   end
 
   create_table "moods", force: :cascade do |t|
-    t.integer "happy_sad"
-    t.integer "calm_angry"
-    t.integer "highenergy_lowenergy"
-    t.integer "social_anxious"
+    t.integer "sad_happy"
+    t.integer "angry_calm"
+    t.integer "lowenergy_highenergy"
+    t.integer "anxious_social"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
