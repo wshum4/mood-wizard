@@ -22,6 +22,6 @@ class MoodsController < ApplicationController
   private
 
   def mood_params
-    params.require(:mood).permit(:happy_sad, :calm_angry, :highenergy_lowenergy, :social_anxious)
+    params.require(:mood).permit(:sad_happy, :angry_calm, :lowenergy_highenergy, :anxious_social)
   end
 end

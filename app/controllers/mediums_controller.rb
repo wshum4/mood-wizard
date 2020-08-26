@@ -1,5 +1,5 @@
 class MediumsController < ApplicationController
-  def show
-    @mediums = policy_scope(Action).where(type: 'Medium')
+  def index
+    @mediums = policy_scope(Action).where(action_type: 'Medium')
   end
 end

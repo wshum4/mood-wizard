@@ -3,11 +3,11 @@ class CreateActions < ActiveRecord::Migration[6.0]
     create_table :actions do |t|
       t.string :name
       t.string :url
-      t.string :type
-      t.integer :happy_sad
-      t.integer :calm_angry
-      t.integer :highenergy_lowenergy
-      t.integer :social_anxious
+      t.string :action_type
+      t.integer :sad_happy, array: true
+      t.integer :angry_calm, array: true
+      t.integer :lowenergy_highenergy, array: true
+      t.integer :anxious_social, array: true
       t.time :duration
       t.string :time_of_day, array: true
       t.datetime :start_time

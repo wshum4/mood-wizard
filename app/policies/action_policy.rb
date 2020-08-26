@@ -5,7 +5,7 @@ class ActionPolicy < ApplicationPolicy
     end
   end
 
-  def show?
+  def index?
     record.user == user
   end
 end
