@@ -28,51 +28,51 @@ axe = Action.new(
   name: 'axe throwing',
   action_type: 'Activity',
   duration: 1.hour,
-  sad_happy: [0, 10]
-  angry_calm: [0, 5]
-  lowenergy_highenergy: [5, 10]
-  anxious_social: [0, 10]
+  sad_happy: [0, 10],
+  angry_calm: [0, 5],
+  lowenergy_highenergy: [5, 10],
+  anxious_social: [0, 10],
   time_of_day: ['Morning', 'Afternoon', 'Evening'] )
 
 bowling = Action.new(
   name: 'bowling',
   action_type: 'Activity',
   duration: 1.hour,
-  sad_happy: [5, 10]
-  angry_calm: [5, 10]
-  lowenergy_highenergy: [5, 10]
-  anxious_social: [5, 10]
+  sad_happy: [5, 10],
+  angry_calm: [5, 10],
+  lowenergy_highenergy: [5, 10],
+  anxious_social: [5, 10],
   time_of_day: ['Morning', 'Afternoon', 'Evening'] )
 
 archery = Action.new(
   name: 'archery',
   action_type: 'Activity',
   duration: 1.hour,
-  sad_happy: [5, 10]
-  angry_calm: [5, 10]
-  lowenergy_highenergy: [5, 10]
-  anxious_social: [5, 10]
+  sad_happy: [5, 10],
+  angry_calm: [5, 10],
+  lowenergy_highenergy: [5, 10],
+  anxious_social: [5, 10],
   time_of_day: ['Morning', 'Afternoon'] )
 
 pottery = Action.new(
   name: 'pottery',
   action_type: 'Activity',
   duration: 2.hour,
-  sad_happy: [0, 10]
-  angry_calm: [5, 10]
-  lowenergy_highenergy: [0, 5]
-  anxious_social: [0, 10]
+  sad_happy: [0, 10],
+  angry_calm: [5, 10],
+  lowenergy_highenergy: [0, 5],
+  anxious_social: [0, 10],
   time_of_day: ['Morning', 'Afternoon', 'Evening'] )
 
 horseback_riding = Action.new(
   name: 'horseback riding',
   action_type: 'Activity',
   duration: 3.hour,
-  sad_happy: [5, 10]
-  angry_calm: [5, 10]
-  lowenergy_highenergy: [5, 10]
-  anxious_social: [0, 10]
-  time_of_day: ['Morning', 'Afternoon', 'Evening'] )
+  sad_happy: [5, 10],
+  angry_calm: [5, 10],
+  lowenergy_highenergy: [5, 10],
+  anxious_social: [0, 10],
+  time_of_day: ['Morning', 'Afternoon'] )
 
 axe.save
 bowling.save
