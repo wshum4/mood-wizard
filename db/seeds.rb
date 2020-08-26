@@ -32,6 +32,7 @@ axe = Action.new(
   angry_calm: [0, 5],
   lowenergy_highenergy: [5, 10],
   anxious_social: [0, 10],
+  start_time: Time.now,
   time_of_day: ['Morning', 'Afternoon', 'Evening'] )
 
 bowling = Action.new(
@@ -42,6 +43,7 @@ bowling = Action.new(
   angry_calm: [5, 10],
   lowenergy_highenergy: [5, 10],
   anxious_social: [5, 10],
+  start_time: Time.now,
   time_of_day: ['Morning', 'Afternoon', 'Evening'] )
 
 archery = Action.new(
@@ -52,6 +54,7 @@ archery = Action.new(
   angry_calm: [5, 10],
   lowenergy_highenergy: [5, 10],
   anxious_social: [5, 10],
+  start_time: Time.now,
   time_of_day: ['Morning', 'Afternoon'] )
 
 pottery = Action.new(
@@ -62,6 +65,7 @@ pottery = Action.new(
   angry_calm: [5, 10],
   lowenergy_highenergy: [0, 5],
   anxious_social: [0, 10],
+  start_time: Time.now,
   time_of_day: ['Morning', 'Afternoon', 'Evening'] )
 
 horseback_riding = Action.new(
@@ -72,6 +76,7 @@ horseback_riding = Action.new(
   angry_calm: [5, 10],
   lowenergy_highenergy: [5, 10],
   anxious_social: [0, 10],
+  start_time: Time.now,
   time_of_day: ['Morning', 'Afternoon'] )
 
 axe.save
@@ -88,7 +93,7 @@ mood1 = Mood.new(
   user: kai
   )
 
-  mood2 = Mood.new(
+mood2 = Mood.new(
   sad_happy: rand(0..10),
   angry_calm: rand(0..10),
   lowenergy_highenergy: rand(0..10),
@@ -96,7 +101,7 @@ mood1 = Mood.new(
   user: kai
   )
 
-  mood3 = Mood.new(
+mood3 = Mood.new(
   sad_happy: rand(0..10),
   angry_calm: rand(0..10),
   lowenergy_highenergy: rand(0..10),
@@ -104,7 +109,7 @@ mood1 = Mood.new(
   user: kai
   )
 
-  mood4 = Mood.new(
+mood4 = Mood.new(
   sad_happy: rand(0..10),
   angry_calm: rand(0..10),
   lowenergy_highenergy: rand(0..10),
@@ -112,9 +117,9 @@ mood1 = Mood.new(
   user: kai
   )
 
-  mood1.save
-  mood2.save
-  mood3.save
-  mood4.save
+mood1.save
+mood2.save
+mood3.save
+mood4.save
 
 puts 'seed ended'
