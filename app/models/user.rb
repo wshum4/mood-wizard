@@ -7,6 +7,6 @@ class User < ApplicationRecord
   has_many :actions, through: :user_actions
 
   def last_mood
-    User.moods.last
+    moods.last
   end
 end
