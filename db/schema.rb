@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2020_08_25_210730) do
     t.integer "angry_calm", array: true
     t.integer "lowenergy_highenergy", array: true
     t.integer "anxious_social", array: true
-    t.time "duration"
+    t.integer "duration"
     t.string "time_of_day", array: true
     t.datetime "start_time"
     t.datetime "created_at", precision: 6, null: false

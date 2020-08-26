@@ -8,7 +8,7 @@ class CreateActions < ActiveRecord::Migration[6.0]
       t.integer :angry_calm, array: true
       t.integer :lowenergy_highenergy, array: true
       t.integer :anxious_social, array: true
-      t.time :duration
+      t.integer :duration
       t.string :time_of_day, array: true
       t.datetime :start_time
       t.datetime :end_time
