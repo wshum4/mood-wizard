@@ -15,7 +15,9 @@ class User < ApplicationRecord
   def availability_format
     accepted = ["Morning", "Afternoon", "Evening"]
     passes = true
+    # conditiion 1
     passes = false if self.availability.empty?
+    # condition 2
     self.availability.each do |i|
       unless accepted.include?(i)
         passes = false

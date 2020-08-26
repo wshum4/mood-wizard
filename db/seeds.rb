@@ -11,6 +11,7 @@ puts 'seed started'
 Rating.destroy_all
 UserAction.destroy_all
 Action.destroy_all
+Mood.destroy_all
 User.destroy_all
 
 kai = User.new(
@@ -32,5 +33,42 @@ axe = Action.new(
   social_anxious: 5,
   duration: ,
   time_of_day: ['Morning', 'Afternoon', 'Evening'] )
+
+mood1 = Mood.new(
+  happy_sad: rand(0..10),
+  calm_angry: rand(0..10),
+  highenergy_lowenergy: rand(0..10),
+  social_anxious: rand(0..10),
+  user: kai
+  )
+
+  mood2 = Mood.new(
+  happy_sad: rand(0..10),
+  calm_angry: rand(0..10),
+  highenergy_lowenergy: rand(0..10),
+  social_anxious: rand(0..10),
+  user: kai
+  )
+
+  mood3 = Mood.new(
+  happy_sad: rand(0..10),
+  calm_angry: rand(0..10),
+  highenergy_lowenergy: rand(0..10),
+  social_anxious: rand(0..10),
+  user: kai
+  )
+
+  mood4 = Mood.new(
+  happy_sad: rand(0..10),
+  calm_angry: rand(0..10),
+  highenergy_lowenergy: rand(0..10),
+  social_anxious: rand(0..10),
+  user: kai
+  )
+
+  mood1.save
+  mood2.save
+  mood3.save
+  mood4.save
 
 puts 'seed ended'
