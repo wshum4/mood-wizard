@@ -8,4 +8,8 @@ class ActionPolicy < ApplicationPolicy
   def index?
     record.user == user
   end
+
+  def show?
+    user.present?
+  end
 end
