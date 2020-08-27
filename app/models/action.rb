@@ -13,17 +13,6 @@ class Action < ApplicationRecord
     return dim1 && dim2 && dim3 && dim4
   end
 
-  # def user_available?(user)
-  #   out = false
-  #   user.availability.each do |a|
-  #     if time_of_day.includes?(a)
-  #       out = true
-  #     end
-  #   end
-    
-  #   out
-  # end
-
   def time_available?(user_start_time, user_end_time)
     start_of_day = Time.now.utc.beginning_of_day
     user_start_seconds = user_start_time.utc.seconds_since_midnight
