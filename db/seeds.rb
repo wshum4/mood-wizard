@@ -19,6 +19,10 @@ Action.destroy_all
 Mood.destroy_all
 User.destroy_all
 
+ActiveRecord::Base.connection.tables.each do |t|
+  ActiveRecord::Base.connection.reset_pk_sequence!(t)
+end
+
 kai = User.new(
   email: 'kai@email.com',
   password: '123456',
@@ -95,11 +99,21 @@ archery.save
 pottery.save
 horseback_riding.save
 
+mood5 = Mood.new(
+  sad_happy: rand(0..10),
+  angry_calm: rand(0..10),
+  lowenergy_highenergy: rand(0..10),
+  anxious_social: rand(0..10),
+  manual_created_at: DateTime.parse('2020-08-22 T 09:00'),
+  user: kai
+  )
+
 mood1 = Mood.new(
   sad_happy: rand(0..10),
   angry_calm: rand(0..10),
   lowenergy_highenergy: rand(0..10),
   anxious_social: rand(0..10),
+  manual_created_at: DateTime.parse('2020-08-23 T 13:00'),
   user: kai
   )
 
@@ -108,6 +122,7 @@ mood2 = Mood.new(
   angry_calm: rand(0..10),
   lowenergy_highenergy: rand(0..10),
   anxious_social: rand(0..10),
+  manual_created_at: DateTime.parse('2020-08-24 T 16:00'),
   user: kai
   )
 
@@ -116,6 +131,7 @@ mood3 = Mood.new(
   angry_calm: rand(0..10),
   lowenergy_highenergy: rand(0..10),
   anxious_social: rand(0..10),
+  manual_created_at: DateTime.parse('2020-08-25 T 10:00'),
   user: kai
   )
 
@@ -124,6 +140,7 @@ mood4 = Mood.new(
   angry_calm: rand(0..10),
   lowenergy_highenergy: rand(0..10),
   anxious_social: rand(0..10),
+  manual_created_at: DateTime.parse('2020-08-26 T 14:00'),
   user: kai
   )
 
