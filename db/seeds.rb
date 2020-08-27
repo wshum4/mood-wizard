@@ -23,18 +23,16 @@ ActiveRecord::Base.connection.tables.each do |t|
   ActiveRecord::Base.connection.reset_pk_sequence!(t)
 end
 
-kai = User.new(
+kai = User.create(
   email: 'kai@email.com',
   password: '123456',
   password_confirmation: '123456',
   address: "5333 Casgrain Avenue",
-  # availability: ['Morning', 'Afternoon']
 )
 
-kai.save
-
-axe = Action.new(
-  name: 'axe throwing',
+# activities
+axe = Action.create(
+  name: 'Axe Throwing',
   action_type: 'Activity',
   duration: 1.hour,
   sad_happy: [0, 10],
@@ -43,10 +41,13 @@ axe = Action.new(
   anxious_social: [0, 10],
   start_time: convert_time("T10:00AM EST"),
   end_time: convert_time("T9:00PM EST"),
-  time_of_day: ['Morning', 'Afternoon', 'Evening'] )
+  company_name: 'Rage: Axe Throwing',
+  price: 33,
+  address: '1436 R. Atateken, Montréal, QC H2L 3L3'
+  )
 
-bowling = Action.new(
-  name: 'bowling',
+bowling = Action.create(
+  name: 'Bowling',
   action_type: 'Activity',
   duration: 1.hour,
   sad_happy: [5, 10],
@@ -55,10 +56,13 @@ bowling = Action.new(
   anxious_social: [5, 10],
   start_time: convert_time("T10:00AM EST"),
   end_time: convert_time("T10:00PM EST"),
-  time_of_day: ['Morning', 'Afternoon', 'Evening'] )
+  company_name: 'Bowling G Plus',
+  price: 15,
+  address: '920 Rue Saint-Zotique E, Montreal, Quebec H2S 1M8'
+  )
 
-archery = Action.new(
-  name: 'archery',
+archery = Action.create(
+  name: 'Archery',
   action_type: 'Activity',
   duration: 1.hour,
   sad_happy: [5, 10],
@@ -67,10 +71,13 @@ archery = Action.new(
   anxious_social: [5, 10],
   start_time: convert_time("T9:00AM EST"),
   end_time: convert_time("T5:00PM EST"),
-  time_of_day: ['Morning', 'Afternoon'] )
+  company_name: 'Combat Archery',
+  price: 38,
+  address: '3955 Rue de Rouen, Montréal, QC H1W 1N4'
+  )
 
-pottery = Action.new(
-  name: 'pottery',
+pottery = Action.create(
+  name: 'Pottery',
   action_type: 'Activity',
   duration: 2.hour,
   sad_happy: [0, 10],
@@ -78,37 +85,259 @@ pottery = Action.new(
   lowenergy_highenergy: [0, 5],
   anxious_social: [0, 10],
   start_time: convert_time("T8:00AM EST"),
-  end_time: convert_time("T9:00PM EST"),
-  time_of_day: ['Morning', 'Afternoon', 'Evening'] )
+  end_time: convert_time("T7:00PM EST"),
+  company_name: 'Céramic Café Studio Montréal',
+  price: 45,
+  address: '4338 St Denis St, Montreal, Quebec H2J 2K8'
+  )
 
-horseback_riding = Action.new(
-  name: 'horseback riding',
+horseback_riding = Action.create(
+  name: 'Horseback Riding',
   action_type: 'Activity',
-  duration: 3.hour,
+  duration: 2.hour,
   sad_happy: [5, 10],
   angry_calm: [5, 10],
   lowenergy_highenergy: [5, 10],
   anxious_social: [0, 10],
+  start_time: convert_time("T9:00AM EST"),
+  end_time: convert_time("T4:00PM EST"),
+  company_name: 'Cavalli Equestrian Center',
+  price: 120,
+  address: '4900 Chemin Bellerive, Carignan, QC J3L 1P3'
+  )
+
+comedy_show = Action.create(
+  name: 'Comedy Show',
+  action_type: 'Activity',
+  duration: 1.hour,
+  sad_happy: [0, 10],
+  angry_calm: [5, 10],
+  lowenergy_highenergy: [0, 10],
+  anxious_social: [5, 10],
+  start_time: convert_time("T12:00pm EST"),
+  end_time: convert_time("T10:00PM EST"),
+  company_name: 'Le Bordel Comedie Club',
+  price: 30,
+  address: '312 Ontario St E, Montreal, Quebec H2X 1H6'
+  )
+
+laser_tag = Action.create(
+  name: 'Laser Tag',
+  action_type: 'Activity',
+  duration: 1.hour,
+  sad_happy: [0, 10],
+  angry_calm: [0, 10],
+  lowenergy_highenergy: [5, 10],
+  anxious_social: [5, 10],
+  start_time: convert_time("T11:00AM EST"),
+  end_time: convert_time("T8:00PM EST"),
+  company_name: 'Zero Latency',
+  price: 36,
+  address: '910 Jean Talon St E, Montreal, Quebec H2R 1V4'
+  )
+
+paint_class = Action.create(
+  name: 'Painting Class',
+  action_type: 'Activity',
+  duration: 3.hour,
+  sad_happy: [0, 10],
+  angry_calm: [0, 10],
+  lowenergy_highenergy: [0, 10],
+  anxious_social: [0, 10],
+  start_time: convert_time("T9:00AM EST"),
+  end_time: convert_time("T5:00PM EST"),
+  company_name: 'Zoya Art Studio',
+  price: 40,
+  address: '1844 William St, Montreal, Quebec H3J 1R5'
+  )
+
+meditation = Action.create(
+  name: 'Meditation Class',
+  action_type: 'Activity',
+  duration: 1.hour,
+  sad_happy: [0, 10],
+  angry_calm: [0, 10],
+  lowenergy_highenergy: [0, 10],
+  anxious_social: [0, 10],
+  start_time: convert_time("T8:00AM EST"),
+  end_time: convert_time("T8:00PM EST"),
+  company_name: 'Tadaima Meditation',
+  price: 38,
+  address: '1565 Mont-Royal Ave E s101, Montreal, Quebec H2J 1Z3'
+  )
+
+yoga = Action.create(
+  name: 'Yoga Class',
+  action_type: 'Activity',
+  duration: 1.hour,
+  sad_happy: [0, 10],
+  angry_calm: [0, 10],
+  lowenergy_highenergy: [0, 10],
+  anxious_social: [0, 10],
+  start_time: convert_time("T8:00AM EST"),
+  end_time: convert_time("T5:00PM EST"),
+  company_name: 'Studio Prema Yoga',
+  price: 35,
+  address: '547 Rue Leclerc suite 200, Repentigny, QC J6A 8B4'
+  )
+
+cooking_class = Action.create(
+  name: 'Cooking Class',
+  action_type: 'Activity',
+  duration: 4.hour,
+  sad_happy: [0, 10],
+  angry_calm: [5, 10],
+  lowenergy_highenergy: [0, 10],
+  anxious_social: [0, 10],
   start_time: convert_time("T10:00AM EST"),
   end_time: convert_time("T5:00PM EST"),
-  time_of_day: ['Morning', 'Afternoon'] )
+  company_name: 'Culinary Guild',
+  price: 60,
+  address: '6381 St Laurent Blvd, Montreal, Quebec H2S 3C3'
+  )
 
-axe.save
-bowling.save
-archery.save
-pottery.save
-horseback_riding.save
+boxing = Action.create(
+  name: 'Boxing',
+  action_type: 'Activity',
+  duration: 3.hour,
+  sad_happy: [0, 10],
+  angry_calm: [0, 5],
+  lowenergy_highenergy: [5, 10],
+  anxious_social: [0, 10],
+  start_time: convert_time("T9:00AM EST"),
+  end_time: convert_time("T8:00PM EST"),
+  company_name: 'Underdog Boxing Gym',
+  price: 32,
+  address: '9 St Catherine St E, Montreal, Quebec H2X 1K4'
+  )
 
-mood5 = Mood.new(
-  sad_happy: rand(0..10),
-  angry_calm: rand(0..10),
-  lowenergy_highenergy: rand(0..10),
-  anxious_social: rand(0..10),
+spa = Action.create(
+  name: 'Spa',
+  action_type: 'Activity',
+  duration: 5.hour,
+  sad_happy: [0, 10],
+  angry_calm: [5, 10],
+  lowenergy_highenergy: [0, 5],
+  anxious_social: [0, 5],
+  start_time: convert_time("T9:00AM EST"),
+  end_time: convert_time("T7:00PM EST"),
+  company_name: 'Spa Ovarium',
+  price: 160,
+  address: '400 Rue Beaubien E, Montréal, QC H2S 1S3'
+  )
+
+plant_arrangement = Action.create(
+  name: 'Plant Arrangement Class',
+  action_type: 'Activity',
+  duration: 3.hour,
+  sad_happy: [0, 10],
+  angry_calm: [5, 10],
+  lowenergy_highenergy: [0, 10],
+  anxious_social: [0, 10],
+  start_time: convert_time("T9:00AM EST"),
+  end_time: convert_time("T5:00PM EST"),
+  company_name: 'Plantzy',
+  price: 40,
+  address: '5445 Gaspe Ave, Montreal, Quebec H2T 3B2'
+  )
+
+pilates = Action.create(
+  name: 'Pilates',
+  action_type: 'Activity',
+  duration: 1.hour,
+  sad_happy: [0, 10],
+  angry_calm: [0, 10],
+  lowenergy_highenergy: [0, 10],
+  anxious_social: [0, 10],
+  start_time: convert_time("T9:00AM EST"),
+  end_time: convert_time("T8:00PM EST"),
+  company_name: 'Espace Pilates',
+  price: 30,
+  address: '768 Rue Rachel E, Montréal, QC H2J 2H5'
+  )
+
+# medium 4
+spotify = Action.create(
+  name: 'Spotify',
+  action_type: 'Medium',
+  url: 'www.spotify.com',
+  duration: 3.hour,
+  sad_happy: [0, 10],
+  angry_calm: [0, 10],
+  lowenergy_highenergy: [0, 10],
+  anxious_social: [0, 10],
+  start_time: convert_time("T9:00AM EST"),
+  end_time: convert_time("T8:00PM EST"),
+  )
+
+medium = Action.create(
+  name: 'Medium',
+  action_type: 'Medium',
+  url: 'www.medium.com',
+  duration: 2.hour,
+  sad_happy: [0, 10],
+  angry_calm: [0, 10],
+  lowenergy_highenergy: [0, 10],
+  anxious_social: [0, 10],
+  start_time: convert_time("T9:00AM EST"),
+  end_time: convert_time("T8:00PM EST"),
+  )
+
+netflix = Action.create(
+  name: 'Netflix',
+  action_type: 'Medium',
+  url: 'www.netflix.com',
+  duration: 4.hour,
+  sad_happy: [0, 10],
+  angry_calm: [0, 10],
+  lowenergy_highenergy: [0, 10],
+  anxious_social: [0, 10],
+  start_time: convert_time("T9:00AM EST"),
+  end_time: convert_time("T8:00PM EST"),
+  )
+
+headspace = Action.create(
+  name: 'Headspace',
+  action_type: 'Medium',
+  url: 'www.headspace.com',
+  duration: 1.hour,
+  sad_happy: [0, 10],
+  angry_calm: [0, 10],
+  lowenergy_highenergy: [0, 10],
+  anxious_social: [0, 10],
+  start_time: convert_time("T9:00AM EST"),
+  end_time: convert_time("T8:00PM EST"),
+  )
+
+# mood
+mood1 = Mood.create(
+  sad_happy: 3,
+  angry_calm: 3,
+  lowenergy_highenergy: 9,
+  anxious_social: 6,
+  manual_created_at: DateTime.parse('2020-08-20 T 09:00'),
+  user: kai
+  )
+
+mood2 = Mood.create(
+  sad_happy: 4,
+  angry_calm: 2,
+  lowenergy_highenergy: 10,
+  anxious_social: 8,
+  manual_created_at: DateTime.parse('2020-08-21 T 09:00'),
+  user: kai
+  )
+
+mood3 = Mood.create(
+  sad_happy: 8,
+  angry_calm: 7,
+  lowenergy_highenergy: 3,
+  anxious_social: 4,
   manual_created_at: DateTime.parse('2020-08-22 T 09:00'),
   user: kai
   )
 
-mood1 = Mood.new(
+mood4 = Mood.create(
   sad_happy: rand(0..10),
   angry_calm: rand(0..10),
   lowenergy_highenergy: rand(0..10),
@@ -117,25 +346,25 @@ mood1 = Mood.new(
   user: kai
   )
 
-mood2 = Mood.new(
-  sad_happy: rand(0..10),
-  angry_calm: rand(0..10),
-  lowenergy_highenergy: rand(0..10),
-  anxious_social: rand(0..10),
+mood5 = Mood.create(
+  sad_happy: 8,
+  angry_calm: 9,
+  lowenergy_highenergy: 7,
+  anxious_social: 6,
   manual_created_at: DateTime.parse('2020-08-24 T 16:00'),
   user: kai
   )
 
-mood3 = Mood.new(
-  sad_happy: rand(0..10),
-  angry_calm: rand(0..10),
-  lowenergy_highenergy: rand(0..10),
-  anxious_social: rand(0..10),
+mood6 = Mood.create(
+  sad_happy: 6,
+  angry_calm: 7,
+  lowenergy_highenergy: 6,
+  anxious_social: 6,
   manual_created_at: DateTime.parse('2020-08-25 T 10:00'),
   user: kai
   )
 
-mood4 = Mood.new(
+mood7 = Mood.create(
   sad_happy: rand(0..10),
   angry_calm: rand(0..10),
   lowenergy_highenergy: rand(0..10),
@@ -144,9 +373,70 @@ mood4 = Mood.new(
   user: kai
   )
 
-mood1.save
-mood2.save
-mood3.save
-mood4.save
+user_action1 = UserAction.create(
+  user: kai,
+  action: axe,
+  created_at: DateTime.parse('2020-08-20 T 09:00')
+  )
+
+user_action2 = UserAction.create(
+  user: kai,
+  action: boxing,
+  created_at: DateTime.parse('2020-08-21 T 09:00')
+  )
+
+user_action3 = UserAction.create(
+  user: kai,
+  action: pottery,
+  created_at: DateTime.parse('2020-08-22 T 09:00')
+  )
+
+user_action4 = UserAction.create(
+  user: kai,
+  action: yoga,
+  created_at: DateTime.parse('2020-08-23 T 13:00')
+  )
+
+user_action5 = UserAction.create(
+  user: kai,
+  action: archery,
+  created_at: DateTime.parse('2020-08-24 T 16:00')
+)
+
+user_action6 = UserAction.create(
+  user: kai,
+  action: plant_arrangement,
+  created_at: DateTime.parse('2020-08-25 T 10:00')
+  )
+
+user_action7 = UserAction.create(
+  user: kai,
+  action: meditation,
+  created_at: DateTime.parse('2020-08-26 T 14:00')
+  )
+
+user_action8 = UserAction.create(
+  user: kai,
+  action: netflix,
+  created_at: DateTime.parse('2020-08-25 T 10:00')
+  )
+
+user_action9 = UserAction.create(
+  user: kai,
+  action: spotify,
+  created_at: DateTime.parse('2020-08-25 T 10:00')
+  )
+
+user_action10 = UserAction.create(
+  user: kai,
+  action: headspace,
+  created_at: DateTime.parse('2020-08-25 T 10:00')
+  )
+
+user_action11 = UserAction.create(
+  user: kai,
+  action: medium,
+  created_at: DateTime.parse('2020-08-25 T 10:00')
+  )
 
 puts 'seed ended'

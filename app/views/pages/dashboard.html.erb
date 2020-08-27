@@ -1,52 +1,54 @@
-<h1>Dashboard</h1>
+<div class="container p-3">
+  <h1>Dashboard</h1>
 
-<ul class="nav nav-tabs" id="myTab" role="tablist">
-  <li class="nav-item">
-    <a class="nav-link active" id="dashboard-tab" data-toggle="tab" href="#dashboard" role="tab" aria-controls="dashboard" aria-selected="true">Dashboard</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="prev-activities-tab" data-toggle="tab" href="#prev-activities" role="tab" aria-controls="prev-activities" aria-selected="false">Previous Activities</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="prev-mediums-tab" data-toggle="tab" href="#prev-mediums" role="tab" aria-controls="prev-mediums" aria-selected="false">Previous Mediums</a>
-  </li>
-</ul>
-<div class="tab-content" id="myTabContent">
-  <div class="tab-pane fade show active" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
-    <h2>Previous Moods</h2>
-    <ul>
-      <% @prev_moods.each do |mood| %>
-      <h3><%= mood.manual_created_at.time.strftime("%d %B %Y") %></h3>
-      <li>Sad | Happy: <%= mood.sad_happy %></li>
-      <li>Angry | Calm: <%= mood.angry_calm %></li>
-      <li>Low energy | High energy: <%= mood.lowenergy_highenergy %></li>
-      <li>Anxious | Social: <%= mood.anxious_social %></li>
-      <br>
-      <% end %>
-    </ul>
-  </div>
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="dashboard-tab" data-toggle="tab" href="#dashboard" role="tab" aria-controls="dashboard" aria-selected="true">Dashboard</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="prev-activities-tab" data-toggle="tab" href="#prev-activities" role="tab" aria-controls="prev-activities" aria-selected="false">Previous Activities</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="prev-mediums-tab" data-toggle="tab" href="#prev-mediums" role="tab" aria-controls="prev-mediums" aria-selected="false">Previous Mediums</a>
+    </li>
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+      <h2>Previous Moods</h2>
+      <ul>
+        <% @prev_moods.each do |mood| %>
+        <h3><%= mood.manual_created_at.time.strftime("%d %B %Y") %></h3>
+        <li>Sad | Happy: <%= mood.sad_happy %></li>
+        <li>Angry | Calm: <%= mood.angry_calm %></li>
+        <li>Low energy | High energy: <%= mood.lowenergy_highenergy %></li>
+        <li>Anxious | Social: <%= mood.anxious_social %></li>
+        <br>
+        <% end %>
+      </ul>
+    </div>
 
-  <div class="tab-pane fade" id="prev-activities" role="tabpanel" aria-labelledby="prev-activities-tab">
-    <h2>Previous Activities</h2>
-    <ul>
-      <% @past_activities.each do |activity| %>
-      <li>Activity: <%= activity.name %></li>
-      <li>Company: <%= activity.company_name %></li>
-      <li>Address: <%= activity.address %></li>
-      <li>Price: <%= activity.price %></li>
-      <br>
-      <% end %>
-    </ul>
-  </div>
+    <div class="tab-pane fade" id="prev-activities" role="tabpanel" aria-labelledby="prev-activities-tab">
+      <h2>Previous Activities</h2>
+      <ul>
+        <% @past_activities.each do |activity| %>
+        <li>Activity: <%= activity.action.name %></li>
+        <li>Company: <%= activity.action.company_name %></li>
+        <li>Address: <%= activity.action.address %></li>
+        <li>Price: <%= activity.action.price %></li>
+        <br>
+        <% end %>
+      </ul>
+    </div>
 
-  <div class="tab-pane fade" id="prev-mediums" role="tabpanel" aria-labelledby="prev-mediums-tab">
-    <h2>Previous Medium</h2>
-    <ul>
-      <% @past_mediums.each do |medium| %>
-      <li>Medium: <%= medium.name %></li>
-      <br>
-      <% end %>
-    </ul>
+    <div class="tab-pane fade" id="prev-mediums" role="tabpanel" aria-labelledby="prev-mediums-tab">
+      <h2>Previous Medium</h2>
+      <ul>
+        <% @past_mediums.each do |medium| %>
+        <li>Medium: <%= medium.action.name %></li>
+        <br>
+        <% end %>
+      </ul>
+    </div>
   </div>
 </div>
 
