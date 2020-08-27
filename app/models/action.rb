@@ -1,8 +1,10 @@
 class Action < ApplicationRecord
   has_many :ratings
+  geocoded_by :address
 
   validates :action_type, acceptance: { accept: ['Activity', 'Medium'] }
   validates :name, :duration, :action_type, :time_of_day, :start_time, presence: true
+  validate :activity_validate
 
   def mood_available?(user)
     current_mood = user.last_mood
@@ -38,6 +40,16 @@ class Action < ApplicationRecord
       (self.end_time.seconds_since_midnight + 1.day.seconds).to_f
     else
       self.end_time.seconds_since_midnight
+    end
+  end
+
+  def activity_validate
+    if action_type == "Activity"
+      if address.present?
+        geocode
+      else
+        errors.add(:address, "must be present")
+      end
     end
   end
 end
