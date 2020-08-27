@@ -43,7 +43,7 @@ axe = Action.create(
   end_time: convert_time("T9:00PM EST"),
   company_name: 'Rage: Axe Throwing',
   price: 33,
-  address: '1436 R. Atateken, Montréal, QC H2L 3L3'
+  address: '1436 R. Atateken, Montreal'
   )
 
 bowling = Action.create(
@@ -58,7 +58,7 @@ bowling = Action.create(
   end_time: convert_time("T10:00PM EST"),
   company_name: 'Bowling G Plus',
   price: 15,
-  address: '920 Rue Saint-Zotique E, Montreal, Quebec H2S 1M8'
+  address: '920 Rue Saint-Zotique, Montreal'
   )
 
 archery = Action.create(
@@ -73,7 +73,7 @@ archery = Action.create(
   end_time: convert_time("T5:00PM EST"),
   company_name: 'Combat Archery',
   price: 38,
-  address: '3955 Rue de Rouen, Montréal, QC H1W 1N4'
+  address: '3955 Rue de Rouen, Montreal'
   )
 
 pottery = Action.create(
@@ -88,7 +88,7 @@ pottery = Action.create(
   end_time: convert_time("T7:00PM EST"),
   company_name: 'Céramic Café Studio Montréal',
   price: 45,
-  address: '4338 St Denis St, Montreal, Quebec H2J 2K8'
+  address: '4338 St Denis St, Montreal'
   )
 
 horseback_riding = Action.create(
@@ -103,7 +103,7 @@ horseback_riding = Action.create(
   end_time: convert_time("T4:00PM EST"),
   company_name: 'Cavalli Equestrian Center',
   price: 120,
-  address: '4900 Chemin Bellerive, Carignan, QC J3L 1P3'
+  address: '4900 Chemin Bellerive, Carignan'
   )
 
 comedy_show = Action.create(
@@ -118,7 +118,7 @@ comedy_show = Action.create(
   end_time: convert_time("T10:00PM EST"),
   company_name: 'Le Bordel Comedie Club',
   price: 30,
-  address: '312 Ontario St E, Montreal, Quebec H2X 1H6'
+  address: '312 Ontario St, Montreal'
   )
 
 laser_tag = Action.create(
@@ -133,7 +133,7 @@ laser_tag = Action.create(
   end_time: convert_time("T8:00PM EST"),
   company_name: 'Zero Latency',
   price: 36,
-  address: '910 Jean Talon St E, Montreal, Quebec H2R 1V4'
+  address: '910 Jean Talon St, Montreal'
   )
 
 paint_class = Action.create(
@@ -148,7 +148,7 @@ paint_class = Action.create(
   end_time: convert_time("T5:00PM EST"),
   company_name: 'Zoya Art Studio',
   price: 40,
-  address: '1844 William St, Montreal, Quebec H3J 1R5'
+  address: '1844 William St, Montreal'
   )
 
 meditation = Action.create(
@@ -163,7 +163,7 @@ meditation = Action.create(
   end_time: convert_time("T8:00PM EST"),
   company_name: 'Tadaima Meditation',
   price: 38,
-  address: '1565 Mont-Royal Ave E s101, Montreal, Quebec H2J 1Z3'
+  address: '1565 Mont-Royal Ave, Montreal'
   )
 
 yoga = Action.create(
@@ -176,9 +176,9 @@ yoga = Action.create(
   anxious_social: [0, 10],
   start_time: convert_time("T8:00AM EST"),
   end_time: convert_time("T5:00PM EST"),
-  company_name: 'Studio Prema Yoga',
+  company_name: 'Naada Yoga',
   price: 35,
-  address: '547 Rue Leclerc suite 200, Repentigny, QC J6A 8B4'
+  address: '5540 Casgrain Ave, Montreal'
   )
 
 cooking_class = Action.create(
@@ -193,7 +193,7 @@ cooking_class = Action.create(
   end_time: convert_time("T5:00PM EST"),
   company_name: 'Culinary Guild',
   price: 60,
-  address: '6381 St Laurent Blvd, Montreal, Quebec H2S 3C3'
+  address: '6381 St Laurent Blvd, Montreal'
   )
 
 boxing = Action.create(
@@ -208,7 +208,7 @@ boxing = Action.create(
   end_time: convert_time("T8:00PM EST"),
   company_name: 'Underdog Boxing Gym',
   price: 32,
-  address: '9 St Catherine St E, Montreal, Quebec H2X 1K4'
+  address: '9 St Catherine St, Montreal'
   )
 
 spa = Action.create(
@@ -223,7 +223,7 @@ spa = Action.create(
   end_time: convert_time("T7:00PM EST"),
   company_name: 'Spa Ovarium',
   price: 160,
-  address: '400 Rue Beaubien E, Montréal, QC H2S 1S3'
+  address: '400 Rue Beaubien, Montreal'
   )
 
 plant_arrangement = Action.create(
@@ -238,7 +238,7 @@ plant_arrangement = Action.create(
   end_time: convert_time("T5:00PM EST"),
   company_name: 'Plantzy',
   price: 40,
-  address: '5445 Gaspe Ave, Montreal, Quebec H2T 3B2'
+  address: '5445 Gaspe Ave, Montreal'
   )
 
 pilates = Action.create(
@@ -253,7 +253,7 @@ pilates = Action.create(
   end_time: convert_time("T8:00PM EST"),
   company_name: 'Espace Pilates',
   price: 30,
-  address: '768 Rue Rachel E, Montréal, QC H2J 2H5'
+  address: '768 Rue Rachel, Montreal'
   )
 
 # medium 4
