@@ -24,21 +24,31 @@ class Action < ApplicationRecord
   #   out
   # end
 
-  def time_available?
+  def time_available?(user_start_time, user_end_time)
     start_of_day = Time.now.utc.beginning_of_day
-    start_seconds = start_time.seconds_since_midnight
-    if start_time > end_time
-      end_seconds = (end_time.seconds_since_midnight + 1.day).to_f
-    else
-      end_seconds = end_time.seconds_since_midnight
-    end
-    now = Time.now.utc.seconds_since_midnight
+    user_start_seconds = user_start_time.utc.seconds_since_midnight
+    user_end_seconds = user_end_time.utc.seconds_since_midnight
+    user_end_seconds += 86400 if user_end_seconds < user_start_seconds
   
+    user_start_seconds > start_seconds && user_end_seconds < end_seconds
   end
 
-  # def currently_available?
-  #   now = DateTime.now.utc.seconds_since_midnight
-  #   now < start_time.seconds_since_midnight
-  # end
+  def currently_available?
+    now = Time.now.utc.seconds_since_midnight
+    now < end_seconds
+  end
 
+  private
+
+  def start_seconds
+    self.start_time.seconds_since_midnight
+  end
+
+  def end_seconds
+    if start_time > end_time
+      (self.end_time.seconds_since_midnight + 1.day.seconds).to_f
+    else
+      self.end_time.seconds_since_midnight
+    end
+  end
 end
