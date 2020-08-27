@@ -3,7 +3,7 @@ class ActivitiesController < ApplicationController
     @activities = policy_scope(Action).where(action_type: 'Activity')
     # selecting activities based on Mood comparison
     # for each action check based on mood comparison
-    @activities = @activities.select { |activity| activity.compare_against(current_user) }
+    @activities = @activities.select { |activity| activity.mood_available?(current_user) }
     # if time range availability given, select acivities available
     # if geo location given, select activities available
 

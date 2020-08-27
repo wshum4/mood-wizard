@@ -1,8 +1,8 @@
 <%= simple_form_for(@mood) do |f| %>
-  <%= f.input :happy_sad, label: "Happy vs Sad", collection: 0..10 %>
-  <%= f.input :calm_angry, label: "Calm vs Angry", collection: 0..10 %>
-  <%= f.input :highenergy_lowenergy, label: "High vs Low Energy", collection: 0..10 %>
-  <%= f.input :social_anxious, label: "Social vs Anxious", collection: 0..10 %>
+  <%= f.input :sad_happy, label: "Happy vs Sad", collection: 0..10 %>
+  <%= f.input :angry_calm, label: "Calm vs Angry", collection: 0..10 %>
+  <%= f.input :lowenergy_highenergy, label: "High vs Low Energy", collection: 0..10 %>
+  <%= f.input :anxious_social, label: "Social vs Anxious", collection: 0..10 %>
 
   <input type="radio" id="Activity" name="type" value="Activity">
   <label for="Activity">Activity</label>

@@ -25,4 +25,21 @@ class User < ApplicationRecord
     end
     passes
   end
+
+  # def availabilities
+  #   out = []
+  #   self.availability.each do |a|
+  #     if a == "Morning"
+  #       out << {  start: DateTime.parse("6 AM EST").utc.seconds_since_midnight,
+  #                 end: DateTime.parse("11:59AM EST").utc.seconds_since_midnight }
+  #     elsif a == "Afternoon"
+  #       out << {  start: DateTime.parse("6:00PM EST").utc.seconds_since_midnight,
+  #                 end: DateTime.parse("6:00PM EST").utc.seconds_since_midnight }
+  #     elsif a == "Evening"
+  #       out << {  start: DateTime.parse("23:59PM EST").utc.seconds_since_midnight,
+  #                 end: DateTime.parse("23:59PM EST").utc.seconds_since_midnight }
+  #     end
+  #   end
+  #   out
+  # end
 end
