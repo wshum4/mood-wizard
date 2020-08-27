@@ -24,7 +24,7 @@ kai = User.new(
   password: '123456',
   password_confirmation: '123456',
   address: "5333 Casgrain Avenue",
-  availability: ['Morning', 'Afternoon']
+  # availability: ['Morning', 'Afternoon']
 )
 
 kai.save
