@@ -9,7 +9,7 @@ class User < ApplicationRecord
   # validate :availability_format
 
   def last_mood
-    Mood.last
+    moods.last
   end
 
   # def availability_format
