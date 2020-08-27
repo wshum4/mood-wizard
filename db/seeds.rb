@@ -6,6 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+def convert_time(time_string)
+  # time_string is a string of this format: "T10:00AM EST",  the T and EST are very important
+  DateTime.parse(time_string).utc
+end
+
 puts 'seed started'
 
 Rating.destroy_all
@@ -32,7 +37,8 @@ axe = Action.new(
   angry_calm: [0, 5],
   lowenergy_highenergy: [5, 10],
   anxious_social: [0, 10],
-  start_time: Time.now,
+  start_time: convert_time("T10:00AM EST"),
+  end_time: convert_time("T9:00PM EST"),
   time_of_day: ['Morning', 'Afternoon', 'Evening'] )
 
 bowling = Action.new(
@@ -43,7 +49,8 @@ bowling = Action.new(
   angry_calm: [5, 10],
   lowenergy_highenergy: [5, 10],
   anxious_social: [5, 10],
-  start_time: Time.now,
+  start_time: convert_time("T10:00AM EST"),
+  end_time: convert_time("T10:00PM EST"),
   time_of_day: ['Morning', 'Afternoon', 'Evening'] )
 
 archery = Action.new(
@@ -54,7 +61,8 @@ archery = Action.new(
   angry_calm: [5, 10],
   lowenergy_highenergy: [5, 10],
   anxious_social: [5, 10],
-  start_time: Time.now,
+  start_time: convert_time("T9:00AM EST"),
+  end_time: convert_time("T5:00PM EST"),
   time_of_day: ['Morning', 'Afternoon'] )
 
 pottery = Action.new(
@@ -65,7 +73,8 @@ pottery = Action.new(
   angry_calm: [5, 10],
   lowenergy_highenergy: [0, 5],
   anxious_social: [0, 10],
-  start_time: Time.now,
+  start_time: convert_time("T8:00AM EST"),
+  end_time: convert_time("T9:00PM EST"),
   time_of_day: ['Morning', 'Afternoon', 'Evening'] )
 
 horseback_riding = Action.new(
@@ -76,7 +85,8 @@ horseback_riding = Action.new(
   angry_calm: [5, 10],
   lowenergy_highenergy: [5, 10],
   anxious_social: [0, 10],
-  start_time: Time.now,
+  start_time: convert_time("T10:00AM EST"),
+  end_time: convert_time("T5:00PM EST"),
   time_of_day: ['Morning', 'Afternoon'] )
 
 axe.save

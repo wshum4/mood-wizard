@@ -25,7 +25,8 @@ ActiveRecord::Schema.define(version: 2020_08_25_210730) do
     t.integer "anxious_social", array: true
     t.integer "duration"
     t.string "time_of_day", array: true
-    t.datetime "start_time"
+    t.time "start_time"
+    t.time "end_time"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.text "description"
@@ -60,6 +61,8 @@ ActiveRecord::Schema.define(version: 2020_08_25_210730) do
   create_table "user_actions", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "action_id", null: false
+    t.datetime "start_time"
+    t.datetime "end_time"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["action_id"], name: "index_user_actions_on_action_id"

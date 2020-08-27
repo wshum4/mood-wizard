@@ -10,8 +10,8 @@ class CreateActions < ActiveRecord::Migration[6.0]
       t.integer :anxious_social, array: true
       t.integer :duration
       t.string :time_of_day, array: true
-      t.datetime :start_time
-      t.datetime :end_time
+      t.time :start_time
+      t.time :end_time
 
       t.timestamps
     end
