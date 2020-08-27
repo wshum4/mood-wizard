@@ -31,10 +31,10 @@
       <h2>Previous Activities</h2>
       <ul>
         <% @past_activities.each do |activity| %>
-        <li>Activity: <%= activity.name %></li>
-        <li>Company: <%= activity.company_name %></li>
-        <li>Address: <%= activity.address %></li>
-        <li>Price: <%= activity.price %></li>
+        <li>Activity: <%= activity.action.name %></li>
+        <li>Company: <%= activity.action.company_name %></li>
+        <li>Address: <%= activity.action.address %></li>
+        <li>Price: <%= activity.action.price %></li>
         <br>
         <% end %>
       </ul>
@@ -44,7 +44,7 @@
       <h2>Previous Medium</h2>
       <ul>
         <% @past_mediums.each do |medium| %>
-        <li>Medium: <%= medium.name %></li>
+        <li>Medium: <%= medium.action.name %></li>
         <br>
         <% end %>
       </ul>

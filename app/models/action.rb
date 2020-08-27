@@ -3,7 +3,7 @@ class Action < ApplicationRecord
   geocoded_by :address
 
   validates :action_type, acceptance: { accept: ['Activity', 'Medium'] }
-  validates :name, :duration, :action_type, :time_of_day, :start_time, presence: true
+  validates :name, :duration, :action_type, :start_time, :end_time, presence: true
   validate :activity_validate
 
   def mood_available?(user)
@@ -20,7 +20,7 @@ class Action < ApplicationRecord
     user_start_seconds = user_start_time.utc.seconds_since_midnight
     user_end_seconds = user_end_time.utc.seconds_since_midnight
     user_end_seconds += 86400 if user_end_seconds < user_start_seconds
-  
+
     user_start_seconds > start_seconds && user_end_seconds < end_seconds
   end
 
