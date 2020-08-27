@@ -1,6 +1,7 @@
 <h1>All Activities</h1>
 
 <form action="/activities" method="get">
+  <input id="location" type="text" name="location" placeholder="Location" value="<%= params["location"] if params["location"].present? %>">
   <label for="start-time">Start</label>
   <input id="start-time" type="time" name="start-time">
   <label for="end-time">End</label>
@@ -10,6 +11,9 @@
 
 <ul>
   <% @activities.each do |activity| %>
-    <li><%= link_to activity.name, activity_path(activity) %></li>
+    <li>
+      <%= link_to activity.name, activity_path(activity) %>
+      <%= "- #{@distances[activity.id]} km" if @distances.present? %>
+    </li>
   <% end %>
 </ul>
