@@ -1,29 +1,43 @@
-.card {
+.card-mw {
   overflow: hidden;
   height: 120px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
-  align-items: center;
+  border: 1px solid white;
+  margin: 15px;
 }
-.card img {
-  height: 100%;
+.prev-act {
+  height: 120px;
   width: 120px;
   object-fit: cover;
 }
+
+.prev-med {
+  height: 120px;
+  width: 120px;
+  object-fit: cover;
+}
+
 .prev-action {
-  font-size: 20px;
+  color: black;
+  font-size: 17px;
   font-weight: bold;
   margin: 0;
 }
-.card p {
+.card-mw p {
+  color: black;
   font-size: 12px;
   line-height: 1.4;
-  opacity: .7;
   margin-bottom: 0;
-  margin-top: 8px;
 }
-.card .cardinfos {
+.cardinfos {
   padding: 16px;
 }
 
+.prev-action-med {
+  color: black;
+  font-size: 25px;
+  font-weight: bold;
+  margin: 0;
+}
