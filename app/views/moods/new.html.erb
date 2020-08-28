@@ -3,13 +3,13 @@
 <div class="mood-selector">
   <h2>How are you feeling today?</h2>
   <%= simple_form_for @mood do |f| %>
-    <%= f.input :sad_happy, label: "Happy vs Sad",
+    <%= f.input :sad_happy, label: "Sad vs Happy",
       as: :range, input_html: { max: 10 } %>
-    <%= f.input :angry_calm, label: "Calm vs Angry",
+    <%= f.input :angry_calm, label: "Angry vs Calm",
       as: :range, input_html: { max: 10 } %>
-    <%= f.input :lowenergy_highenergy, label: "High vs Low Energy",
+    <%= f.input :lowenergy_highenergy, label: "Low vs High Energy",
       as: :range, input_html: { max: 10 } %>
-    <%= f.input :anxious_social, label: "Social vs Anxious",
+    <%= f.input :anxious_social, label: "Anxious vs Social",
       as: :range, input_html: { max: 10 } %>
 
     <h3>What would you like to do?</h3>
