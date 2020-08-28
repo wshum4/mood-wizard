@@ -1,0 +1,18 @@
+
+.info_header{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100vw;
+height: 400px;
+margin: 0;
+flex-direction: column;
+color: white;
+
+}
+.info_activity {
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction:column;
+}
