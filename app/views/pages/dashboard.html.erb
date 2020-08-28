@@ -29,30 +29,34 @@
 
     <div class="tab-pane fade" id="prev-activities" role="tabpanel" aria-labelledby="prev-activities-tab">
       <h2>Previous Activities</h2>
-      <ul>
-        <% @past_activities.each do |activity| %>
-        <li>Activity: <%= activity.action.name %></li>
-        <li>Company: <%= activity.action.company_name %></li>
-        <li>Address: <%= activity.action.address %></li>
-        <li>Price: <%= activity.action.price %></li>
-        <br>
+      <% @past_activities.each do |activity| %>
+        <%= link_to activity_path(activity) do %>
+          <div class=“card-“>
+            <img src=<%= activity.action.photo_url %>>
+            <div class=“cardinfos”>
+              <h2 class="prev-action">Activity: <%= activity.action.name %></h2>
+              <p>Company: <%= activity.action.company_name %></p>
+              <p>Address: <%= activity.action.address %></p>
+              <p>Price: $<%= activity.action.price %></p>
+            </div>
+          </div>
         <% end %>
-      </ul>
+      <% end %>
     </div>
 
     <div class="tab-pane fade" id="prev-mediums" role="tabpanel" aria-labelledby="prev-mediums-tab">
       <h2>Previous Medium</h2>
-      <ul>
-        <% @past_mediums.each do |medium| %>
-        <li>Medium: <%= medium.action.name %></li>
-        <br>
-        <% end %>
-      </ul>
+      <% @past_mediums.each do |medium| %>
+        <div class=“card-“>
+          <img src=<%= medium.action.photo_url %>>
+          <div class=“cardinfos”>
+            <h2 class="prev-action">Medium: <%= medium.action.name %></h2>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
-
-
 
 
 

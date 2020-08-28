@@ -1,7 +1,11 @@
-<h1><%= @activity.name %></h1>
+<div class="container p-3">
+  <h1><%= @activity.name %></h1>
 
-<p>Company Name:<%= @activity.company_name %></p>
-<p>Address:<%= @activity.address %></p>
-<p>Duration:<%= @activity.duration %></p>
-<p>Time:<%= @activity.start_time %></p>
-<p>Price:<%= @activity.price %></p>
+  <p>Company Name: <%= @activity.company_name %></p>
+  <p>Address: <%= @activity.address %></p>
+  <p>Duration: <%= @activity.duration %></p>
+  <p>Time: <%= @activity.start_time %></p>
+  <p>Price: $<%= @activity.price %></p>
+
+  <%= link_to 'Book Now', root_path, class: 'sign-in-front' %>
+</div>
