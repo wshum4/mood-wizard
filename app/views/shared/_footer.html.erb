@@ -1,0 +1,15 @@
+<% if user_signed_in? %>
+  <div class="footer">
+    <div class="footer-links">
+      <%= link_to root_path do %>
+        <%= image_tag "dashicon", class:"footerbttns"%>
+      <%end%>
+      <%= link_to root_path do %>
+        <%= image_tag "mood", class:"footerbttns", id: "mood" %>
+      <%end%>
+      <%= link_to root_path do %>
+        <%= image_tag "pencil", class:"footerbttns"%>
+      <%end%>
+    </div>
+  </div>
+<%end%>
