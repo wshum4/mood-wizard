@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_28_161531) do
+ActiveRecord::Schema.define(version: 2020_08_28_195057) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2020_08_28_161531) do
     t.float "latitude"
     t.float "longitude"
     t.string "photo_url"
+    t.string "background_image_url"
   end
 
   create_table "moods", force: :cascade do |t|
