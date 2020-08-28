@@ -44,7 +44,9 @@ axe = Action.create(
   company_name: 'Rage: Axe Throwing',
   price: 33,
   address: '1436 R. Atateken, Montreal',
-  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631894/axe_throwing_jsewtt.jpg'
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631894/axe_throwing_jsewtt.jpg',
+  background_image_url: 'https://res.cloudinary.com/claidy/image/upload/v1598643801/axe_figma_tbmhbz.png'
+
   )
 
 bowling = Action.create(
