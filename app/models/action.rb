@@ -16,17 +16,16 @@ class Action < ApplicationRecord
   end
 
   def time_available?(user_start_time, user_end_time)
-    start_of_day = Time.now.utc.beginning_of_day
     user_start_seconds = user_start_time.utc.seconds_since_midnight
     user_end_seconds = user_end_time.utc.seconds_since_midnight
     user_end_seconds += 86400 if user_end_seconds < user_start_seconds
-
-    user_start_seconds > start_seconds && user_end_seconds < end_seconds
+    
+    user_start_seconds <= end_seconds && user_end_seconds >= start_seconds
   end
 
   def currently_available?
     now = Time.now.utc.seconds_since_midnight
-    now < end_seconds
+    now < end_seconds && now >= start_seconds
   end
 
   private
