@@ -26,5 +26,6 @@ class ActivitiesController < ApplicationController
   def show
     @activity = Action.find(params[:id])
     authorize(@activity)
+    @markers = [{ lat: @activity.latitude, lng: @activity.longitude }]
   end
 end
