@@ -43,7 +43,8 @@ axe = Action.create(
   end_time: convert_time("T9:00PM EST"),
   company_name: 'Rage: Axe Throwing',
   price: 33,
-  address: '1436 R. Atateken, Montreal'
+  address: '1436 R. Atateken, Montreal',
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631894/axe_throwing_jsewtt.jpg'
   )
 
 bowling = Action.create(
@@ -58,7 +59,8 @@ bowling = Action.create(
   end_time: convert_time("T10:00PM EST"),
   company_name: 'Bowling G Plus',
   price: 15,
-  address: '920 Rue Saint-Zotique, Montreal'
+  address: '920 Rue Saint-Zotique, Montreal',
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631894/bowling_nxtlcx.jpg'
   )
 
 archery = Action.create(
@@ -73,7 +75,8 @@ archery = Action.create(
   end_time: convert_time("T5:00PM EST"),
   company_name: 'Combat Archery',
   price: 38,
-  address: '3955 Rue de Rouen, Montreal'
+  address: '3955 Rue de Rouen, Montreal',
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631895/archery_wqx7bt.jpg'
   )
 
 pottery = Action.create(
@@ -88,7 +91,8 @@ pottery = Action.create(
   end_time: convert_time("T7:00PM EST"),
   company_name: 'Céramic Café Studio Montréal',
   price: 45,
-  address: '4338 St Denis St, Montreal'
+  address: '4338 St Denis St, Montreal',
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/pottery_hnguky.jpg'
   )
 
 horseback_riding = Action.create(
@@ -103,7 +107,8 @@ horseback_riding = Action.create(
   end_time: convert_time("T4:00PM EST"),
   company_name: 'Cavalli Equestrian Center',
   price: 120,
-  address: '4900 Chemin Bellerive, Carignan'
+  address: '4900 Chemin Bellerive, Carignan',
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/hoerse_backriding1_zdct5e.jpg'
   )
 
 comedy_show = Action.create(
@@ -118,22 +123,24 @@ comedy_show = Action.create(
   end_time: convert_time("T10:00PM EST"),
   company_name: 'Le Bordel Comedie Club',
   price: 30,
-  address: '312 Ontario St, Montreal'
+  address: '312 Ontario St, Montreal',
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631895/comedy1_tqkwcr.jpg'
   )
 
-laser_tag = Action.create(
-  name: 'Laser Tag',
+golf = Action.create(
+  name: 'Golf',
   action_type: 'Activity',
-  duration: 1.hour,
+  duration: 5.hour,
   sad_happy: [0, 10],
   angry_calm: [0, 10],
-  lowenergy_highenergy: [5, 10],
-  anxious_social: [5, 10],
-  start_time: convert_time("T11:00AM EST"),
+  lowenergy_highenergy: [0, 10],
+  anxious_social: [0, 10],
+  start_time: convert_time("T08:00AM EST"),
   end_time: convert_time("T8:00PM EST"),
-  company_name: 'Zero Latency',
-  price: 36,
-  address: '910 Jean Talon St, Montreal'
+  company_name: 'Municipal Golf Montreal',
+  price: 45,
+  address: '4235 Viau St, Montreal',
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/golf_xwfpfn.jpg'
   )
 
 paint_class = Action.create(
@@ -148,7 +155,8 @@ paint_class = Action.create(
   end_time: convert_time("T5:00PM EST"),
   company_name: 'Zoya Art Studio',
   price: 40,
-  address: '1844 William St, Montreal'
+  address: '1844 William St, Montreal',
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631894/painting1_cxr6uw.jpg'
   )
 
 meditation = Action.create(
@@ -163,7 +171,8 @@ meditation = Action.create(
   end_time: convert_time("T8:00PM EST"),
   company_name: 'Tadaima Meditation',
   price: 38,
-  address: '1565 Mont-Royal Ave, Montreal'
+  address: '1565 Mont-Royal Ave, Montreal',
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/yoga_yhx4gb.jpg'
   )
 
 yoga = Action.create(
@@ -178,7 +187,8 @@ yoga = Action.create(
   end_time: convert_time("T5:00PM EST"),
   company_name: 'Naada Yoga',
   price: 35,
-  address: '5540 Casgrain Ave, Montreal'
+  address: '5540 Casgrain Ave, Montreal',
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/yoga1_xhkpza.jpg'
   )
 
 cooking_class = Action.create(
@@ -193,7 +203,8 @@ cooking_class = Action.create(
   end_time: convert_time("T5:00PM EST"),
   company_name: 'Culinary Guild',
   price: 60,
-  address: '6381 St Laurent Blvd, Montreal'
+  address: '6381 St Laurent Blvd, Montreal',
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631895/cooking_class_1_gqfw0d.jpg'
   )
 
 boxing = Action.create(
@@ -208,7 +219,8 @@ boxing = Action.create(
   end_time: convert_time("T8:00PM EST"),
   company_name: 'Underdog Boxing Gym',
   price: 32,
-  address: '9 St Catherine St, Montreal'
+  address: '9 St Catherine St, Montreal',
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598632415/photo-1549719386-74dfcbf7dbed_to0kp6.jpg'
   )
 
 spa = Action.create(
@@ -223,7 +235,8 @@ spa = Action.create(
   end_time: convert_time("T7:00PM EST"),
   company_name: 'Spa Ovarium',
   price: 160,
-  address: '400 Rue Beaubien, Montreal'
+  address: '400 Rue Beaubien, Montreal',
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598632480/taylor-simpson-Z8s3PRQVuUk-unsplash_xuudos.jpg'
   )
 
 plant_arrangement = Action.create(
@@ -238,7 +251,8 @@ plant_arrangement = Action.create(
   end_time: convert_time("T5:00PM EST"),
   company_name: 'Plantzy',
   price: 40,
-  address: '5445 Gaspe Ave, Montreal'
+  address: '5445 Gaspe Ave, Montreal',
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598632598/mariah-hewines-C-C771OdQJc-unsplash_epmuan.jpg'
   )
 
 pilates = Action.create(
@@ -253,7 +267,8 @@ pilates = Action.create(
   end_time: convert_time("T8:00PM EST"),
   company_name: 'Espace Pilates',
   price: 30,
-  address: '768 Rue Rachel, Montreal'
+  address: '768 Rue Rachel, Montreal',
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631895/pilates_j1wa6v.jpg'
   )
 
 # medium 4
@@ -268,6 +283,7 @@ spotify = Action.create(
   anxious_social: [0, 10],
   start_time: convert_time("T9:00AM EST"),
   end_time: convert_time("T8:00PM EST"),
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598637269/spotify_wt262b.jpg'
   )
 
 medium = Action.create(
@@ -281,6 +297,7 @@ medium = Action.create(
   anxious_social: [0, 10],
   start_time: convert_time("T9:00AM EST"),
   end_time: convert_time("T8:00PM EST"),
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598637269/medium_tisx7i.png'
   )
 
 netflix = Action.create(
@@ -294,6 +311,7 @@ netflix = Action.create(
   anxious_social: [0, 10],
   start_time: convert_time("T9:00AM EST"),
   end_time: convert_time("T8:00PM EST"),
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598637269/netflix_sg6mcg.jpg'
   )
 
 headspace = Action.create(
@@ -307,6 +325,7 @@ headspace = Action.create(
   anxious_social: [0, 10],
   start_time: convert_time("T9:00AM EST"),
   end_time: convert_time("T8:00PM EST"),
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598637269/headspace_g0dzrn.jpg'
   )
 
 # mood
