@@ -5,6 +5,6 @@ class Mood < ApplicationRecord
 
   def time_since
     # Returns the number of seconds since the mood was created
-    Time.now - created_at
+    Time.now - manual_created_at
   end
 end
