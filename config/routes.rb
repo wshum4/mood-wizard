@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   resources :activities, only: [:index, :show] do
     resources :ratings, only: [:new, :create]
   end
+  resources :user_actions, only: [:create]
 end
