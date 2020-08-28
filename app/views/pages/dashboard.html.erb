@@ -1,3 +1,5 @@
+<div style="background-image: url(<%= asset_path('dashboard.png') %>)" class="top-img" ></div>
+
 <div class="container p-3">
   <h1>Dashboard</h1>
 
@@ -15,26 +17,27 @@
   <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
       <h2>Previous Moods</h2>
-      <ul>
-        <% @prev_moods.each do |mood| %>
-        <h3><%= mood.manual_created_at.time.strftime("%d %B %Y") %></h3>
-        <li>Sad | Happy: <%= mood.sad_happy %></li>
-        <li>Angry | Calm: <%= mood.angry_calm %></li>
-        <li>Low energy | High energy: <%= mood.lowenergy_highenergy %></li>
-        <li>Anxious | Social: <%= mood.anxious_social %></li>
-        <br>
-        <% end %>
-      </ul>
+      <% @prev_moods.each do |mood| %>
+      <div class='card-mw'>
+        <div class='cardinfos'>
+          <h2 class='prev-action'><%= mood.manual_created_at.time.strftime("%d %B %Y") %></h3>
+          <p>Sad | Happy: <%= mood.sad_happy %></p>
+          <p>Angry | Calm: <%= mood.angry_calm %></p>
+          <p>Low energy | High energy: <%= mood.lowenergy_highenergy %></p>
+          <p>Anxious | Social: <%= mood.anxious_social %></p>
+        </div>
+      </div>
+      <% end %>
     </div>
 
     <div class="tab-pane fade" id="prev-activities" role="tabpanel" aria-labelledby="prev-activities-tab">
       <h2>Previous Activities</h2>
       <% @past_activities.each do |activity| %>
         <%= link_to activity_path(activity) do %>
-          <div class=“card-“>
-            <img src=<%= activity.action.photo_url %>>
-            <div class=“cardinfos”>
-              <h2 class="prev-action">Activity: <%= activity.action.name %></h2>
+          <div class='card-mw'>
+            <img class='prev-act' src=<%= activity.action.photo_url %>>
+            <div class='cardinfos'>
+              <h2 class='prev-action'>Activity: <%= activity.action.name %></h2>
               <p>Company: <%= activity.action.company_name %></p>
               <p>Address: <%= activity.action.address %></p>
               <p>Price: $<%= activity.action.price %></p>
@@ -47,10 +50,10 @@
     <div class="tab-pane fade" id="prev-mediums" role="tabpanel" aria-labelledby="prev-mediums-tab">
       <h2>Previous Medium</h2>
       <% @past_mediums.each do |medium| %>
-        <div class=“card-“>
-          <img src=<%= medium.action.photo_url %>>
-          <div class=“cardinfos”>
-            <h2 class="prev-action">Medium: <%= medium.action.name %></h2>
+        <div class='card-mw'>
+          <img class='prev-med' src=<%= medium.action.photo_url %>>
+          <div class='cardinfos'>
+            <h2 class='prev-action-med'><%= medium.action.name %></h2>
           </div>
         </div>
       <% end %>

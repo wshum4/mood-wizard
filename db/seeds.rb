@@ -44,9 +44,8 @@ axe = Action.create(
   company_name: 'Rage: Axe Throwing',
   price: 33,
   address: '1436 R. Atateken, Montreal',
-  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631894/axe_throwing_jsewtt.jpg',
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598639290/axe_throwing_lrxmti.jpg',
   background_image_url: 'https://res.cloudinary.com/claidy/image/upload/v1598643801/axe_figma_tbmhbz.png'
-
   )
 
 bowling = Action.create(
@@ -78,7 +77,7 @@ archery = Action.create(
   company_name: 'Combat Archery',
   price: 38,
   address: '3955 Rue de Rouen, Montreal',
-  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631895/archery_wqx7bt.jpg'
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598639290/archery_ch5qdf.jpg'
   )
 
 pottery = Action.create(
@@ -206,7 +205,7 @@ cooking_class = Action.create(
   company_name: 'Culinary Guild',
   price: 60,
   address: '6381 St Laurent Blvd, Montreal',
-  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631895/cooking_class_1_gqfw0d.jpg'
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598639290/cooking_class_1_ldbfpt.jpg'
   )
 
 boxing = Action.create(
@@ -222,7 +221,7 @@ boxing = Action.create(
   company_name: 'Underdog Boxing Gym',
   price: 32,
   address: '9 St Catherine St, Montreal',
-  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598632415/photo-1549719386-74dfcbf7dbed_to0kp6.jpg'
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598639538/photo-1549719386-74dfcbf7dbed_bbspkw.jpg'
   )
 
 spa = Action.create(
@@ -254,7 +253,7 @@ plant_arrangement = Action.create(
   company_name: 'Plantzy',
   price: 40,
   address: '5445 Gaspe Ave, Montreal',
-  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598632598/mariah-hewines-C-C771OdQJc-unsplash_epmuan.jpg'
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598639334/mariah-hewines-C-C771OdQJc-unsplash_nzycdh.jpg'
   )
 
 pilates = Action.create(
