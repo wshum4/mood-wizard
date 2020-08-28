@@ -1,7 +1,17 @@
-<h1>All Medium</h1>
+<div style="background-image: url(<%= asset_path('mediumindex.png') %>)" class="top-img" ></div>
 
-<ul>
-  <% @mediums.each do |medium| %>
-    <li><%= medium.name %></li>
-  <% end %>
-</ul>
+<div class="mediums-container">
+
+  <h1>All Medium</h1>
+
+  <div class='mediums-info'>
+    <% @mediums.each do |medium| %>
+      <div class='card-mw'>
+        <img class='prev-med' src=<%= medium.photo_url %>>
+        <div class='cardinfos'>
+          <h2 class='prev-action-med'><%= medium.name %></h2>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
