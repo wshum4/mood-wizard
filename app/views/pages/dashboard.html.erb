@@ -50,14 +50,12 @@
     <div class="tab-pane fade" id="prev-mediums" role="tabpanel" aria-labelledby="prev-mediums-tab">
       <h2>Previous Medium</h2>
       <% @past_mediums.each do |medium| %>
-        <!-- <a href=<%= link_to medium.action.url %> > -->
-          <div class='card-mw'>
-            <img class='prev-med' src=<%= medium.action.photo_url %>>
-            <div class='cardinfos'>
-              <h2 class='prev-action-med'><%= medium.action.name %></h2>
-            </div>
+        <div class='card-mw'>
+          <img class='prev-med' src=<%= medium.action.photo_url %>>
+          <div class='cardinfos'>
+            <h2 class='prev-action-med'><%= medium.action.name %></h2>
           </div>
-        <!-- </a> -->
+        </div>
       <% end %>
     </div>
   </div>
