@@ -37,8 +37,13 @@ document.addEventListener('turbolinks:load', () => {
     // pass options into the chart to customize the style. Check docs at: https://www.chartjs.org/docs/latest/charts/polar.html
     new DashboardChart({ 
       scales: {
+        xAxes: [{
+          type: 'time',
+          distribution: 'linear'
+        }],
         yAxes: [{
             ticks: {
+                stacked: true,
                 beginAtZero: true
             }
         }]
