@@ -28,9 +28,23 @@ import "bootstrap";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { initMapbox } from '../plugins/init_mapbox';
+import { DashboardChart } from "../plugins/init_chart";
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
+  // only load chart on the dashboard page
+  if (window.location.pathname === '/') {
+    // pass options into the chart to customize the style. Check docs at: https://www.chartjs.org/docs/latest/charts/polar.html
+    new DashboardChart({ 
+      scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+      }
+    }).render();
+  }
   // initSelect2();
   initMapbox();
 });
