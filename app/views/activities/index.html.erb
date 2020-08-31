@@ -27,11 +27,11 @@
           <img class='prev-act' src=<%= activity.photo_url %>>
           <div class='cardinfos'>
             <h2 class='prev-action'>Activity: <%= activity.name %></h2>
-            <p>Company: <%= activity.company_name %></p>
+            <p><strong>Company:</strong> <%= activity.company_name %></p>
             <% if @distances.present? %>
-              <p>Distance: <%= @distances[activity.id] %> km</p>
+              <p><strong>Distance:</strong> <%= @distances[activity.id] %> km</p>
             <% end %>
-            <p>Price: $<%= activity.price %></p>
+            <p><strong>Price:</strong> $<%= activity.price %></p>
           </div>
         </div>
       <% end %>

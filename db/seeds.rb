@@ -23,8 +23,8 @@ ActiveRecord::Base.connection.tables.each do |t|
   ActiveRecord::Base.connection.reset_pk_sequence!(t)
 end
 
-kai = User.create(
-  email: 'kai@email.com',
+wince = User.create(
+  email: 'wince@email.com',
   password: '123456',
   password_confirmation: '123456',
   address: "5333 Casgrain Avenue",
@@ -138,7 +138,7 @@ golf = Action.create(
   anxious_social: [0, 10],
   start_time: convert_time("T08:00AM EST"),
   end_time: convert_time("T8:00PM EST"),
-  company_name: 'Municipal Golf Montreal',
+  company_name: 'Municipal Golf',
   price: 45,
   address: '4235 Viau St, Montreal',
   photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/golf_xwfpfn.jpg'
@@ -172,7 +172,7 @@ meditation = Action.create(
   end_time: convert_time("T8:00PM EST"),
   company_name: 'Tadaima Meditation',
   price: 38,
-  address: '1565 Mont-Royal Ave, Montreal',
+  address: '1800 Avenue McGill College, Montreal',
   photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/yoga_yhx4gb.jpg'
   )
 
@@ -186,9 +186,9 @@ yoga = Action.create(
   anxious_social: [0, 10],
   start_time: convert_time("T8:00AM EST"),
   end_time: convert_time("T5:00PM EST"),
-  company_name: 'Naada Yoga',
+  company_name: 'Happy Tree Yoga',
   price: 35,
-  address: '5540 Casgrain Ave, Montreal',
+  address: '4812 St Laurent Blvd, Montreal',
   photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/yoga1_xhkpza.jpg'
   )
 
@@ -220,7 +220,7 @@ boxing = Action.create(
   end_time: convert_time("T8:00PM EST"),
   company_name: 'Underdog Boxing Gym',
   price: 32,
-  address: '9 St Catherine St, Montreal',
+  address: '215 Rue Jean-Talon Ouest, Montreal',
   photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598639538/photo-1549719386-74dfcbf7dbed_bbspkw.jpg'
   )
 
@@ -236,7 +236,7 @@ spa = Action.create(
   end_time: convert_time("T7:00PM EST"),
   company_name: 'Spa Ovarium',
   price: 160,
-  address: '400 Rue Beaubien, Montreal',
+  address: '1228 Sherbrooke St, Montreal',
   photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598632480/taylor-simpson-Z8s3PRQVuUk-unsplash_xuudos.jpg'
   )
 
@@ -252,7 +252,7 @@ plant_arrangement = Action.create(
   end_time: convert_time("T5:00PM EST"),
   company_name: 'Plantzy',
   price: 40,
-  address: '5445 Gaspe Ave, Montreal',
+  address: '1457 Ottawa St, Montreal',
   photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598639334/mariah-hewines-C-C771OdQJc-unsplash_nzycdh.jpg'
   )
 
@@ -336,7 +336,7 @@ mood1 = Mood.create(
   lowenergy_highenergy: 9,
   anxious_social: 6,
   manual_created_at: DateTime.parse('2020-08-20 T 09:00'),
-  user: kai
+  user: wince
   )
 
 mood2 = Mood.create(
@@ -345,16 +345,16 @@ mood2 = Mood.create(
   lowenergy_highenergy: 10,
   anxious_social: 8,
   manual_created_at: DateTime.parse('2020-08-21 T 09:00'),
-  user: kai
+  user: wince
   )
 
 mood3 = Mood.create(
   sad_happy: 8,
-  angry_calm: 7,
-  lowenergy_highenergy: 3,
+  angry_calm: 4,
+  lowenergy_highenergy: 8,
   anxious_social: 4,
   manual_created_at: DateTime.parse('2020-08-22 T 09:00'),
-  user: kai
+  user: wince
   )
 
 mood4 = Mood.create(
@@ -363,7 +363,7 @@ mood4 = Mood.create(
   lowenergy_highenergy: rand(0..10),
   anxious_social: rand(0..10),
   manual_created_at: DateTime.parse('2020-08-23 T 13:00'),
-  user: kai
+  user: wince
   )
 
 mood5 = Mood.create(
@@ -372,7 +372,7 @@ mood5 = Mood.create(
   lowenergy_highenergy: 7,
   anxious_social: 6,
   manual_created_at: DateTime.parse('2020-08-24 T 16:00'),
-  user: kai
+  user: wince
   )
 
 mood6 = Mood.create(
@@ -381,7 +381,7 @@ mood6 = Mood.create(
   lowenergy_highenergy: 6,
   anxious_social: 6,
   manual_created_at: DateTime.parse('2020-08-25 T 10:00'),
-  user: kai
+  user: wince
   )
 
 mood7 = Mood.create(
@@ -390,71 +390,71 @@ mood7 = Mood.create(
   lowenergy_highenergy: rand(0..10),
   anxious_social: rand(0..10),
   manual_created_at: DateTime.parse('2020-08-26 T 14:00'),
-  user: kai
+  user: wince
   )
 
 user_action1 = UserAction.create(
-  user: kai,
+  user: wince,
   action: axe,
   created_at: DateTime.parse('2020-08-20 T 09:00')
   )
 
 user_action2 = UserAction.create(
-  user: kai,
+  user: wince,
   action: boxing,
   created_at: DateTime.parse('2020-08-21 T 09:00')
   )
 
 user_action3 = UserAction.create(
-  user: kai,
-  action: pottery,
+  user: wince,
+  action: axe,
   created_at: DateTime.parse('2020-08-22 T 09:00')
   )
 
 user_action4 = UserAction.create(
-  user: kai,
+  user: wince,
   action: yoga,
   created_at: DateTime.parse('2020-08-23 T 13:00')
   )
 
 user_action5 = UserAction.create(
-  user: kai,
+  user: wince,
   action: archery,
   created_at: DateTime.parse('2020-08-24 T 16:00')
 )
 
 user_action6 = UserAction.create(
-  user: kai,
+  user: wince,
   action: plant_arrangement,
   created_at: DateTime.parse('2020-08-25 T 10:00')
   )
 
 user_action7 = UserAction.create(
-  user: kai,
+  user: wince,
   action: meditation,
   created_at: DateTime.parse('2020-08-26 T 14:00')
   )
 
 user_action8 = UserAction.create(
-  user: kai,
+  user: wince,
   action: netflix,
   created_at: DateTime.parse('2020-08-25 T 10:00')
   )
 
 user_action9 = UserAction.create(
-  user: kai,
+  user: wince,
   action: spotify,
   created_at: DateTime.parse('2020-08-25 T 10:00')
   )
 
 user_action10 = UserAction.create(
-  user: kai,
+  user: wince,
   action: headspace,
   created_at: DateTime.parse('2020-08-25 T 10:00')
   )
 
 user_action11 = UserAction.create(
-  user: kai,
+  user: wince,
   action: medium,
   created_at: DateTime.parse('2020-08-25 T 10:00')
   )
