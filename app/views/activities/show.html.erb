@@ -1,5 +1,6 @@
-<div class="container p-3" style="background-image: url(<%= @activity.background_image_url %>); background-repeat: no-repeat;">
-  <div class="info_header">
+<div class="container p-0" >
+  <div class="info_header curved_background" style="background-image: url(<%= @activity.photo_url %>); background-repeat: no-repeat; background-position: center;
+background-size: cover;">
     <h1><%= @activity.name %></h1>
     <p>Price: $<%= @activity.price %></p>
   </div>
