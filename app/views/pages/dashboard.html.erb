@@ -17,10 +17,13 @@
   <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
       <h2>Previous Moods</h2>
+      <!-- Chart JS -->
+      <h4>Previous Moods The Past Week</h4>
+      <canvas id="dashboardChart" width="400" height="400" data-moods="<%= @prev_moods.map(&:to_json) %>"></canvas>
       <% @prev_moods.each do |mood| %>
       <div class='card-mw'>
         <div class='cardinfos'>
-          <h2 class='prev-action'><%= mood.manual_created_at.time.strftime("%d %B %Y") %></h3>
+          <h2 class='prev-action'><%= mood.created_at.time.strftime("%d %B %Y") %></h3>
           <p>Sad | Happy: <%= mood.sad_happy %></p>
           <p>Angry | Calm: <%= mood.angry_calm %></p>
           <p>Low energy | High energy: <%= mood.lowenergy_highenergy %></p>
@@ -38,9 +41,40 @@
             <img class='prev-act' src=<%= activity.action.photo_url %>>
             <div class='cardinfos'>
               <h2 class='prev-action'>Activity: <%= activity.action.name %></h2>
-              <p>Company: <%= activity.action.company_name %></p>
-              <p>Address: <%= activity.action.address %></p>
-              <p>Price: $<%= activity.action.price %></p>
+              <p>Date: <%= activity.created_at.time.strftime("%d %B %Y") %></p>
+                <% if activity.mood_before && activity.mood_after %>
+                  <% if activity.mood_after.sad_happy > activity.mood_before.sad_happy%>
+                    <i class="fas fa-arrow-up"></i>
+                  <% elsif activity.mood_after.sad_happy == activity.mood_before.sad_happy %>
+                    <i class="fas fa-horizontal-rule"></i>
+                  <% elsif activity.mood_after.sad_happy < activity.mood_before.sad_happy %>
+                    <i class="fas fa-arrow-down"></i>
+                  <% end %>
+
+                  <% if activity.mood_after.angry_calm > activity.mood_before.angry_calm %>
+                    <i class="fas fa-arrow-up"></i>
+                  <% elsif activity.mood_after.angry_calm == activity.mood_before.angry_calm %>
+                    <i class="fas fa-horizontal-rule"></i>
+                  <% elsif activity.mood_after.angry_calm < activity.mood_before.angry_calm  %>
+                    <i class="fas fa-arrow-down"></i>
+                  <% end %>
+
+                  <% if activity.mood_after.lowenergy_highenergy > activity.mood_before.lowenergy_highenergy %>
+                    <i class="fas fa-arrow-up"></i>
+                  <% elsif activity.mood_after.lowenergy_highenergy == activity.mood_before.lowenergy_highenergy %>
+                    <i class="fas fa-horizontal-rule"></i>
+                  <% elsif activity.mood_after.lowenergy_highenergy < activity.mood_before.lowenergy_highenergy %>
+                    <i class="fas fa-arrow-down"></i>
+                  <% end %>
+
+                  <% if activity.mood_after.anxious_social > activity.mood_before.anxious_social %>
+                    <i class="fas fa-arrow-up"></i>
+                  <% elsif activity.mood_after.anxious_social == activity.mood_before.anxious_social %>
+                    <i class="fas fa-horizontal-rule"></i>
+                  <% elsif activity.mood_after.anxious_social < activity.mood_before.anxious_social %>
+                    <i class="fas fa-arrow-down"></i>
+                  <% end %>
+                <% end %>
             </div>
           </div>
         <% end %>
@@ -50,12 +84,14 @@
     <div class="tab-pane fade" id="prev-mediums" role="tabpanel" aria-labelledby="prev-mediums-tab">
       <h2>Previous Medium</h2>
       <% @past_mediums.each do |medium| %>
-        <div class='card-mw'>
-          <img class='prev-med' src=<%= medium.action.photo_url %>>
-          <div class='cardinfos'>
-            <h2 class='prev-action-med'><%= medium.action.name %></h2>
+        <%= link_to "https://#{medium.action.url}", target: "_blank" do %>
+          <div class='card-mw'>
+            <img class='prev-med' src=<%= medium.action.photo_url %>>
+            <div class='cardinfos'>
+              <h2 class='prev-action-med'><%= medium.action.name %></h2>
+            </div>
           </div>
-        </div>
+        <% end %>
       <% end %>
     </div>
   </div>
