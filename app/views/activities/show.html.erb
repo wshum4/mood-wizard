@@ -1,4 +1,5 @@
-<div style="background-image: url(<%= @activity.background_image_url %>); background-repeat: no-repeat;">
+<div class="container p-0" >
+  <div class="info_header curved_background" style="background-image: url(<%= @activity.photo_url %>); background-repeat: no-repeat; background-position: center; background-size: cover;"></div>
   <%= link_to activities_path, class: "back-arrow" do %>
     <i class="fas fa-chevron-left"></i>
   <% end %>
@@ -13,7 +14,7 @@
     <p><strong>Time:</strong> <%= @activity.start_time.time.strftime("%I:%M %p") %></p>
     <%= button_to 'Book Now', user_actions_path, id: "book-now", class: 'sign-in-front', params: { action_id: @activity.id } %>
     <br>
-    
+
   </div>
 
   <br>
