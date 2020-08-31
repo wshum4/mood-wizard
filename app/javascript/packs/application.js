@@ -39,7 +39,7 @@ document.addEventListener('turbolinks:load', () => {
     new DashboardChart({ 
       scales: {
         xAxes: [{
-          type: 'time',
+          type: 'time'
         }],
         yAxes: [{
             ticks: {
@@ -57,5 +57,8 @@ document.addEventListener('turbolinks:load', () => {
   // }
 
   // initSelect2();
-  initMapbox();
+  const mapElement = document.getElementById('map');
+  if (mapElement) {
+    initMapbox(mapElement);
+  }
 });

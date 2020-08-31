@@ -13,10 +13,10 @@ end
 
 puts 'seed started'
 
+Mood.destroy_all
 Rating.destroy_all
 UserAction.destroy_all
 Action.destroy_all
-Mood.destroy_all
 User.destroy_all
 
 ActiveRecord::Base.connection.tables.each do |t|
@@ -61,7 +61,7 @@ bowling = Action.create(
   company_name: 'Bowling G Plus',
   price: 15,
   address: '920 Rue Saint-Zotique, Montreal',
-  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631894/bowling_nxtlcx.jpg'
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631894/bowling_nxtlcx.jpg',
   background_image_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631894/bowling_nxtlcx.jpg'
   )
 
@@ -78,7 +78,7 @@ archery = Action.create(
   company_name: 'Combat Archery',
   price: 38,
   address: '3955 Rue de Rouen, Montreal',
-  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598639290/archery_ch5qdf.jpg'
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598639290/archery_ch5qdf.jpg',
   background_image_url: 'https://res.cloudinary.com/claidy/image/upload/v1598887379/annie-spratt-jY9mXvA15W0-unsplash_ywsg7y.jpg'
   )
 
@@ -95,7 +95,7 @@ pottery = Action.create(
   company_name: 'Céramic Café Studio Montréal',
   price: 45,
   address: '4338 St Denis St, Montreal',
-  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/pottery_hnguky.jpg'
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/pottery_hnguky.jpg',
   background_image_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/pottery_hnguky.jpg'
   )
 
@@ -112,7 +112,7 @@ horseback_riding = Action.create(
   company_name: 'Cavalli Equestrian Center',
   price: 120,
   address: '4900 Chemin Bellerive, Carignan',
-  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/hoerse_backriding1_zdct5e.jpg'
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/hoerse_backriding1_zdct5e.jpg',
   background_image_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/hoerse_backriding1_zdct5e.jpg'
   )
 
@@ -129,7 +129,7 @@ comedy_show = Action.create(
   company_name: 'Le Bordel Comedie Club',
   price: 30,
   address: '312 Ontario St, Montreal',
-  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631895/comedy1_tqkwcr.jpg'
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631895/comedy1_tqkwcr.jpg',
   background_image_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631895/comedy1_tqkwcr.jpg'
   )
 
@@ -146,7 +146,7 @@ golf = Action.create(
   company_name: 'Municipal Golf',
   price: 45,
   address: '4235 Viau St, Montreal',
-  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/golf_xwfpfn.jpg'
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/golf_xwfpfn.jpg',
   background_image_url:'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/golf_xwfpfn.jpg'
   )
 
@@ -163,7 +163,7 @@ paint_class = Action.create(
   company_name: 'Zoya Art Studio',
   price: 40,
   address: '1844 William St, Montreal',
-  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631894/painting1_cxr6uw.jpg'
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631894/painting1_cxr6uw.jpg',
   background_image_url:'https://res.cloudinary.com/demifo4s4/image/upload/v1598631894/painting1_cxr6uw.jpg'
   )
 
@@ -180,7 +180,7 @@ meditation = Action.create(
   company_name: 'Tadaima Meditation',
   price: 38,
   address: '1800 Avenue McGill College, Montreal',
-  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/yoga_yhx4gb.jpg'
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/yoga_yhx4gb.jpg',
   background_image_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/yoga_yhx4gb.jpg'
   )
 
@@ -197,7 +197,7 @@ yoga = Action.create(
   company_name: 'Happy Tree Yoga',
   price: 35,
   address: '4812 St Laurent Blvd, Montreal',
-  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/yoga1_xhkpza.jpg'
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/yoga1_xhkpza.jpg',
   background_image_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/yoga1_xhkpza.jpg'
   )
 
@@ -214,7 +214,7 @@ cooking_class = Action.create(
   company_name: 'Culinary Guild',
   price: 60,
   address: '6381 St Laurent Blvd, Montreal',
-  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598639290/cooking_class_1_ldbfpt.jpg'
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598639290/cooking_class_1_ldbfpt.jpg',
   background_image_url:'https://res.cloudinary.com/claidy/image/upload/v1598887624/cooking_class_1_cacrsf.jpg'
   )
 
@@ -231,7 +231,7 @@ boxing = Action.create(
   company_name: 'Underdog Boxing Gym',
   price: 32,
   address: '215 Rue Jean-Talon Ouest, Montreal',
-  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598639538/photo-1549719386-74dfcbf7dbed_bbspkw.jpg'
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598639538/photo-1549719386-74dfcbf7dbed_bbspkw.jpg',
   background_image_url:'https://res.cloudinary.com/claidy/image/upload/v1598887780/bogdan-yukhymchuk-XmvuWRDimrg-unsplash_nls8va.jpg'
   )
 
@@ -248,7 +248,7 @@ spa = Action.create(
   company_name: 'Spa Ovarium',
   price: 160,
   address: '1228 Sherbrooke St, Montreal',
-  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598632480/taylor-simpson-Z8s3PRQVuUk-unsplash_xuudos.jpg'
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598632480/taylor-simpson-Z8s3PRQVuUk-unsplash_xuudos.jpg',
   background_image_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598632480/taylor-simpson-Z8s3PRQVuUk-unsplash_xuudos.jpg'
   )
 
@@ -265,7 +265,7 @@ plant_arrangement = Action.create(
   company_name: 'Plantzy',
   price: 40,
   address: '1457 Ottawa St, Montreal',
-  photo_url: 'https://res.cloudinary.com/claidy/image/upload/v1598887913/ergita-sela-8lZB_vv9kEE-unsplash_ypmrqs.jpg'
+  photo_url: 'https://res.cloudinary.com/claidy/image/upload/v1598887913/ergita-sela-8lZB_vv9kEE-unsplash_ypmrqs.jpg',
   background_image_url: 'https://res.cloudinary.com/claidy/image/upload/v1598887913/ergita-sela-8lZB_vv9kEE-unsplash_ypmrqs.jpg'
   )
 
@@ -282,7 +282,7 @@ pilates = Action.create(
   company_name: 'Espace Pilates',
   price: 30,
   address: '768 Rue Rachel, Montreal',
-  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631895/pilates_j1wa6v.jpg'
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631895/pilates_j1wa6v.jpg',
   background_image_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631895/pilates_j1wa6v.jpg'
   )
 

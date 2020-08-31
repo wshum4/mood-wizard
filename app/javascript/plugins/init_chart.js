@@ -1,12 +1,11 @@
 var Chart = require('chart.js');
 
 class DashboardChart {
-    constructor(options, type = "lineChart") {
+    constructor(options) {
         this.chartDomElement = document.getElementById('dashboardChart'),
         this.previousMoods = JSON.parse(this.chartDomElement.dataset.moods).map(mood => JSON.parse(mood)),
         this.ctx = this.chartDomElement.getContext('2d'),
-        this.options = options,
-        this.type = type
+        this.options = options
     }
 
     render() {
