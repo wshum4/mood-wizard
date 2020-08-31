@@ -17,6 +17,9 @@
   <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
       <h2>Previous Moods</h2>
+      <!-- Chart JS -->
+      <h4>Previous Moods The Past Week</h4>
+      <canvas id="dashboardChart" width="400" height="400" data-moods="<%= @prev_moods.map(&:to_json) %>"></canvas>
       <% @prev_moods.each do |mood| %>
       <div class='card-mw'>
         <div class='cardinfos'>
