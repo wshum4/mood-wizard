@@ -45,7 +45,7 @@ axe = Action.create(
   price: 33,
   address: '1436 R. Atateken, Montreal',
   photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598639290/axe_throwing_lrxmti.jpg',
-  background_image_url: 'https://res.cloudinary.com/claidy/image/upload/v1598643801/axe_figma_tbmhbz.png'
+  background_image_url: 'https://res.cloudinary.com/claidy/image/upload/v1598888067/jason-abdilla-jZWmw6007EY-unsplash_sqouci.jpg'
   )
 
 bowling = Action.create(
@@ -62,6 +62,7 @@ bowling = Action.create(
   price: 15,
   address: '920 Rue Saint-Zotique, Montreal',
   photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631894/bowling_nxtlcx.jpg'
+  background_image_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631894/bowling_nxtlcx.jpg'
   )
 
 archery = Action.create(
@@ -78,6 +79,7 @@ archery = Action.create(
   price: 38,
   address: '3955 Rue de Rouen, Montreal',
   photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598639290/archery_ch5qdf.jpg'
+  background_image_url: 'https://res.cloudinary.com/claidy/image/upload/v1598887379/annie-spratt-jY9mXvA15W0-unsplash_ywsg7y.jpg'
   )
 
 pottery = Action.create(
@@ -94,6 +96,7 @@ pottery = Action.create(
   price: 45,
   address: '4338 St Denis St, Montreal',
   photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/pottery_hnguky.jpg'
+  background_image_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/pottery_hnguky.jpg'
   )
 
 horseback_riding = Action.create(
@@ -110,6 +113,7 @@ horseback_riding = Action.create(
   price: 120,
   address: '4900 Chemin Bellerive, Carignan',
   photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/hoerse_backriding1_zdct5e.jpg'
+  background_image_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/hoerse_backriding1_zdct5e.jpg'
   )
 
 comedy_show = Action.create(
@@ -126,6 +130,7 @@ comedy_show = Action.create(
   price: 30,
   address: '312 Ontario St, Montreal',
   photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631895/comedy1_tqkwcr.jpg'
+  background_image_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631895/comedy1_tqkwcr.jpg'
   )
 
 golf = Action.create(
@@ -142,6 +147,7 @@ golf = Action.create(
   price: 45,
   address: '4235 Viau St, Montreal',
   photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/golf_xwfpfn.jpg'
+  background_image_url:'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/golf_xwfpfn.jpg'
   )
 
 paint_class = Action.create(
@@ -158,6 +164,7 @@ paint_class = Action.create(
   price: 40,
   address: '1844 William St, Montreal',
   photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631894/painting1_cxr6uw.jpg'
+  background_image_url:'https://res.cloudinary.com/demifo4s4/image/upload/v1598631894/painting1_cxr6uw.jpg'
   )
 
 meditation = Action.create(
@@ -174,6 +181,7 @@ meditation = Action.create(
   price: 38,
   address: '1800 Avenue McGill College, Montreal',
   photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/yoga_yhx4gb.jpg'
+  background_image_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/yoga_yhx4gb.jpg'
   )
 
 yoga = Action.create(
@@ -190,6 +198,7 @@ yoga = Action.create(
   price: 35,
   address: '4812 St Laurent Blvd, Montreal',
   photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/yoga1_xhkpza.jpg'
+  background_image_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/yoga1_xhkpza.jpg'
   )
 
 cooking_class = Action.create(
@@ -206,6 +215,7 @@ cooking_class = Action.create(
   price: 60,
   address: '6381 St Laurent Blvd, Montreal',
   photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598639290/cooking_class_1_ldbfpt.jpg'
+  background_image_url:'https://res.cloudinary.com/claidy/image/upload/v1598887624/cooking_class_1_cacrsf.jpg'
   )
 
 boxing = Action.create(
@@ -222,6 +232,7 @@ boxing = Action.create(
   price: 32,
   address: '215 Rue Jean-Talon Ouest, Montreal',
   photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598639538/photo-1549719386-74dfcbf7dbed_bbspkw.jpg'
+  background_image_url:'https://res.cloudinary.com/claidy/image/upload/v1598887780/bogdan-yukhymchuk-XmvuWRDimrg-unsplash_nls8va.jpg'
   )
 
 spa = Action.create(
@@ -238,6 +249,7 @@ spa = Action.create(
   price: 160,
   address: '1228 Sherbrooke St, Montreal',
   photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598632480/taylor-simpson-Z8s3PRQVuUk-unsplash_xuudos.jpg'
+  background_image_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598632480/taylor-simpson-Z8s3PRQVuUk-unsplash_xuudos.jpg'
   )
 
 plant_arrangement = Action.create(
@@ -253,7 +265,8 @@ plant_arrangement = Action.create(
   company_name: 'Plantzy',
   price: 40,
   address: '1457 Ottawa St, Montreal',
-  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598639334/mariah-hewines-C-C771OdQJc-unsplash_nzycdh.jpg'
+  photo_url: 'https://res.cloudinary.com/claidy/image/upload/v1598887913/ergita-sela-8lZB_vv9kEE-unsplash_ypmrqs.jpg'
+  background_image_url: 'https://res.cloudinary.com/claidy/image/upload/v1598887913/ergita-sela-8lZB_vv9kEE-unsplash_ypmrqs.jpg'
   )
 
 pilates = Action.create(
@@ -270,6 +283,7 @@ pilates = Action.create(
   price: 30,
   address: '768 Rue Rachel, Montreal',
   photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631895/pilates_j1wa6v.jpg'
+  background_image_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631895/pilates_j1wa6v.jpg'
   )
 
 # medium 4
