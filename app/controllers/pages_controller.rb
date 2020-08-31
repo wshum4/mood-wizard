@@ -13,12 +13,14 @@ class PagesController < ApplicationController
     # setting current user
     # @current_user_id = current_user.id
     # Redirects user to graph display
-    @prev_moods = current_user.moods.last(5)
+    @prev_moods = current_user.moods_before_activity.limit(5).reverse
+
     # Redirects user to past activities
     @past_mediums = UserAction.includes(:action)
     @past_mediums = @past_mediums.where(user_id: current_user.id, actions: { action_type: 'Medium' })
     @past_activities = UserAction.includes(:action)
-    @past_activities = @past_activities.where(user_id: current_user.id, actions: { action_type: 'Activity' })
+    @past_activities = @past_activities.where(user_id: current_user.id, actions: { action_type: 'Activity' }).last(5).reverse
+
     # Redirect user to past medium
     # @past_medium = current_user.actions.filter do |action|
     #   action.action_type == 'Medium'

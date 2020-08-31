@@ -1,7 +1,7 @@
 <div style="background-image: url(<%= asset_path('mood_selector.png') %>)" class="top-img" ></div>
 
 <div class="mood-selector">
-  <h2>How are you feeling today?</h2>
+  <h2>How are you feeling after?</h2>
   <%= simple_form_for @mood do |f| %>
     <%= f.input :sad_happy, label: "Sad vs Happy",
       as: :range, input_html: { max: 10 } %>
