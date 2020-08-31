@@ -6,9 +6,12 @@ class ActivitiesController < ApplicationController
     if params["location"].present?
       @activities = Action.near(params["location"], 20)
       @location = Geocoder.search(params["location"]).first.coordinates
-      @distances = {}
-      @activities.each { |a| @distances[a.id] = a.distance_to(@location).truncate(2) }
+    else
+      @location = Geocoder.search(current_user.address).first.coordinates
+      @activities = Action.near(current_user.address, 20)
     end
+    @distances = {}
+    @activities.each { |a| @distances[a.id] = a.distance_to(@location).truncate(2) }
 
     # for each action check based on mood comparison
     @activities = @activities.select { |activity| activity.mood_available?(current_user) }
