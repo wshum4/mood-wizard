@@ -1,7 +1,7 @@
 var Chart = require('chart.js');
 
 class DashboardChart {
-    constructor(options, type) {
+    constructor(options, type = "lineChart") {
         this.chartDomElement = document.getElementById('dashboardChart'),
         this.previousMoods = JSON.parse(this.chartDomElement.dataset.moods).map(mood => JSON.parse(mood)),
         this.ctx = this.chartDomElement.getContext('2d'),

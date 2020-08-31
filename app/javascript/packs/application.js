@@ -39,11 +39,9 @@ document.addEventListener('turbolinks:load', () => {
       scales: {
         xAxes: [{
           type: 'time',
-          distribution: 'linear'
         }],
         yAxes: [{
             ticks: {
-                stacked: true,
                 beginAtZero: true
             }
         }]
