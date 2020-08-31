@@ -329,70 +329,7 @@ headspace = Action.create(
   photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598637269/headspace_g0dzrn.jpg'
   )
 
-# mood
-mood1 = Mood.create(
-  sad_happy: 3,
-  angry_calm: 3,
-  lowenergy_highenergy: 9,
-  anxious_social: 6,
-  manual_created_at: DateTime.parse('2020-08-20 T 09:00'),
-  user: wince
-  )
-
-mood2 = Mood.create(
-  sad_happy: 4,
-  angry_calm: 2,
-  lowenergy_highenergy: 10,
-  anxious_social: 8,
-  manual_created_at: DateTime.parse('2020-08-21 T 09:00'),
-  user: wince
-  )
-
-mood3 = Mood.create(
-  sad_happy: 8,
-  angry_calm: 4,
-  lowenergy_highenergy: 8,
-  anxious_social: 4,
-  manual_created_at: DateTime.parse('2020-08-22 T 09:00'),
-  user: wince
-  )
-
-mood4 = Mood.create(
-  sad_happy: rand(0..10),
-  angry_calm: rand(0..10),
-  lowenergy_highenergy: rand(0..10),
-  anxious_social: rand(0..10),
-  manual_created_at: DateTime.parse('2020-08-23 T 13:00'),
-  user: wince
-  )
-
-mood5 = Mood.create(
-  sad_happy: 8,
-  angry_calm: 9,
-  lowenergy_highenergy: 7,
-  anxious_social: 6,
-  manual_created_at: DateTime.parse('2020-08-24 T 16:00'),
-  user: wince
-  )
-
-mood6 = Mood.create(
-  sad_happy: 6,
-  angry_calm: 7,
-  lowenergy_highenergy: 6,
-  anxious_social: 6,
-  manual_created_at: DateTime.parse('2020-08-25 T 10:00'),
-  user: wince
-  )
-
-mood7 = Mood.create(
-  sad_happy: rand(0..10),
-  angry_calm: rand(0..10),
-  lowenergy_highenergy: rand(0..10),
-  anxious_social: rand(0..10),
-  manual_created_at: DateTime.parse('2020-08-26 T 14:00'),
-  user: wince
-  )
-
+# user_actions
 user_action1 = UserAction.create(
   user: wince,
   action: axe,
@@ -431,7 +368,7 @@ user_action6 = UserAction.create(
 
 user_action7 = UserAction.create(
   user: wince,
-  action: meditation,
+  action: archery,
   created_at: DateTime.parse('2020-08-26 T 14:00')
   )
 
@@ -457,6 +394,140 @@ user_action11 = UserAction.create(
   user: wince,
   action: medium,
   created_at: DateTime.parse('2020-08-25 T 10:00')
+  )
+
+# mood
+mood1 = Mood.create(
+  sad_happy: 3,
+  angry_calm: 3,
+  lowenergy_highenergy: 9,
+  anxious_social: 6,
+  created_at: DateTime.parse('2020-08-20 T 09:00'),
+  user: wince
+  )
+
+mood2 = Mood.create(
+  sad_happy: 7,
+  angry_calm: 9,
+  lowenergy_highenergy: 7,
+  anxious_social: 6,
+  created_at: DateTime.parse('2020-08-20 T 23:00'),
+  user_action: user_action1,
+  user: wince
+  )
+
+mood3 = Mood.create(
+  sad_happy: 4,
+  angry_calm: 2,
+  lowenergy_highenergy: 10,
+  anxious_social: 8,
+  created_at: DateTime.parse('2020-08-21 T 09:00'),
+  user: wince
+  )
+
+mood4 = Mood.create(
+  sad_happy: 9,
+  angry_calm: 10,
+  lowenergy_highenergy: 7,
+  anxious_social: 8,
+  created_at: DateTime.parse('2020-08-21 T 23:00'),
+  user_action: user_action2,
+  user: wince
+  )
+
+mood5 = Mood.create(
+  sad_happy: 8,
+  angry_calm: 4,
+  lowenergy_highenergy: 8,
+  anxious_social: 4,
+  created_at: DateTime.parse('2020-08-22 T 09:00'),
+  user: wince
+  )
+
+mood6 = Mood.create(
+  sad_happy: 8,
+  angry_calm: 10,
+  lowenergy_highenergy: 5,
+  anxious_social: 3,
+  created_at: DateTime.parse('2020-08-22 T 23:00'),
+  user_action: user_action3,
+  user: wince
+  )
+
+mood7 = Mood.create(
+  sad_happy: 5,
+  angry_calm: 8,
+  lowenergy_highenergy: 5,
+  anxious_social: 5,
+  created_at: DateTime.parse('2020-08-23 T 13:00'),
+  user: wince
+  )
+
+mood8 = Mood.create(
+  sad_happy: 9,
+  angry_calm: 10,
+  lowenergy_highenergy: 8,
+  anxious_social: 5,
+  created_at: DateTime.parse('2020-08-23 T 23:00'),
+  user_action: user_action4,
+  user: wince
+  )
+
+mood9 = Mood.create(
+  sad_happy: 8,
+  angry_calm: 9,
+  lowenergy_highenergy: 7,
+  anxious_social: 6,
+  created_at: DateTime.parse('2020-08-24 T 16:00'),
+  user: wince
+  )
+
+mood10 = Mood.create(
+  sad_happy: 10,
+  angry_calm: 9,
+  lowenergy_highenergy: 8,
+  anxious_social: 9,
+  created_at: DateTime.parse('2020-08-24 T 23:00'),
+  user_action: user_action5,
+  user: wince
+  )
+
+mood11 = Mood.create(
+  sad_happy: 6,
+  angry_calm: 7,
+  lowenergy_highenergy: 6,
+  anxious_social: 6,
+  created_at: DateTime.parse('2020-08-25 T 10:00'),
+  user: wince
+  )
+
+mood12 = Mood.create(
+  sad_happy: 8,
+  angry_calm: 9,
+  lowenergy_highenergy: 8,
+  anxious_social: 8,
+  created_at: DateTime.parse('2020-08-25 T 23:00'),
+  user_action: user_action6,
+  user: wince
+  )
+
+mood13 = Mood.create(
+  sad_happy: 6,
+  angry_calm: 8,
+  lowenergy_highenergy: 6,
+  anxious_social: 5,
+  created_at: DateTime.parse('2020-08-26 T 14:00'),
+  user: wince
+  )
+
+mood14 = Mood.create(
+  sad_happy: 9,
+  angry_calm: 8,
+  lowenergy_highenergy: 6,
+  anxious_social: 8,
+  created_at: DateTime.parse('2020-08-26 T 23:00'),
+  user_action: user_action7,
+  user: wince
   )
 
 puts 'seed ended'

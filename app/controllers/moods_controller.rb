@@ -6,7 +6,7 @@ class MoodsController < ApplicationController
 
   def create
     @mood = Mood.new(mood_params)
-    @mood.manual_created_at = Time.now
+    @mood.created_at = Time.now
     @mood.user = current_user
     authorize(@mood)
     if @mood.save

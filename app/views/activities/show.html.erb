@@ -9,7 +9,7 @@
   <div class="info_activity">
     <p><strong>Company Name:</strong> <%= @activity.company_name %></p>
     <p><strong>Address:</strong> <%= @activity.address %></p>
-    <p><strong>Duration:</strong> <%= (@activity.duration) / 60 %> mins</p>
+    <p><strong>Duration:</strong> <%= (@activity.duration) / 3600 %> hour(s)</p>
     <p><strong>Time:</strong> <%= @activity.start_time.time.strftime("%I:%M %p") %></p>
     <%= button_to 'Book Now', user_actions_path, class: 'sign-in-front', params: { action_id: @activity.id } %>
     <br>
