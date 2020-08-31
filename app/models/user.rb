@@ -8,11 +8,7 @@ class User < ApplicationRecord
   has_many :actions, through: :user_actions
 
   def last_mood
-    moods.last
-  end
-
-  def second_last_mood
-    moods.second_to_last
+    moods.order(created_at: :asc).last
   end
 
   def moods_before_activity
