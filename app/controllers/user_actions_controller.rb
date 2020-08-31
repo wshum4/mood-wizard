@@ -5,7 +5,8 @@ class UserActionsController < ApplicationController
     authorize(@user_action)
 
     if @user_action.save
-      redirect_to root_path
+      flash[:notice] = "Your activity has been booked."
+      redirect_to new_activity_rating_path(params[:action_id])
     else
       flash[:alert] = "Something went wrong with booking!"
       redirect_to activity_path(params[:action_id])

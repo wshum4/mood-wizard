@@ -29,6 +29,7 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 import { initMapbox } from '../plugins/init_mapbox';
 import { DashboardChart } from "../plugins/init_chart";
+import { triggerNotifications } from '../plugins/notifications';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
@@ -48,6 +49,13 @@ document.addEventListener('turbolinks:load', () => {
       }
     }).render();
   }
+
+  // if (document.querySelector('#book-now')) {
+  //   document.querySelector('#book-now').addEventListener('click', () => {
+  //     triggerNotifications();
+  //   });
+  // }
+
   // initSelect2();
   initMapbox();
 });
