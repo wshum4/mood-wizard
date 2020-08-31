@@ -35,7 +35,15 @@ document.addEventListener('turbolinks:load', () => {
   // only load chart on the dashboard page
   if (window.location.pathname === '/') {
     // pass options into the chart to customize the style. Check docs at: https://www.chartjs.org/docs/latest/charts/polar.html
-    new DashboardChart({color: ['red', 'green', 'blue']}).render();
+    new DashboardChart({ 
+      scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+      }
+    }).render();
   }
   // initSelect2();
   initMapbox();

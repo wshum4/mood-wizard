@@ -11,11 +11,12 @@ class DashboardChart {
     render() {
         var chart = new Chart(this.ctx, {
             type: 'polarArea',
+            options: this.options, // options is defined in application.js when you create a new instance of the chart
             data: {
                 labels: ['Sadness', 'Happiness', 'Anger', 'Calmness', 'Low Energy', 'High Energy'],
                 datasets: [{
                     label: 'Moods',
-                    data: this.previousMoods.map(mood => mood.sad_happy),
+                    data: this.previousMoods.map(mood => mood.sad_happy), // select one dimension of mood to plot on graph
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',
@@ -35,15 +36,6 @@ class DashboardChart {
                     borderWidth: 1
                 }]
             },
-            options: {
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }]
-                }
-            }
         });
         console.table(chart);
     }
