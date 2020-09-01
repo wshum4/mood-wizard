@@ -197,8 +197,8 @@ yoga = Action.create(
   company_name: 'Happy Tree Yoga',
   price: 35,
   address: '4812 St Laurent Blvd, Montreal',
-  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/yoga1_xhkpza.jpg',
-  background_image_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/yoga1_xhkpza.jpg'
+  photo_url: 'https://res.cloudinary.com/claidy/image/upload/v1598995210/yannic-laderach-Dqx4XWuXu7w-unsplash_brdr9h.jpg',
+  background_image_url: 'https://res.cloudinary.com/claidy/image/upload/v1598995210/yannic-laderach-Dqx4XWuXu7w-unsplash_brdr9h.jpg'
   )
 
 cooking_class = Action.create(
