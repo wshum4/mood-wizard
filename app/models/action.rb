@@ -1,5 +1,6 @@
 class Action < ApplicationRecord
   has_many :ratings
+  has_many :user_actions
   geocoded_by :address
 
   validates :action_type, acceptance: { accept: ['Activity', 'Medium'] }
@@ -19,7 +20,7 @@ class Action < ApplicationRecord
     user_start_seconds = user_start_time.utc.seconds_since_midnight
     user_end_seconds = user_end_time.utc.seconds_since_midnight
     user_end_seconds += 86400 if user_end_seconds < user_start_seconds
-    
+
     user_start_seconds <= end_seconds && user_end_seconds >= start_seconds
   end
 

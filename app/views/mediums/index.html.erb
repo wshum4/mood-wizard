@@ -4,10 +4,11 @@
 
   <h1>All Medium</h1>
 
+
   <div class='mediums-info'>
     <% @mediums.each do |medium| %>
       <%= link_to "https://#{medium.url}", target: "_blank" do %>
-        <div class='card-mw'>
+        <div class='card-mw' id="medium-<%= medium.id %>">
           <img class='prev-med' src=<%= medium.photo_url %>>
           <div class='cardinfos'>
             <h2 class='prev-action-med'><%= medium.name %></h2>
@@ -15,5 +16,51 @@
         </div>
       <% end %>
     <% end %>
+  </div>
+</div>
+
+<!-- Button trigger modal -->
+<button type="button" class="#" data-toggle="modal" data-target="#booking-reminder"></button>
+
+<!-- Modal Booking Confirmation -->
+<div class="modal fade" id="booking-reminder" tabindex="-1" role="dialog" aria-labelledby="booking-reminder" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Activity Reminder</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Your booked <%= @activity.name %> starts in 30 minutes with <%= @activity.company_name %>!
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="reminder-modal-close-btn" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button trigger modal -->
+<button type="button" class="#" data-toggle="modal" data-target="#rating-reminder"></button>
+
+<!-- Modal Booking rating -->
+<div class="modal fade" id="rating-reminder" tabindex="-1" role="dialog" aria-labelledby="rating-reminder" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Activity done!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        How are you feeling after <%= @activity.name %> with <%= @activity.company_name %>? Rate the activity and how you are feeling now!
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="rating-modal-close-btn" class="btn btn-secondary" data-dismiss="modal">Rate Now</button>
+      </div>
+    </div>
   </div>
 </div>

@@ -290,7 +290,7 @@ pilates = Action.create(
 spotify = Action.create(
   name: 'Spotify',
   action_type: 'Medium',
-  url: 'www.spotify.com',
+  url: 'open.spotify.com/playlist/37i9dQZF1DX3rxVfibe1L0',
   duration: 3.hour,
   sad_happy: [0, 10],
   angry_calm: [0, 10],
