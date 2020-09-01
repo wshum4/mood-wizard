@@ -25,9 +25,11 @@ class PagesController < ApplicationController
     # @past_medium = current_user.actions.filter do |action|
     #   action.action_type == 'Medium'
     # end
-    @average_sadness_happiness = Mood.average_happiness(current_user)
-    @average_angryness_calmness = Mood.average_calmness(current_user)
-    @average_lowenergy_highenergy = Mood.average_highenergy(current_user)
-    @average_anxiousness_socialness = Mood.average_socialness(current_user)
+    @averages = [
+      Mood.average_happiness(current_user),
+      Mood.average_calmness(current_user),
+      Mood.average_highenergy(current_user),
+      Mood.average_socialness(current_user)
+    ]
   end
 end

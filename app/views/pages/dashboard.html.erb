@@ -19,17 +19,22 @@
       <h2>Previous Moods</h2>
       <!-- Chart JS -->
       <h4>Previous Moods The Past Week</h4>
-      <canvas id="dashboardChart" width="400" height="400" data-moods="<%= @prev_moods.map(&:to_json) %>"></canvas>
-      <% @prev_moods.each do |mood| %>
-      <div class='card-mw'>
-        <div class='cardinfos'>
-          <h2 class='prev-action'><%= mood.created_at.time.strftime("%d %B %Y") %></h3>
-          <p>Sad | Happy: <%= mood.sad_happy %></p>
-          <p>Angry | Calm: <%= mood.angry_calm %></p>
-          <p>Low energy | High energy: <%= mood.lowenergy_highenergy %></p>
-          <p>Anxious | Social: <%= mood.anxious_social %></p>
-        </div>
+      <canvas id="dashboardChart" width="400" height="400" data-averages="<%= @averages.map(&:to_json) %>" data-moods="<%= @prev_moods.map(&:to_json) %>"></canvas>
+      <div class="d-flex justify-content-center mt-1">
+        <button id="line-btn" class="btn btn-outline-secondary" checked>Historical Moods</button>
+        <button id="polar-btn" class="btn btn-outline-secondary">Average Moods</button>
       </div>
+      
+      <% @prev_moods.each do |mood| %>
+        <div class='card-mw'>
+          <div class='cardinfos'>
+            <h2 class='prev-action'><%= mood.created_at.time.strftime("%d %B %Y") %></h3>
+            <p>Sad | Happy: <%= mood.sad_happy %></p>
+            <p>Angry | Calm: <%= mood.angry_calm %></p>
+            <p>Low energy | High energy: <%= mood.lowenergy_highenergy %></p>
+            <p>Anxious | Social: <%= mood.anxious_social %></p>
+          </div>
+        </div>
       <% end %>
     </div>
 

@@ -37,18 +37,43 @@ document.addEventListener('turbolinks:load', () => {
   // only load chart on the dashboard page
   if (window.location.pathname === '/') {
     // pass options into the chart to customize the style. Check docs at: https://www.chartjs.org/docs/latest/charts/polar.html
-    new DashboardChart({
+
+    const lineButton = document.getElementById('line-btn');
+    const polarButton = document.getElementById('polar-btn');
+
+    const lineChart = new DashboardChart({ 
       scales: {
         xAxes: [{
-          type: 'time'
+          type: 'time',
+          time: {
+            minUnit: 'day'
+          }
         }],
         yAxes: [{
-            ticks: {
-                beginAtZero: true
-            }
+          ticks: {
+            beginAtZero: true
+          }
         }]
       }
-    }).render();
+    }, "historical");
+
+    const polarChart = new DashboardChart({
+      scale: {
+        ticks: {
+          beginAtZero: true,
+          max: 10
+        }
+      }
+    }, "average");
+
+    lineButton.addEventListener('click', () => {
+      lineChart.render();
+    });
+    polarButton.addEventListener('click', () => {
+      polarChart.render();
+    });
+    
+    lineChart.render();
   }
 
   // if (document.querySelector('#book-now')) {
