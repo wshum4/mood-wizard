@@ -6,7 +6,11 @@ class UserActionsController < ApplicationController
 
     if @user_action.save
       flash[:notice] = "Your activity has been booked."
-      redirect_to new_activity_rating_path(params[:action_id])
+      if request.headers['HTTP_HOST'] == "localhost:3000"
+        redirect_to('http://localhost:3000/#prev-mediums/')
+      else
+        redirect_to('https://mood-wizard.herokuapp.com/#prev-mediums')
+      end
     else
       flash[:alert] = "Something went wrong with booking!"
       redirect_to activity_path(params[:action_id])

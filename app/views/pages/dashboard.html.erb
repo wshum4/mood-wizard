@@ -41,7 +41,7 @@
     <div class="tab-pane fade" id="prev-activities" role="tabpanel" aria-labelledby="prev-activities-tab">
       <h2>Previous Activities</h2>
       <% @past_activities.each do |activity| %>
-        <%= link_to activity_path(activity) do %>
+        <%= link_to activity_path(activity.action) do %>
           <div class='card-mw'>
             <img class='prev-act' src=<%= activity.action.photo_url %>>
             <div class='cardinfos'>
@@ -49,35 +49,35 @@
               <p>Date: <%= activity.created_at.time.strftime("%d %B %Y") %></p>
                 <% if activity.mood_before && activity.mood_after %>
                   <% if activity.mood_after.sad_happy > activity.mood_before.sad_happy%>
-                    <i class="fas fa-arrow-up"></i>
+                    <i class="far fa-laugh"></i> <i class="fas fa-arrow-up"></i>
                   <% elsif activity.mood_after.sad_happy == activity.mood_before.sad_happy %>
-                    <i class="fas fa-horizontal-rule"></i>
+                    <i class="far fa-meh"></i> <i class="fas fa-window-minimize"></i>
                   <% elsif activity.mood_after.sad_happy < activity.mood_before.sad_happy %>
-                    <i class="fas fa-arrow-down"></i>
+                    <i class="far fa-sad-tear"></i> <i class="fas fa-arrow-down"></i>
                   <% end %>
 
                   <% if activity.mood_after.angry_calm > activity.mood_before.angry_calm %>
-                    <i class="fas fa-arrow-up"></i>
+                    <i class="far fa-smile"></i> <i class="fas fa-arrow-up"></i>
                   <% elsif activity.mood_after.angry_calm == activity.mood_before.angry_calm %>
-                    <i class="fas fa-horizontal-rule"></i>
+                    <i class="far fa-meh"></i> <i class="fas fa-window-minimize"></i>
                   <% elsif activity.mood_after.angry_calm < activity.mood_before.angry_calm  %>
-                    <i class="fas fa-arrow-down"></i>
+                    <i class="far fa-angry"></i> <i class="fas fa-arrow-down"></i>
                   <% end %>
 
                   <% if activity.mood_after.lowenergy_highenergy > activity.mood_before.lowenergy_highenergy %>
-                    <i class="fas fa-arrow-up"></i>
+                    <i class="fas fa-battery-full"></i> <i class="fas fa-arrow-up"></i>
                   <% elsif activity.mood_after.lowenergy_highenergy == activity.mood_before.lowenergy_highenergy %>
-                    <i class="fas fa-horizontal-rule"></i>
+                    <i class="fas fa-battery-half"></i> <i class="fas fa-window-minimize"></i>
                   <% elsif activity.mood_after.lowenergy_highenergy < activity.mood_before.lowenergy_highenergy %>
-                    <i class="fas fa-arrow-down"></i>
+                    <i class="fas fa-battery-empty"></i> <i class="fas fa-arrow-down"></i>
                   <% end %>
 
                   <% if activity.mood_after.anxious_social > activity.mood_before.anxious_social %>
-                    <i class="fas fa-arrow-up"></i>
+                    <i class="fas fa-users"></i> <i class="fas fa-arrow-up"></i>
                   <% elsif activity.mood_after.anxious_social == activity.mood_before.anxious_social %>
-                    <i class="fas fa-horizontal-rule"></i>
+                    <i class="fas fa-people-arrows"></i> <i class="fas fa-window-minimize"></i>
                   <% elsif activity.mood_after.anxious_social < activity.mood_before.anxious_social %>
-                    <i class="fas fa-arrow-down"></i>
+                    <i class="fas fa-user"></i> <i class="fas fa-arrow-down"></i>
                   <% end %>
                 <% end %>
             </div>

@@ -347,67 +347,67 @@ headspace = Action.create(
 user_action1 = UserAction.create(
   user: wince,
   action: axe,
-  created_at: DateTime.parse('2020-08-20 T 09:00')
+  created_at: DateTime.parse('2020-08-26 T 09:00')
   )
 
 user_action2 = UserAction.create(
   user: wince,
   action: boxing,
-  created_at: DateTime.parse('2020-08-21 T 09:00')
+  created_at: DateTime.parse('2020-08-27 T 09:00')
   )
 
 user_action3 = UserAction.create(
   user: wince,
   action: axe,
-  created_at: DateTime.parse('2020-08-22 T 09:00')
+  created_at: DateTime.parse('2020-08-28 T 09:00')
   )
 
 user_action4 = UserAction.create(
   user: wince,
   action: yoga,
-  created_at: DateTime.parse('2020-08-23 T 13:00')
+  created_at: DateTime.parse('2020-08-29 T 13:00')
   )
 
 user_action5 = UserAction.create(
   user: wince,
   action: archery,
-  created_at: DateTime.parse('2020-08-24 T 16:00')
+  created_at: DateTime.parse('2020-08-30 T 16:00')
 )
 
 user_action6 = UserAction.create(
   user: wince,
   action: plant_arrangement,
-  created_at: DateTime.parse('2020-08-25 T 10:00')
+  created_at: DateTime.parse('2020-08-31 T 10:00')
   )
 
 user_action7 = UserAction.create(
   user: wince,
   action: archery,
-  created_at: DateTime.parse('2020-08-26 T 14:00')
+  created_at: DateTime.parse('2020-09-01 T 14:00')
   )
 
 user_action8 = UserAction.create(
   user: wince,
   action: netflix,
-  created_at: DateTime.parse('2020-08-25 T 10:00')
+  created_at: DateTime.parse('2020-09-01 T 10:00')
   )
 
 user_action9 = UserAction.create(
   user: wince,
   action: spotify,
-  created_at: DateTime.parse('2020-08-25 T 10:00')
+  created_at: DateTime.parse('2020-09-01 T 10:00')
   )
 
 user_action10 = UserAction.create(
   user: wince,
   action: headspace,
-  created_at: DateTime.parse('2020-08-25 T 10:00')
+  created_at: DateTime.parse('2020-09-01 T 10:00')
   )
 
 user_action11 = UserAction.create(
   user: wince,
   action: medium,
-  created_at: DateTime.parse('2020-08-25 T 10:00')
+  created_at: DateTime.parse('2020-09-01 T 10:00')
   )
 
 # mood
@@ -416,7 +416,7 @@ mood1 = Mood.create(
   angry_calm: 3,
   lowenergy_highenergy: 9,
   anxious_social: 6,
-  created_at: DateTime.parse('2020-08-20 T 09:00'),
+  created_at: DateTime.parse('2020-08-26 T 09:00'),
   user: wince
   )
 
@@ -425,7 +425,7 @@ mood2 = Mood.create(
   angry_calm: 9,
   lowenergy_highenergy: 7,
   anxious_social: 6,
-  created_at: DateTime.parse('2020-08-20 T 23:00'),
+  created_at: DateTime.parse('2020-08-26 T 23:00'),
   user_action: user_action1,
   user: wince
   )
@@ -435,7 +435,7 @@ mood3 = Mood.create(
   angry_calm: 2,
   lowenergy_highenergy: 10,
   anxious_social: 8,
-  created_at: DateTime.parse('2020-08-21 T 09:00'),
+  created_at: DateTime.parse('2020-08-27 T 09:00'),
   user: wince
   )
 
@@ -444,7 +444,7 @@ mood4 = Mood.create(
   angry_calm: 10,
   lowenergy_highenergy: 7,
   anxious_social: 8,
-  created_at: DateTime.parse('2020-08-21 T 23:00'),
+  created_at: DateTime.parse('2020-08-27 T 23:00'),
   user_action: user_action2,
   user: wince
   )
@@ -454,7 +454,7 @@ mood5 = Mood.create(
   angry_calm: 4,
   lowenergy_highenergy: 8,
   anxious_social: 4,
-  created_at: DateTime.parse('2020-08-22 T 09:00'),
+  created_at: DateTime.parse('2020-08-28 T 09:00'),
   user: wince
   )
 
@@ -463,7 +463,7 @@ mood6 = Mood.create(
   angry_calm: 10,
   lowenergy_highenergy: 5,
   anxious_social: 3,
-  created_at: DateTime.parse('2020-08-22 T 23:00'),
+  created_at: DateTime.parse('2020-08-28 T 23:00'),
   user_action: user_action3,
   user: wince
   )
@@ -473,7 +473,7 @@ mood7 = Mood.create(
   angry_calm: 8,
   lowenergy_highenergy: 5,
   anxious_social: 5,
-  created_at: DateTime.parse('2020-08-23 T 13:00'),
+  created_at: DateTime.parse('2020-08-29 T 13:00'),
   user: wince
   )
 
@@ -482,7 +482,7 @@ mood8 = Mood.create(
   angry_calm: 10,
   lowenergy_highenergy: 8,
   anxious_social: 5,
-  created_at: DateTime.parse('2020-08-23 T 23:00'),
+  created_at: DateTime.parse('2020-08-29 T 23:00'),
   user_action: user_action4,
   user: wince
   )
@@ -492,7 +492,7 @@ mood9 = Mood.create(
   angry_calm: 9,
   lowenergy_highenergy: 7,
   anxious_social: 6,
-  created_at: DateTime.parse('2020-08-24 T 16:00'),
+  created_at: DateTime.parse('2020-08-30 T 16:00'),
   user: wince
   )
 
@@ -501,7 +501,7 @@ mood10 = Mood.create(
   angry_calm: 9,
   lowenergy_highenergy: 8,
   anxious_social: 9,
-  created_at: DateTime.parse('2020-08-24 T 23:00'),
+  created_at: DateTime.parse('2020-08-30 T 23:00'),
   user_action: user_action5,
   user: wince
   )
@@ -511,7 +511,7 @@ mood11 = Mood.create(
   angry_calm: 7,
   lowenergy_highenergy: 6,
   anxious_social: 6,
-  created_at: DateTime.parse('2020-08-25 T 10:00'),
+  created_at: DateTime.parse('2020-08-31 T 10:00'),
   user: wince
   )
 
@@ -520,7 +520,7 @@ mood12 = Mood.create(
   angry_calm: 9,
   lowenergy_highenergy: 8,
   anxious_social: 8,
-  created_at: DateTime.parse('2020-08-25 T 23:00'),
+  created_at: DateTime.parse('2020-08-31 T 23:00'),
   user_action: user_action6,
   user: wince
   )
@@ -530,7 +530,7 @@ mood13 = Mood.create(
   angry_calm: 8,
   lowenergy_highenergy: 6,
   anxious_social: 5,
-  created_at: DateTime.parse('2020-08-26 T 14:00'),
+  created_at: DateTime.parse('2020-09-01 T 14:00'),
   user: wince
   )
 
@@ -539,9 +539,59 @@ mood14 = Mood.create(
   angry_calm: 8,
   lowenergy_highenergy: 6,
   anxious_social: 8,
-  created_at: DateTime.parse('2020-08-26 T 23:00'),
+  created_at: DateTime.parse('2020-09-01 T 23:00'),
   user_action: user_action7,
   user: wince
   )
+
+# ratings
+# rating1 = Rating.create(
+#   user: wince,
+#   user_action: user_action1,
+#   rating: 5,
+#   comment: 'Good, feel more relaxed now!'
+#   )
+
+# rating2 = Rating.create(
+#   user: wince,
+#   user_action: user_action2,
+#   rating: 4,
+#   comment: 'So great to sweat it out, I feel better!'
+#   )
+
+# rating3 = Rating.create(
+#   user: wince,
+#   user_action: user_action3,
+#   rating: 4,
+#   comment: 'Amazing!'
+#   )
+
+# rating4 = Rating.create(
+#   user: wince,
+#   user_action: user_action4,
+#   rating: 5,
+#   comment: 'Good, feel more relaxed now!'
+#   )
+
+# rating5 = Rating.create(
+#   user: wince,
+#   user_action: user_action5,
+#   rating: 3,
+#   comment: 'Great!'
+#   )
+
+# rating6 = Rating.create(
+#   user: wince,
+#   user_action: user_action6,
+#   rating: 5,
+#   comment: 'First time doing this. I would probably doing it again!'
+#   )
+
+# rating7 = Rating.create(
+#   user: wince,
+#   user_action: user_action7,
+#   rating: 5,
+#   comment: 'Good!'
+#   )
 
 puts 'seed ended'
