@@ -545,53 +545,53 @@ mood14 = Mood.create(
   )
 
 # ratings
-rating1 = Rating.create(
-  user: wince,
-  user_action: user_action1,
-  rating: 5,
-  comment: 'Good, feel more relaxed now!'
-  )
+# rating1 = Rating.create(
+#   user: wince,
+#   user_action: user_action1,
+#   rating: 5,
+#   comment: 'Good, feel more relaxed now!'
+#   )
 
-rating2 = Rating.create(
-  user: wince,
-  user_action: user_action2,
-  rating: 4,
-  comment: 'So great to sweat it out, I feel better!'
-  )
+# rating2 = Rating.create(
+#   user: wince,
+#   user_action: user_action2,
+#   rating: 4,
+#   comment: 'So great to sweat it out, I feel better!'
+#   )
 
-rating3 = Rating.create(
-  user: wince,
-  user_action: user_action3,
-  rating: 4,
-  comment: 'Amazing!'
-  )
+# rating3 = Rating.create(
+#   user: wince,
+#   user_action: user_action3,
+#   rating: 4,
+#   comment: 'Amazing!'
+#   )
 
-rating4 = Rating.create(
-  user: wince,
-  user_action: user_action4,
-  rating: 5,
-  comment: 'Good, feel more relaxed now!'
-  )
+# rating4 = Rating.create(
+#   user: wince,
+#   user_action: user_action4,
+#   rating: 5,
+#   comment: 'Good, feel more relaxed now!'
+#   )
 
-rating5 = Rating.create(
-  user: wince,
-  user_action: user_action5,
-  rating: 3,
-  comment: 'Great!'
-  )
+# rating5 = Rating.create(
+#   user: wince,
+#   user_action: user_action5,
+#   rating: 3,
+#   comment: 'Great!'
+#   )
 
-rating6 = Rating.create(
-  user: wince,
-  user_action: user_action6,
-  rating: 5,
-  comment: 'First time doing this. I would probably doing it again!'
-  )
+# rating6 = Rating.create(
+#   user: wince,
+#   user_action: user_action6,
+#   rating: 5,
+#   comment: 'First time doing this. I would probably doing it again!'
+#   )
 
-rating7 = Rating.create(
-  user: wince,
-  user_action: user_action7,
-  rating: 5,
-  comment: 'Good!'
-  )
+# rating7 = Rating.create(
+#   user: wince,
+#   user_action: user_action7,
+#   rating: 5,
+#   comment: 'Good!'
+#   )
 
 puts 'seed ended'
