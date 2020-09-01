@@ -5,6 +5,20 @@
     text-align: center;
    }
 }
+
+.dashboard-container {
+  padding: 1rem;
+  padding-bottom: 76px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
 .big_container{
   display: flex;
   width: 148px;
@@ -19,4 +33,3 @@
   display: grid;
   place-content: center center;
 }
-
