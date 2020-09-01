@@ -20,7 +20,7 @@
       <!-- Chart JS -->
       <h4>Previous Moods The Past Week</h4>
       <canvas id="dashboardChart" width="400" height="400" data-averages="<%= @averages.map(&:to_json) %>" data-moods="<%= @prev_moods.map(&:to_json) %>"></canvas>
-      <div class="d-flex justify-content-center btn-group btn-group-sm mt-1">
+      <div class="d-flex justify-content-center mt-1">
         <button id="line-btn" class="btn btn-outline-secondary" checked>Historical Moods</button>
         <button id="polar-btn" class="btn btn-outline-secondary">Average Moods</button>
       </div>

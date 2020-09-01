@@ -60,16 +60,24 @@ class DashboardChart {
                         label: 'Sad | Happy',
                         data: this.averageMoods.flatMap(dim => Object.values(dim)), // select one dimension of mood to plot on graph
                         backgroundColor: [
-                            'rgba(255, 206, 86, 0.1)',
-                            'rgba(75, 192, 192, 0.1)',
-                            'rgba(54, 162, 235, 0.1)',
-                            'rgba(255, 99, 132, 0.1)'
+                            'rgba(127, 255, 212, 0.1)',
+                            'rgba(138, 43, 226, 0.1)',
+                            'rgba(128, 128, 128, 0.1)',
+                            'rgba(220, 20, 60, 0.1)',
+                            'rgba(143, 188, 143, 0.1)',
+                            'rgba(255, 140, 0, 0.1)',
+                            'rgba(233, 150, 122, 0.1)',
+                            'rgba(0, 255, 255, 0.1)'
                         ],
                         borderColor: [
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 99, 132, 1)',
+                            'rgba(127, 255, 212, 1)',
+                            'rgba(138, 43, 226, 1)',
+                            'rgba(128, 128, 128, 1)',
+                            'rgba(220, 20, 60, 1)',
+                            'rgba(143, 188, 143, 1)',
+                            'rgba(255, 140, 0, 1)',
+                            'rgba(233, 150, 122, 1)',
+                            'rgba(0, 255, 255, 1)'
                         ],
                         borderWidth: 1
                     }]
