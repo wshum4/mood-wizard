@@ -1,5 +1,6 @@
 class Action < ApplicationRecord
   has_many :ratings
+  has_many :user_actions
   geocoded_by :address
 
   validates :action_type, acceptance: { accept: ['Activity', 'Medium'] }

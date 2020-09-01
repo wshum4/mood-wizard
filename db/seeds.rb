@@ -197,8 +197,8 @@ yoga = Action.create(
   company_name: 'Happy Tree Yoga',
   price: 35,
   address: '4812 St Laurent Blvd, Montreal',
-  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/yoga1_xhkpza.jpg',
-  background_image_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/yoga1_xhkpza.jpg'
+  photo_url: 'https://res.cloudinary.com/claidy/image/upload/v1598995210/yannic-laderach-Dqx4XWuXu7w-unsplash_brdr9h.jpg',
+  background_image_url: 'https://res.cloudinary.com/claidy/image/upload/v1598995210/yannic-laderach-Dqx4XWuXu7w-unsplash_brdr9h.jpg'
   )
 
 cooking_class = Action.create(
@@ -290,7 +290,7 @@ pilates = Action.create(
 spotify = Action.create(
   name: 'Spotify',
   action_type: 'Medium',
-  url: 'www.spotify.com',
+  url: 'open.spotify.com/playlist/37i9dQZF1DX3rxVfibe1L0',
   duration: 3.hour,
   sad_happy: [0, 10],
   angry_calm: [0, 10],
