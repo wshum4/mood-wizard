@@ -29,7 +29,7 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 import { initMapbox } from '../plugins/init_mapbox';
 import { DashboardChart } from "../plugins/init_chart";
-import { triggerNotifications } from '../plugins/notifications';
+import { triggerConfirmation, triggerReminder, triggerRating, ratingRedirect } from '../plugins/notifications';
 import { tabBar } from '../plugins/tab_bar';
 
 document.addEventListener('turbolinks:load', () => {
@@ -41,7 +41,7 @@ document.addEventListener('turbolinks:load', () => {
     const lineButton = document.getElementById('line-btn');
     const polarButton = document.getElementById('polar-btn');
 
-    const lineChart = new DashboardChart({ 
+    const lineChart = new DashboardChart({
       scales: {
         xAxes: [{
           type: 'time',
@@ -72,7 +72,7 @@ document.addEventListener('turbolinks:load', () => {
     polarButton.addEventListener('click', () => {
       polarChart.render();
     });
-    
+
     lineChart.render();
   }
 
@@ -89,5 +89,8 @@ document.addEventListener('turbolinks:load', () => {
   }
 
   tabBar();
+  triggerReminder();
+  triggerRating();
+  ratingRedirect();
 });
 
