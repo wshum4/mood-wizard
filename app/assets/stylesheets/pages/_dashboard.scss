@@ -1,7 +1,35 @@
 .tab-move {
   padding-top: 84px;
-   h2{
+   .title{
     margin-top: 20px;
     text-align: center;
    }
+}
+
+.dashboard-container {
+  padding: 1rem;
+  padding-bottom: 76px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+.big_container{
+  display: flex;
+  width: 148px;
+  justify-content: space-between;
+  & > div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.cardinfos {
+  padding: 12px;
+  display: grid;
+  place-content: center center;
 }

@@ -1,14 +1,33 @@
-<%= simple_form_for [@activity, @rating], url: activity_ratings_path do |f| %>
-  <div class="mood-selector">
-    <h2>How are you feeling after the <%= @activity.name %>?</h2>
-    <%= range_field_tag('mood[sad_happy]', 5, { max: 10 }) %>
-    <%= range_field_tag('mood[angry_calm]', 5, { max: 10 }) %>
-    <%= range_field_tag('mood[lowenergy_highenergy]', 5, { max: 10 }) %>
-    <%= range_field_tag('mood[anxious_social]', 5, { max: 10 }) %>
-  </div>
+<div class="info_header curved_background" style="background-image: url(<%= @activity.photo_url %>); background-repeat: no-repeat; background-position: center; background-size: cover;">
+  <h2 class="msg">How are you feeling after <%= @activity.name %>?</h2>
+</div>
 
-  <%= f.input :rating, collection: 0..5 %>
-  <%= f.input :comment %>
-  <%= f.submit %>
-<% end %>
+<div class="ratings-container">
+  <%= simple_form_for [@activity, @rating], url: activity_ratings_path do |f| %>
+    <p class="rating-prompt">Did you complete your activity yet?<br>If so, please tell us how you feel.</p>
+    <div class="rating-mood-selector">
+      <div class="form-group range">
+        <label for="mood_sad_happy">Sad vs Happy</label>
+        <%= range_field_tag('mood[sad_happy]', 5, { max: 10, class: "numeric range form-control-range" }) %>
+      </div>
+      <div class="form-group range">
+        <label for="mood_angry_calm">Angry vs Calm</label>
+        <%= range_field_tag('mood[angry_calm]', 5, { max: 10, class: "numeric range form-control-range" }) %>
+      </div>
+      <div class="form-group range">
+        <label for="mood_lowenergy_highenergy">Low vs High Energy</label>
+        <%= range_field_tag('mood[lowenergy_highenergy]', 5, { max: 10, class: "numeric range form-control-range" }) %>
+      </div>
+      <div class="form-group range">
+        <label for="mood_anxious_social">Anxious vs Social</label>
+        <%= range_field_tag('mood[anxious_social]', 5, { max: 10, class: "numeric range form-control-range" }) %>
+      </div>
+    </div>
 
+    <%= f.input :rating, collection: 0..5 %>
+    <%= f.input :comment %>
+    <div class="d-flex justify-content-center">
+      <%= f.submit class: "sign-in-front" %>
+    </div>
+  <% end %>
+</div>
