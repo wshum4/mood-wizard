@@ -6,12 +6,14 @@
 
   <div class='mediums-info'>
     <% @mediums.each do |medium| %>
-      <div class='card-mw'>
-        <img class='prev-med' src=<%= medium.photo_url %>>
-        <div class='cardinfos'>
-          <h2 class='prev-action-med'><%= medium.name %></h2>
+      <%= link_to "https://#{medium.url}", target: "_blank" do %>
+        <div class='card-mw'>
+          <img class='prev-med' src=<%= medium.photo_url %>>
+          <div class='cardinfos'>
+            <h2 class='prev-action-med'><%= medium.name %></h2>
+          </div>
         </div>
-      </div>
+      <% end %>
     <% end %>
   </div>
 </div>

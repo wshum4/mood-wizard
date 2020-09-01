@@ -13,10 +13,10 @@ end
 
 puts 'seed started'
 
+Mood.destroy_all
 Rating.destroy_all
 UserAction.destroy_all
 Action.destroy_all
-Mood.destroy_all
 User.destroy_all
 
 ActiveRecord::Base.connection.tables.each do |t|
@@ -45,7 +45,7 @@ axe = Action.create(
   price: 33,
   address: '1436 R. Atateken, Montreal',
   photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598639290/axe_throwing_lrxmti.jpg',
-  background_image_url: 'https://res.cloudinary.com/claidy/image/upload/v1598643801/axe_figma_tbmhbz.png'
+  background_image_url: 'https://res.cloudinary.com/claidy/image/upload/v1598888067/jason-abdilla-jZWmw6007EY-unsplash_sqouci.jpg'
   )
 
 bowling = Action.create(
@@ -61,7 +61,8 @@ bowling = Action.create(
   company_name: 'Bowling G Plus',
   price: 15,
   address: '920 Rue Saint-Zotique, Montreal',
-  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631894/bowling_nxtlcx.jpg'
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631894/bowling_nxtlcx.jpg',
+  background_image_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631894/bowling_nxtlcx.jpg'
   )
 
 archery = Action.create(
@@ -77,7 +78,8 @@ archery = Action.create(
   company_name: 'Combat Archery',
   price: 38,
   address: '3955 Rue de Rouen, Montreal',
-  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598639290/archery_ch5qdf.jpg'
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598639290/archery_ch5qdf.jpg',
+  background_image_url: 'https://res.cloudinary.com/claidy/image/upload/v1598887379/annie-spratt-jY9mXvA15W0-unsplash_ywsg7y.jpg'
   )
 
 pottery = Action.create(
@@ -93,7 +95,8 @@ pottery = Action.create(
   company_name: 'Céramic Café Studio Montréal',
   price: 45,
   address: '4338 St Denis St, Montreal',
-  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/pottery_hnguky.jpg'
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/pottery_hnguky.jpg',
+  background_image_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/pottery_hnguky.jpg'
   )
 
 horseback_riding = Action.create(
@@ -109,7 +112,8 @@ horseback_riding = Action.create(
   company_name: 'Cavalli Equestrian Center',
   price: 120,
   address: '4900 Chemin Bellerive, Carignan',
-  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/hoerse_backriding1_zdct5e.jpg'
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/hoerse_backriding1_zdct5e.jpg',
+  background_image_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/hoerse_backriding1_zdct5e.jpg'
   )
 
 comedy_show = Action.create(
@@ -125,7 +129,8 @@ comedy_show = Action.create(
   company_name: 'Le Bordel Comedie Club',
   price: 30,
   address: '312 Ontario St, Montreal',
-  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631895/comedy1_tqkwcr.jpg'
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631895/comedy1_tqkwcr.jpg',
+  background_image_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631895/comedy1_tqkwcr.jpg'
   )
 
 golf = Action.create(
@@ -141,7 +146,8 @@ golf = Action.create(
   company_name: 'Municipal Golf',
   price: 45,
   address: '4235 Viau St, Montreal',
-  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/golf_xwfpfn.jpg'
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/golf_xwfpfn.jpg',
+  background_image_url:'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/golf_xwfpfn.jpg'
   )
 
 paint_class = Action.create(
@@ -157,7 +163,8 @@ paint_class = Action.create(
   company_name: 'Zoya Art Studio',
   price: 40,
   address: '1844 William St, Montreal',
-  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631894/painting1_cxr6uw.jpg'
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631894/painting1_cxr6uw.jpg',
+  background_image_url:'https://res.cloudinary.com/demifo4s4/image/upload/v1598631894/painting1_cxr6uw.jpg'
   )
 
 meditation = Action.create(
@@ -173,7 +180,8 @@ meditation = Action.create(
   company_name: 'Tadaima Meditation',
   price: 38,
   address: '1800 Avenue McGill College, Montreal',
-  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/yoga_yhx4gb.jpg'
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/yoga_yhx4gb.jpg',
+  background_image_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/yoga_yhx4gb.jpg'
   )
 
 yoga = Action.create(
@@ -189,7 +197,8 @@ yoga = Action.create(
   company_name: 'Happy Tree Yoga',
   price: 35,
   address: '4812 St Laurent Blvd, Montreal',
-  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/yoga1_xhkpza.jpg'
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/yoga1_xhkpza.jpg',
+  background_image_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631896/yoga1_xhkpza.jpg'
   )
 
 cooking_class = Action.create(
@@ -205,7 +214,8 @@ cooking_class = Action.create(
   company_name: 'Culinary Guild',
   price: 60,
   address: '6381 St Laurent Blvd, Montreal',
-  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598639290/cooking_class_1_ldbfpt.jpg'
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598639290/cooking_class_1_ldbfpt.jpg',
+  background_image_url:'https://res.cloudinary.com/claidy/image/upload/v1598887624/cooking_class_1_cacrsf.jpg'
   )
 
 boxing = Action.create(
@@ -221,7 +231,8 @@ boxing = Action.create(
   company_name: 'Underdog Boxing Gym',
   price: 32,
   address: '215 Rue Jean-Talon Ouest, Montreal',
-  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598639538/photo-1549719386-74dfcbf7dbed_bbspkw.jpg'
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598639538/photo-1549719386-74dfcbf7dbed_bbspkw.jpg',
+  background_image_url:'https://res.cloudinary.com/claidy/image/upload/v1598887780/bogdan-yukhymchuk-XmvuWRDimrg-unsplash_nls8va.jpg'
   )
 
 spa = Action.create(
@@ -237,7 +248,8 @@ spa = Action.create(
   company_name: 'Spa Ovarium',
   price: 160,
   address: '1228 Sherbrooke St, Montreal',
-  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598632480/taylor-simpson-Z8s3PRQVuUk-unsplash_xuudos.jpg'
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598632480/taylor-simpson-Z8s3PRQVuUk-unsplash_xuudos.jpg',
+  background_image_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598632480/taylor-simpson-Z8s3PRQVuUk-unsplash_xuudos.jpg'
   )
 
 plant_arrangement = Action.create(
@@ -253,7 +265,8 @@ plant_arrangement = Action.create(
   company_name: 'Plantzy',
   price: 40,
   address: '1457 Ottawa St, Montreal',
-  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598639334/mariah-hewines-C-C771OdQJc-unsplash_nzycdh.jpg'
+  photo_url: 'https://res.cloudinary.com/claidy/image/upload/v1598887913/ergita-sela-8lZB_vv9kEE-unsplash_ypmrqs.jpg',
+  background_image_url: 'https://res.cloudinary.com/claidy/image/upload/v1598887913/ergita-sela-8lZB_vv9kEE-unsplash_ypmrqs.jpg'
   )
 
 pilates = Action.create(
@@ -269,7 +282,8 @@ pilates = Action.create(
   company_name: 'Espace Pilates',
   price: 30,
   address: '768 Rue Rachel, Montreal',
-  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631895/pilates_j1wa6v.jpg'
+  photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631895/pilates_j1wa6v.jpg',
+  background_image_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598631895/pilates_j1wa6v.jpg'
   )
 
 # medium 4
@@ -329,134 +343,255 @@ headspace = Action.create(
   photo_url: 'https://res.cloudinary.com/demifo4s4/image/upload/v1598637269/headspace_g0dzrn.jpg'
   )
 
+# user_actions
+user_action1 = UserAction.create(
+  user: wince,
+  action: axe,
+  created_at: DateTime.parse('2020-08-28 T 09:00')
+  )
+
+user_action2 = UserAction.create(
+  user: wince,
+  action: boxing,
+  created_at: DateTime.parse('2020-08-29 T 09:00')
+  )
+
+user_action3 = UserAction.create(
+  user: wince,
+  action: axe,
+  created_at: DateTime.parse('2020-08-30 T 09:00')
+  )
+
+user_action4 = UserAction.create(
+  user: wince,
+  action: yoga,
+  created_at: DateTime.parse('2020-08-31 T 13:00')
+  )
+
+user_action5 = UserAction.create(
+  user: wince,
+  action: archery,
+  created_at: DateTime.parse('2020-09-01 T 16:00')
+)
+
+user_action6 = UserAction.create(
+  user: wince,
+  action: plant_arrangement,
+  created_at: DateTime.parse('2020-09-02 T 10:00')
+  )
+
+user_action7 = UserAction.create(
+  user: wince,
+  action: archery,
+  created_at: DateTime.parse('2020-09-03 T 14:00')
+  )
+
+user_action8 = UserAction.create(
+  user: wince,
+  action: netflix,
+  created_at: DateTime.parse('2020-09-03 T 10:00')
+  )
+
+user_action9 = UserAction.create(
+  user: wince,
+  action: spotify,
+  created_at: DateTime.parse('2020-09-03 T 10:00')
+  )
+
+user_action10 = UserAction.create(
+  user: wince,
+  action: headspace,
+  created_at: DateTime.parse('2020-09-03 T 10:00')
+  )
+
+user_action11 = UserAction.create(
+  user: wince,
+  action: medium,
+  created_at: DateTime.parse('2020-09-03 T 10:00')
+  )
+
 # mood
 mood1 = Mood.create(
   sad_happy: 3,
   angry_calm: 3,
   lowenergy_highenergy: 9,
   anxious_social: 6,
-  manual_created_at: DateTime.parse('2020-08-20 T 09:00'),
+  created_at: DateTime.parse('2020-08-28 T 09:00'),
   user: wince
   )
 
 mood2 = Mood.create(
-  sad_happy: 4,
-  angry_calm: 2,
-  lowenergy_highenergy: 10,
-  anxious_social: 8,
-  manual_created_at: DateTime.parse('2020-08-21 T 09:00'),
+  sad_happy: 7,
+  angry_calm: 9,
+  lowenergy_highenergy: 7,
+  anxious_social: 6,
+  created_at: DateTime.parse('2020-08-28 T 23:00'),
+  user_action: user_action1,
   user: wince
   )
 
 mood3 = Mood.create(
-  sad_happy: 8,
-  angry_calm: 4,
-  lowenergy_highenergy: 8,
-  anxious_social: 4,
-  manual_created_at: DateTime.parse('2020-08-22 T 09:00'),
+  sad_happy: 4,
+  angry_calm: 2,
+  lowenergy_highenergy: 10,
+  anxious_social: 8,
+  created_at: DateTime.parse('2020-08-29 T 09:00'),
   user: wince
   )
 
 mood4 = Mood.create(
-  sad_happy: rand(0..10),
-  angry_calm: rand(0..10),
-  lowenergy_highenergy: rand(0..10),
-  anxious_social: rand(0..10),
-  manual_created_at: DateTime.parse('2020-08-23 T 13:00'),
+  sad_happy: 9,
+  angry_calm: 10,
+  lowenergy_highenergy: 7,
+  anxious_social: 8,
+  created_at: DateTime.parse('2020-08-29 T 23:00'),
+  user_action: user_action2,
   user: wince
   )
 
 mood5 = Mood.create(
   sad_happy: 8,
-  angry_calm: 9,
-  lowenergy_highenergy: 7,
-  anxious_social: 6,
-  manual_created_at: DateTime.parse('2020-08-24 T 16:00'),
+  angry_calm: 4,
+  lowenergy_highenergy: 8,
+  anxious_social: 4,
+  created_at: DateTime.parse('2020-08-30 T 09:00'),
   user: wince
   )
 
 mood6 = Mood.create(
-  sad_happy: 6,
-  angry_calm: 7,
-  lowenergy_highenergy: 6,
-  anxious_social: 6,
-  manual_created_at: DateTime.parse('2020-08-25 T 10:00'),
+  sad_happy: 8,
+  angry_calm: 10,
+  lowenergy_highenergy: 5,
+  anxious_social: 3,
+  created_at: DateTime.parse('2020-08-30 T 23:00'),
+  user_action: user_action3,
   user: wince
   )
 
 mood7 = Mood.create(
-  sad_happy: rand(0..10),
-  angry_calm: rand(0..10),
-  lowenergy_highenergy: rand(0..10),
-  anxious_social: rand(0..10),
-  manual_created_at: DateTime.parse('2020-08-26 T 14:00'),
+  sad_happy: 5,
+  angry_calm: 8,
+  lowenergy_highenergy: 5,
+  anxious_social: 5,
+  created_at: DateTime.parse('2020-08-31 T 13:00'),
   user: wince
   )
 
-user_action1 = UserAction.create(
-  user: wince,
-  action: axe,
-  created_at: DateTime.parse('2020-08-20 T 09:00')
+mood8 = Mood.create(
+  sad_happy: 9,
+  angry_calm: 10,
+  lowenergy_highenergy: 8,
+  anxious_social: 5,
+  created_at: DateTime.parse('2020-08-31 T 23:00'),
+  user_action: user_action4,
+  user: wince
   )
 
-user_action2 = UserAction.create(
-  user: wince,
-  action: boxing,
-  created_at: DateTime.parse('2020-08-21 T 09:00')
+mood9 = Mood.create(
+  sad_happy: 8,
+  angry_calm: 9,
+  lowenergy_highenergy: 7,
+  anxious_social: 6,
+  created_at: DateTime.parse('2020-09-01 T 16:00'),
+  user: wince
   )
 
-user_action3 = UserAction.create(
-  user: wince,
-  action: axe,
-  created_at: DateTime.parse('2020-08-22 T 09:00')
+mood10 = Mood.create(
+  sad_happy: 10,
+  angry_calm: 9,
+  lowenergy_highenergy: 8,
+  anxious_social: 9,
+  created_at: DateTime.parse('2020-09-01 T 23:00'),
+  user_action: user_action5,
+  user: wince
   )
 
-user_action4 = UserAction.create(
-  user: wince,
-  action: yoga,
-  created_at: DateTime.parse('2020-08-23 T 13:00')
+mood11 = Mood.create(
+  sad_happy: 6,
+  angry_calm: 7,
+  lowenergy_highenergy: 6,
+  anxious_social: 6,
+  created_at: DateTime.parse('2020-09-02 T 10:00'),
+  user: wince
   )
 
-user_action5 = UserAction.create(
-  user: wince,
-  action: archery,
-  created_at: DateTime.parse('2020-08-24 T 16:00')
-)
-
-user_action6 = UserAction.create(
-  user: wince,
-  action: plant_arrangement,
-  created_at: DateTime.parse('2020-08-25 T 10:00')
+mood12 = Mood.create(
+  sad_happy: 8,
+  angry_calm: 9,
+  lowenergy_highenergy: 8,
+  anxious_social: 8,
+  created_at: DateTime.parse('2020-09-02 T 23:00'),
+  user_action: user_action6,
+  user: wince
   )
 
-user_action7 = UserAction.create(
-  user: wince,
-  action: meditation,
-  created_at: DateTime.parse('2020-08-26 T 14:00')
+mood13 = Mood.create(
+  sad_happy: 6,
+  angry_calm: 8,
+  lowenergy_highenergy: 6,
+  anxious_social: 5,
+  created_at: DateTime.parse('2020-09-03 T 14:00'),
+  user: wince
   )
 
-user_action8 = UserAction.create(
-  user: wince,
-  action: netflix,
-  created_at: DateTime.parse('2020-08-25 T 10:00')
+mood14 = Mood.create(
+  sad_happy: 9,
+  angry_calm: 8,
+  lowenergy_highenergy: 6,
+  anxious_social: 8,
+  created_at: DateTime.parse('2020-09-03 T 23:00'),
+  user_action: user_action7,
+  user: wince
   )
 
-user_action9 = UserAction.create(
-  user: wince,
-  action: spotify,
-  created_at: DateTime.parse('2020-08-25 T 10:00')
-  )
+# ratings
+# rating1 = Rating.create(
+#   user: wince,
+#   user_action: user_action1,
+#   rating: 5,
+#   comment: 'Good, feel more relaxed now!'
+#   )
 
-user_action10 = UserAction.create(
-  user: wince,
-  action: headspace,
-  created_at: DateTime.parse('2020-08-25 T 10:00')
-  )
+# rating2 = Rating.create(
+#   user: wince,
+#   user_action: user_action2,
+#   rating: 4,
+#   comment: 'So great to sweat it out, I feel better!'
+#   )
 
-user_action11 = UserAction.create(
-  user: wince,
-  action: medium,
-  created_at: DateTime.parse('2020-08-25 T 10:00')
-  )
+# rating3 = Rating.create(
+#   user: wince,
+#   user_action: user_action3,
+#   rating: 4,
+#   comment: 'Amazing!'
+#   )
+
+# rating4 = Rating.create(
+#   user: wince,
+#   user_action: user_action4,
+#   rating: 5,
+#   comment: 'Good, feel more relaxed now!'
+#   )
+
+# rating5 = Rating.create(
+#   user: wince,
+#   user_action: user_action5,
+#   rating: 3,
+#   comment: 'Great!'
+#   )
+
+# rating6 = Rating.create(
+#   user: wince,
+#   user_action: user_action6,
+#   rating: 5,
+#   comment: 'First time doing this. I would probably doing it again!'
+#   )
+
+# rating7 = Rating.create(
+#   user: wince,
+#   user_action: user_action7,
+#   rating: 5,
+#   comment: 'Good!'
+#   )
 
 puts 'seed ended'

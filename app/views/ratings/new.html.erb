@@ -1,4 +1,12 @@
 <%= simple_form_for [@activity, @rating], url: activity_ratings_path do |f| %>
+  <div class="mood-selector">
+    <h2>How are you feeling after the <%= @activity.name %>?</h2>
+    <%= range_field_tag('mood[sad_happy]', 5, { max: 10 }) %>
+    <%= range_field_tag('mood[angry_calm]', 5, { max: 10 }) %>
+    <%= range_field_tag('mood[lowenergy_highenergy]', 5, { max: 10 }) %>
+    <%= range_field_tag('mood[anxious_social]', 5, { max: 10 }) %>
+  </div>
+
   <%= f.input :rating, collection: 0..5 %>
   <%= f.input :comment %>
   <%= f.submit %>
