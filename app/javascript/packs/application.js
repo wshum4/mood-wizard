@@ -30,13 +30,14 @@ import "bootstrap";
 import { initMapbox } from '../plugins/init_mapbox';
 import { DashboardChart } from "../plugins/init_chart";
 import { triggerNotifications } from '../plugins/notifications';
+import { tabBar } from '../plugins/tab_bar';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // only load chart on the dashboard page
   if (window.location.pathname === '/') {
     // pass options into the chart to customize the style. Check docs at: https://www.chartjs.org/docs/latest/charts/polar.html
-    new DashboardChart({ 
+    new DashboardChart({
       scales: {
         xAxes: [{
           type: 'time'
@@ -61,4 +62,7 @@ document.addEventListener('turbolinks:load', () => {
   if (mapElement) {
     initMapbox(mapElement);
   }
+
+  tabBar();
 });
+
