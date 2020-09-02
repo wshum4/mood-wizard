@@ -31,6 +31,7 @@ import { initMapbox } from '../plugins/init_mapbox';
 import { DashboardChart } from "../plugins/init_chart";
 import { triggerConfirmation, triggerReminder, triggerRating, ratingRedirect } from '../plugins/notifications';
 import { tabBar } from '../plugins/tab_bar';
+import { bindRangeElements } from '../plugins/mood_selector';
 import { ratingStars } from '../plugins/rating_stars';
 
 document.addEventListener('turbolinks:load', () => {
@@ -96,6 +97,9 @@ document.addEventListener('turbolinks:load', () => {
   triggerReminder();
   triggerRating();
   ratingRedirect();
+  if (document.getElementById('new_mood')) {
+    bindRangeElements();
+  }
   ratingStars();
 });
 
