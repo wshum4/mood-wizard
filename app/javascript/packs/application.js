@@ -89,6 +89,9 @@ document.addEventListener('turbolinks:load', () => {
   }
 
   tabBar();
+  if (document.getElementById('booking-confirmation')) {
+    triggerConfirmation();
+  }
   triggerReminder();
   triggerRating();
   ratingRedirect();

@@ -1,5 +1,5 @@
 const triggerConfirmation = () => {
-  $('#bookingConfirmation').modal('show');
+  $('#booking-confirmation').modal('show');
 };
 
 // open reminder modal

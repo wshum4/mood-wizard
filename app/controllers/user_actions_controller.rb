@@ -5,7 +5,7 @@ class UserActionsController < ApplicationController
     authorize(@user_action)
 
     if @user_action.save
-      flash[:notice] = "Your activity has been booked and it is confirmed."
+      flash[:booking] = { action_id: @user_action.action_id }
       if request.headers['HTTP_HOST'] == "localhost:3000"
         redirect_to mediums_path(action_id: "#{@user_action.action_id}")
       else
