@@ -13,4 +13,11 @@
 @import "components/index";
 @import "pages/index";
 
+h4 {
+  color: #262B40;
+}
 
+a:hover {
+  color: inherit;
+  text-decoration: underline;
+}

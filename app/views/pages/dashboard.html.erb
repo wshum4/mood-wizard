@@ -1,17 +1,17 @@
 <div style="background-image: url(<%= asset_path('dashboard.png') %>)" class="top-img" ></div>
 
 <div class="dashboard-container">
-  <h1>Dashboard</h1>
+  <h1 class="dash">Dashboard</h1>
 
   <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item">
-      <a class="nav-link active" id="dashboard-tab" data-toggle="tab" href="#dashboard" role="tab" aria-controls="dashboard" aria-selected="true">Dashboard</a>
+      <a class="nav-st nav-link active" id="dashboard-tab" data-toggle="tab" href="#dashboard" role="tab" aria-controls="dashboard" aria-selected="true">Dashboard</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="prev-activities-tab" data-toggle="tab" href="#prev-activities" role="tab" aria-controls="prev-activities" aria-selected="false">My Activities</a>
+      <a class="nav-st nav-link" id="prev-activities-tab" data-toggle="tab" href="#prev-activities" role="tab" aria-controls="prev-activities" aria-selected="false">My Activities</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="prev-mediums-tab" data-toggle="tab" href="#prev-mediums" role="tab" aria-controls="prev-mediums" aria-selected="false">My Mediums</a>
+      <a class=" nav-st nav-link" id="prev-mediums-tab" data-toggle="tab" href="#prev-mediums" role="tab" aria-controls="prev-mediums" aria-selected="false">My Mediums</a>
     </li>
   </ul>
   <div class="tab-content" id="myTabContent">
@@ -29,10 +29,10 @@
         <div class='card-mw'>
           <div class='cardinfos'>
             <h2 class='prev-action'><%= mood.created_at.time.strftime("%d %B %Y") %></h3>
-            <p>Sad | Happy: <%= mood.sad_happy %></p>
-            <p>Angry | Calm: <%= mood.angry_calm %></p>
-            <p>Low energy | High energy: <%= mood.lowenergy_highenergy %></p>
-            <p>Anxious | Social: <%= mood.anxious_social %></p>
+            <p><i class="far fa-sad-tear icon"></i> Sad | <i class="far fa-laugh icon"></i> Happy: <%= mood.sad_happy %></p>
+            <p><i class="far fa-angry icon"></i> Angry | <i class="far fa-smile icon"></i> Calm: <%= mood.angry_calm %></p>
+            <p><i class="fas fa-battery-empty icon"></i> Low energy | <i class="fas fa-battery-full icon"></i> High energy: <%= mood.lowenergy_highenergy %></p>
+            <p><i class="fas fa-user icon"></i> Anxious | <i class="fas fa-users icon"></i> Social: <%= mood.anxious_social %></p>
           </div>
         </div>
       <% end %>
@@ -54,21 +54,21 @@
                 <div class="mood_1">
                   <div class="happy">
                     <% if activity.mood_after.sad_happy > activity.mood_before.sad_happy%>
-                      <i class="far fa-laugh"></i> <i class="fas fa-arrow-up"></i>
+                      <i class="far fa-laugh icon"></i> <i class="fas fa-arrow-up arrow_up"></i>
                     <% elsif activity.mood_after.sad_happy == activity.mood_before.sad_happy %>
-                      <i class="far fa-meh"></i> <i class="fas fa-window-minimize"></i>
+                      <i class="far fa-meh icon"></i> <i class="fas fa-window-minimize"></i>
                     <% elsif activity.mood_after.sad_happy < activity.mood_before.sad_happy %>
-                      <i class="far fa-sad-tear"></i> <i class="fas fa-arrow-down"></i>
+                      <i class="far fa-sad-tear icon"></i> <i class="fas fa-arrow-down arrow_down"></i>
                     <% end %>
                   </div>
 
                   <div class="angry">
                     <% if activity.mood_after.angry_calm > activity.mood_before.angry_calm %>
-                      <i class="far fa-smile"></i> <i class="fas fa-arrow-up"></i>
+                      <i class="far fa-smile icon"></i> <i class="fas fa-arrow-up arrow_up"></i>
                     <% elsif activity.mood_after.angry_calm == activity.mood_before.angry_calm %>
-                      <i class="far fa-meh"></i> <i class="fas fa-window-minimize"></i>
+                      <i class="far fa-meh icon"></i> <i class="fas fa-window-minimize steady"></i>
                     <% elsif activity.mood_after.angry_calm < activity.mood_before.angry_calm  %>
-                      <i class="far fa-angry"></i> <i class="fas fa-arrow-down"></i>
+                      <i class="far fa-angry icon"></i> <i class="fas fa-arrow-down arrow_down"></i>
                     <% end %>
                   </div>
                 </div>
@@ -77,21 +77,21 @@
                 <div class="mood_2">
                   <div class="lowenergy">
                     <% if activity.mood_after.lowenergy_highenergy > activity.mood_before.lowenergy_highenergy %>
-                      <i class="fas fa-battery-full"></i> <i class="fas fa-arrow-up"></i>
+                      <i class="fas fa-battery-full icon"></i> <i class="fas fa-arrow-up arrow_up"></i>
                     <% elsif activity.mood_after.lowenergy_highenergy == activity.mood_before.lowenergy_highenergy %>
-                      <i class="fas fa-battery-half"></i> <i class="fas fa-window-minimize"></i>
+                      <i class="fas fa-battery-half icon"></i> <i class="fas fa-window-minimize steady"></i>
                     <% elsif activity.mood_after.lowenergy_highenergy < activity.mood_before.lowenergy_highenergy %>
-                      <i class="fas fa-battery-empty"></i> <i class="fas fa-arrow-down"></i>
+                      <i class="fas fa-battery-empty icon"></i> <i class="fas fa-arrow-down arrow_down"></i>
                     <% end %>
                   </div>
 
                   <div class="social">
                     <% if activity.mood_after.anxious_social > activity.mood_before.anxious_social %>
-                      <i class="fas fa-users"></i> <i class="fas fa-arrow-up"></i>
+                      <i class="fas fa-users icon"></i> <i class="fas fa-arrow-up arrow_up"></i>
                     <% elsif activity.mood_after.anxious_social == activity.mood_before.anxious_social %>
-                      <i class="fas fa-people-arrows"></i> <i class="fas fa-window-minimize"></i>
+                      <i class="fas fa-people-arrows icon"></i> <i class="fas fa-window-minimize steady"></i>
                     <% elsif activity.mood_after.anxious_social < activity.mood_before.anxious_social %>
-                      <i class="fas fa-user"></i> <i class="fas fa-arrow-down"></i>
+                      <i class="fas fa-user icon"></i> <i class="fas fa-arrow-down arrow_down"></i>
                     <% end %>
                   </div>
                 </div>
