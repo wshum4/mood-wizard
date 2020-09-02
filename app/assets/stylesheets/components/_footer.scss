@@ -2,7 +2,7 @@
   background: #414A6F;
   position: fixed;
   bottom:0;
-  width: 100%;
+  width: 100vw;
   height: 76px;
   display: flex;
   align-items: center;
@@ -27,4 +27,10 @@
 }
 #mood {
   padding: 0 45px 66px 45px;
+}
+
+@media (min-width: 600px) {
+  .footer {
+    width: 600px;
+  }
 }

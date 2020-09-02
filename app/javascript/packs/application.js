@@ -32,8 +32,10 @@ import { DashboardChart } from "../plugins/init_chart";
 import { triggerConfirmation, triggerReminder, triggerRating, ratingRedirect } from '../plugins/notifications';
 import { tabBar } from '../plugins/tab_bar';
 import { ratingStars } from '../plugins/rating_stars';
+import { setStyles } from '../components/style_inject';
 
 document.addEventListener('turbolinks:load', () => {
+  setStyles();
   // Call your functions here, e.g:
   // only load chart on the dashboard page
   if (window.location.pathname === '/') {
