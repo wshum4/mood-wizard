@@ -1,10 +1,12 @@
+
 .tab-move {
   padding-top: 84px;
-   .title{
-    margin-top: 20px;
+   .title {
     text-align: center;
-   }
+    color: #262B40;
 }
+   }
+
 
 .dashboard-container {
   padding: 1rem;
@@ -34,4 +36,32 @@ a:active {
   padding: 12px;
   display: grid;
   place-content: center center;
+}
+.dash{
+  margin-top: 61px;
+  color: #262B40;
+}
+.icon {
+  color: #262B40;
+}
+.arrow_up{
+color: #5C6899;
+}
+.arrow_down{
+  color: #363D59;
+}
+.steady {
+  color: #6773A2;
+}
+#myTab {
+  justify-content: space-between;
+}
+.nav-link {
+  color: white ;
+  padding: 5% ;
+  border: 1px solid #6572A4 !important ;
+  border-radius: 14px !important ;
+  background-color: #6572A4 ;
+  text-decoration: none ;
+  min-width: 110px;
 }
