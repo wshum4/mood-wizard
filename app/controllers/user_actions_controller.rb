@@ -9,7 +9,7 @@ class UserActionsController < ApplicationController
       if request.headers['HTTP_HOST'] == "localhost:3000"
         redirect_to mediums_path(action_id: "#{@user_action.action_id}")
       else
-        redirect_to('https://mood-wizard.herokuapp.com/mediums', action_id: @user_action.action_id)
+        redirect_to('https://mood-wizard.herokuapp.com/mediums', action_id: "#{@user_action.action_id}")
       end
     else
       flash[:alert] = "Something went wrong with booking!"
