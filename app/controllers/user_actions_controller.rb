@@ -5,12 +5,8 @@ class UserActionsController < ApplicationController
     authorize(@user_action)
 
     if @user_action.save
-      flash[:notice] = "Your activity has been booked and it is confirmed."
-      # if request.headers['HTTP_HOST'] == "localhost:3000"
+      flash[:booking] = { action_id: @user_action.action_id }
       redirect_to mediums_path(action_id: "#{@user_action.action_id}")
-      # else
-      #   redirect_to('https://mood-wizard.herokuapp.com/mediums', action_id: "#{@user_action.action_id}")
-      # end
     else
       flash[:alert] = "Something went wrong with booking!"
       redirect_to activity_path(params[:action_id])
