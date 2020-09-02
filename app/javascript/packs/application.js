@@ -33,8 +33,10 @@ import { triggerConfirmation, triggerReminder, triggerRating, ratingRedirect } f
 import { tabBar } from '../plugins/tab_bar';
 import { bindRangeElements } from '../plugins/mood_selector';
 import { ratingStars } from '../plugins/rating_stars';
+import { setStyles } from '../components/style_inject';
 
 document.addEventListener('turbolinks:load', () => {
+  setStyles();
   // Call your functions here, e.g:
   // only load chart on the dashboard page
   if (window.location.pathname === '/') {
