@@ -35,7 +35,7 @@ a:active {
 .cardinfos {
   padding: 12px;
   display: grid;
-  place-content: center center;
+  // place-content: center center;
 }
 .dash{
   margin-top: 61px;
@@ -64,4 +64,28 @@ color: #5C6899;
   background-color: #6572A4 ;
   text-decoration: none ;
   min-width: 110px;
+}
+.sides {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5px;
+}
+
+
+.card-dashboard-page {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border: 1px solid white;
+  border-radius: 20px 60px 20px 60px;
+  margin: 15px;
+
+  i {
+    font-size: 10px;
+  }
+
+  p {
+    font-size: 10px
+  }
 }

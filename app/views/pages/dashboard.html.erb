@@ -26,13 +26,25 @@
       </div>
 
       <% @prev_moods.each do |mood| %>
-        <div class='card-mw'>
+        <div class='card-dashboard-page'>
           <div class='cardinfos'>
             <h2 class='prev-action'><%= mood.created_at.time.strftime("%d %B %Y") %></h3>
-            <p><i class="far fa-sad-tear icon"></i> Sad | <i class="far fa-laugh icon"></i> Happy: <%= mood.sad_happy %></p>
-            <p><i class="far fa-angry icon"></i> Angry | <i class="far fa-smile icon"></i> Calm: <%= mood.angry_calm %></p>
-            <p><i class="fas fa-battery-empty icon"></i> Low energy | <i class="fas fa-battery-full icon"></i> High energy: <%= mood.lowenergy_highenergy %></p>
-            <p><i class="fas fa-user icon"></i> Anxious | <i class="fas fa-users icon"></i> Social: <%= mood.anxious_social %></p>
+          <div class="sides">
+          <div class="left-inside">
+            <p><i class="far fa-sad-tear icon"></i> Sad: <%= 10 - mood.sad_happy %></p>
+            <p><i class="far fa-angry icon"></i> Angry: <%= 10 - mood.angry_calm %> </p>
+            <p><i class="fas fa-battery-empty icon"></i> Low energy: <%= 10 - mood.lowenergy_highenergy %> </p>
+            <p><i class="fas fa-user icon"></i> Anxious: <%= 10 - mood.anxious_social %> </p>
+            </div>
+
+          <div class="right-inside">
+            <p><i class="far fa-laugh icon"></i> Happy: <%= mood.sad_happy %></p>
+            <p><i class="far fa-smile icon"></i> Calm: <%= mood.angry_calm %></p>
+            <p><i class="fas fa-battery-full icon"></i> High energy: <%= mood.lowenergy_highenergy %></p>
+            <p><i class="fas fa-users icon"></i> Social: <%= mood.anxious_social %></p>
+          </div>
+
+          </div>
           </div>
         </div>
       <% end %>
