@@ -20,3 +20,9 @@
 #new_user {
   padding-top: 3em;
 }
+
+@media (min-width: 600px) {
+  .sign-up {
+    margin-top: -48px;
+  }
+}
