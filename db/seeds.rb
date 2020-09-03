@@ -168,7 +168,7 @@ paint_class = Action.create(
   )
 
 meditation = Action.create(
-  name: 'Meditation Class',
+  name: 'Meditation',
   action_type: 'Activity',
   duration: 1.hour,
   sad_happy: [0, 10],
