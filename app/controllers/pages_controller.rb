@@ -4,6 +4,11 @@ class PagesController < ApplicationController
   def home
   end
 
+  def prev_activities
+    @past_activities = UserAction.includes(:action)
+    @past_activities = @past_activities.where(user_id: current_user.id, actions: { action_type: 'Activity' }).last(10).reverse
+  end
+
   def dashboard
     # Redirects the user to login page if they are not logged in
     redirect_to new_user_session_path if current_user.nil?

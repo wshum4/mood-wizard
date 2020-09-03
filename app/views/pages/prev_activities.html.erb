@@ -1,0 +1,75 @@
+<div style="background-image: url(<%= asset_path('activities_show.png') %>)" class="top-img" ></div>
+<div class="activities-container">
+  <h1>Previous Activities</h1>
+  <div class="activity-nav d-flex justify-content-center">
+    <a href="/activities" class="btn btn-outline-dark">All</a>
+    <a class="btn btn-dark">Previous</a>
+  </div>
+  
+  <div class="prev-activity-cards">
+    <% @past_activities.each do |activity| %>
+      <%= link_to activity_path(activity.action) do %>
+        <div class='card-mw'>
+          <img class='prev-act' src=<%= activity.action.photo_url %>>
+          <div class='cardinfos'>
+            <h2 class='prev-action'>Activity: <%= activity.action.name %></h2>
+            <p>Date: <%= activity.created_at.time.strftime("%d %B %Y") %></p>
+
+            <div class="big_container">
+              <% if activity.mood_before && activity.mood_after %>
+
+              <div class="mood_1">
+                <div class="happy">
+                  <% if activity.mood_after.sad_happy > activity.mood_before.sad_happy%>
+                    <i class="far fa-laugh icon"></i> <i class="fas fa-arrow-up arrow_up"></i>
+                  <% elsif activity.mood_after.sad_happy == activity.mood_before.sad_happy %>
+                    <i class="far fa-meh icon"></i> <i class="fas fa-window-minimize steady"></i>
+                  <% elsif activity.mood_after.sad_happy < activity.mood_before.sad_happy %>
+                    <i class="far fa-sad-tear icon"></i> <i class="fas fa-arrow-down arrow_down"></i>
+                  <% end %>
+                </div>
+
+                <div class="angry">
+                  <% if activity.mood_after.angry_calm > activity.mood_before.angry_calm %>
+                    <i class="far fa-smile icon"></i> <i class="fas fa-arrow-up arrow_up"></i>
+                  <% elsif activity.mood_after.angry_calm == activity.mood_before.angry_calm %>
+                    <i class="far fa-meh icon"></i> <i class="fas fa-window-minimize steady"></i>
+                  <% elsif activity.mood_after.angry_calm < activity.mood_before.angry_calm  %>
+                    <i class="far fa-angry icon"></i> <i class="fas fa-arrow-down arrow_down"></i>
+                  <% end %>
+                </div>
+              </div>
+
+
+              <div class="mood_2">
+                <div class="lowenergy">
+                  <% if activity.mood_after.lowenergy_highenergy > activity.mood_before.lowenergy_highenergy %>
+                    <i class="fas fa-battery-full icon"></i> <i class="fas fa-arrow-up arrow_up"></i>
+                  <% elsif activity.mood_after.lowenergy_highenergy == activity.mood_before.lowenergy_highenergy %>
+                    <i class="fas fa-battery-half icon"></i> <i class="fas fa-window-minimize steady"></i>
+                  <% elsif activity.mood_after.lowenergy_highenergy < activity.mood_before.lowenergy_highenergy %>
+                    <i class="fas fa-battery-empty icon"></i> <i class="fas fa-arrow-down arrow_down"></i>
+                  <% end %>
+                </div>
+
+                <div class="social">
+                  <% if activity.mood_after.anxious_social > activity.mood_before.anxious_social %>
+                    <i class="fas fa-users icon"></i> <i class="fas fa-arrow-up arrow_up"></i>
+                  <% elsif activity.mood_after.anxious_social == activity.mood_before.anxious_social %>
+                    <i class="fas fa-people-arrows icon"></i> <i class="fas fa-window-minimize steady"></i>
+                  <% elsif activity.mood_after.anxious_social < activity.mood_before.anxious_social %>
+                    <i class="fas fa-user icon"></i> <i class="fas fa-arrow-down arrow_down"></i>
+                  <% end %>
+                </div>
+              </div>
+
+              <% end %>
+
+            </div>
+
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
