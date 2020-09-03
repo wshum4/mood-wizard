@@ -33,7 +33,7 @@ import { triggerConfirmation, triggerReminder, triggerRating, ratingRedirect } f
 import { tabBar } from '../plugins/tab_bar';
 import { bindRangeElements } from '../plugins/mood_selector';
 import { ratingStars } from '../plugins/rating_stars';
-import { setStyles } from '../components/style_inject';
+import { setStyles } from '../plugins/style_inject_rating';
 
 document.addEventListener('turbolinks:load', () => {
   setStyles();
@@ -103,5 +103,6 @@ document.addEventListener('turbolinks:load', () => {
     bindRangeElements();
   }
   ratingStars();
+  setStyles();
 });
 
