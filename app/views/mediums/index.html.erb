@@ -7,13 +7,29 @@
 
   <div class='mediums-info'>
     <% @mediums.each do |medium| %>
-      <%= link_to "https://#{medium.url}", target: "_blank" do %>
-        <div class='card-mw' id="medium-<%= medium.id %>">
-          <img class='prev-med' src=<%= medium.photo_url %>>
-          <div class='cardinfos'>
-            <h2 class='prev-action-med'><%= medium.name %></h2>
+      <% if medium.id == 16 %>
+        <a href="#spotifyCollapse" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="spotifyCollapse">
+          <div class='card-mw' id="medium-<%= medium.id %>">
+            <img class='prev-med' src=<%= medium.photo_url %>>
+            <div class='cardinfos'>
+              <h2 class='prev-action-med'><%= medium.name %></h2>
+            </div>
+          </div>
+        </a>
+        <div id="spotifyCollapse" class="collapse">
+          <div class="d-flex justify-content-center">
+            <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX3rxVfibe1L0" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
           </div>
         </div>
+      <% else %>
+        <%= link_to "https://#{medium.url}", target: "_blank" do %>
+          <div class='card-mw' id="medium-<%= medium.id %>">
+            <img class='prev-med' src=<%= medium.photo_url %>>
+            <div class='cardinfos'>
+              <h2 class='prev-action-med'><%= medium.name %></h2>
+            </div>
+          </div>
+        <% end %>
       <% end %>
     <% end %>
   </div>
