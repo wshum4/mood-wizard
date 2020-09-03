@@ -6,7 +6,7 @@ class PagesController < ApplicationController
 
   def prev_activities
     @past_activities = UserAction.includes(:action)
-    @past_activities = @past_activities.where(user_id: current_user.id, actions: { action_type: 'Activity' }).last(10).reverse
+    @past_activities = @past_activities.where(user_id: current_user.id, actions: { action_type: 'Activity' }).last(5).reverse
   end
 
   def dashboard
