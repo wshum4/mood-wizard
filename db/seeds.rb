@@ -376,7 +376,7 @@ user_action5 = UserAction.create(
 
 user_action6 = UserAction.create(
   user: wince,
-  action: plant_arrangement,
+  action: paint_class,
   created_at: DateTime.parse('2020-09-02 T 10:00')
   )
 
