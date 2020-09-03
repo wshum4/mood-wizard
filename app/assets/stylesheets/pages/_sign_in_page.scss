@@ -40,3 +40,9 @@ margin-top: 135px;
   justify-content: center;
   width: 100%;
 }
+
+@media (min-width: 600px) {
+  .top-img, .bottom-img {
+    width: 600px;
+  }
+}

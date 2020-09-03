@@ -35,3 +35,14 @@
   color: white;
   background-color: rgb(116, 117, 133);
 }
+
+.mood-img {
+  position: absolute;
+  top: -120px;
+  width: 100vw;
+  height: 438px;
+  background-size: cover;
+  background-position: bottom;
+  mask-image: url(https://res.cloudinary.com/claidy/image/upload/v1598883588/Vector_1_sizoot.svg);
+  mask-mode: alpha;
+}

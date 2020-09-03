@@ -1,0 +1,38 @@
+<%= simple_form_for [@activity, @rating], url: activity_ratings_path, class: 'box_box' do |f| %>
+  <p class="rating-prompt">Did you complete your activity yet?<br>If so, please tell us how you feel.</p>
+  <div class="rating-mood-selector">
+    <div class="form-group range">
+      <label for="mood_sad_happy">Sad vs Happy</label>
+      <%= range_field_tag('mood[sad_happy]', 5, { max: 10, class: "numeric range form-control-range" }) %>
+    </div>
+    <div class="form-group range">
+      <label for="mood_angry_calm">Angry vs Calm</label>
+      <%= range_field_tag('mood[angry_calm]', 5, { max: 10, class: "numeric range form-control-range" }) %>
+    </div>
+    <div class="form-group range">
+      <label for="mood_lowenergy_highenergy">Low vs High Energy</label>
+      <%= range_field_tag('mood[lowenergy_highenergy]', 5, { max: 10, class: "numeric range form-control-range" }) %>
+    </div>
+    <div class="form-group range">
+      <label for="mood_anxious_social">Anxious vs Social</label>
+      <%= range_field_tag('mood[anxious_social]', 5, { max: 10, class: "numeric range form-control-range" }) %>
+    </div>
+    <p>Rating</p>
+    <div class="container">
+      <div class="row star-rating justify-content-center">
+        <div data-value="1" class="star"><i class="far fa-star"></i></div>
+        <div data-value="2" class="star"><i class="far fa-star"></i></div>
+        <div data-value="3" class="star"><i class="far fa-star"></i></div>
+        <div data-value="4" class="star"><i class="far fa-star"></i></div>
+        <div data-value="5" class="star"><i class="far fa-star"></i></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <#%= f.input :rating, collection: 0..5 %> -->
+  <%= hidden_field_tag "rating[rating]", "", id: "rating_rating" %>
+  <%= f.input :comment %>
+  <div class="d-flex justify-content-center">
+    <%= f.submit class: "sign-in-front" %>
+  </div>
+<% end %>

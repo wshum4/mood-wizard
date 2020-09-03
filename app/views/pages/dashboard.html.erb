@@ -56,7 +56,7 @@
                     <% if activity.mood_after.sad_happy > activity.mood_before.sad_happy%>
                       <i class="far fa-laugh icon"></i> <i class="fas fa-arrow-up arrow_up"></i>
                     <% elsif activity.mood_after.sad_happy == activity.mood_before.sad_happy %>
-                      <i class="far fa-meh icon"></i> <i class="fas fa-window-minimize"></i>
+                      <i class="far fa-meh icon"></i> <i class="fas fa-window-minimize steady"></i>
                     <% elsif activity.mood_after.sad_happy < activity.mood_before.sad_happy %>
                       <i class="far fa-sad-tear icon"></i> <i class="fas fa-arrow-down arrow_down"></i>
                     <% end %>
