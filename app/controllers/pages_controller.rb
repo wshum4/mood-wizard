@@ -19,7 +19,7 @@ class PagesController < ApplicationController
     # setting current user
     # @current_user_id = current_user.id
     # Redirects user to graph display
-    @prev_moods = current_user.moods_before_activity.reverse.limit(5)
+    @prev_moods = current_user.moods_before_activity.order(created_at: :desc).limit(5)
 
     # Redirects user to past activities
     @past_mediums = UserAction.includes(:action)
