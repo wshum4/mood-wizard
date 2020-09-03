@@ -9,6 +9,7 @@ class PagesController < ApplicationController
     redirect_to new_user_session_path if current_user.nil?
     # redirect_to new_mood_path if current_user.last_mood.nil?
     # # Redirects the user to enter a mood if they haven't in 1 hour (in seconds)
+    redirect_to new_mood_path if current_user.moods.empty?
     redirect_to new_mood_path if current_user.moods.length > 0 && current_user.last_mood.time_since > 3600
     # setting current user
     # @current_user_id = current_user.id
@@ -25,11 +26,16 @@ class PagesController < ApplicationController
     # @past_medium = current_user.actions.filter do |action|
     #   action.action_type == 'Medium'
     # end
-    @averages = [
-      Mood.average_happiness(current_user),
-      Mood.average_calmness(current_user),
-      Mood.average_highenergy(current_user),
-      Mood.average_socialness(current_user)
-    ]
+
+    if current_user.moods.empty?
+      @averages = []
+    else
+      @averages = [
+        Mood.average_happiness(current_user),
+        Mood.average_calmness(current_user),
+        Mood.average_highenergy(current_user),
+        Mood.average_socialness(current_user)
+      ]
+    end
   end
 end

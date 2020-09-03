@@ -5,13 +5,18 @@ class ActivitiesController < ApplicationController
     # if geo location given, select activities available
     if params["location"].present?
       @activities = Action.near(params["location"], 20)
-      @location = Geocoder.search(params["location"]).first.coordinates
+      @location = Geocoder.search(params["location"]).first&.coordinates
     else
-      @location = Geocoder.search(current_user.address).first.coordinates
-      @activities = Action.near(current_user.address, 20)
+      @location = Geocoder.search(current_user.address).first&.coordinates
+      if @location.present?
+        @activities = Action.near(current_user.address, 20)
+      end
     end
+    
     @distances = {}
-    @activities.each { |a| @distances[a.id] = a.distance_to(@location).truncate(2) }
+    if @location.present?
+      @activities.each { |a| @distances[a.id] = a.distance_to(@location).truncate(2) }
+    end
 
     # for each action check based on mood comparison
     @activities = @activities.select { |activity| activity.mood_available?(current_user) }
