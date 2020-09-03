@@ -37,3 +37,16 @@ a:hover {
   min-height: 100vh;
   overflow: hidden;
 }
+.popup-style-curved {
+  border-radius: 20px 60px 20px 60px!important;
+  h5 {
+    color: #414A6F!important;
+  }
+  .pop-bttn {
+    border-radius: 30%!important;
+    background-color: #414A6F!important;
+  }
+  .popup-text {
+    color: #414A6F!important;
+  }
+}
