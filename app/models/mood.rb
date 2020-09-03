@@ -68,7 +68,7 @@ class Mood < ApplicationRecord
 
     return { average_highenergy: @average_highenergy, average_lowenergy: @average_lowenergy }
   end
-  
+
   def self.average_socialness(user)
     @total_socialness = 0
     @total_anxiousness = 0

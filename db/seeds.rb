@@ -346,96 +346,96 @@ headspace = Action.create(
 # user_actions
 user_action1 = UserAction.create(
   user: wince,
-  action: axe,
-  created_at: DateTime.parse('2020-08-26 T 09:00')
+  action: golf,
+  created_at: DateTime.parse('2020-08-28 T 09:00')
   )
 
 user_action2 = UserAction.create(
   user: wince,
   action: boxing,
-  created_at: DateTime.parse('2020-08-27 T 09:00')
+  created_at: DateTime.parse('2020-08-29 T 09:00')
   )
 
 user_action3 = UserAction.create(
   user: wince,
-  action: axe,
-  created_at: DateTime.parse('2020-08-28 T 09:00')
+  action: golf,
+  created_at: DateTime.parse('2020-08-30 T 09:00')
   )
 
 user_action4 = UserAction.create(
   user: wince,
   action: yoga,
-  created_at: DateTime.parse('2020-08-29 T 13:00')
+  created_at: DateTime.parse('2020-08-31 T 13:00')
   )
 
 user_action5 = UserAction.create(
   user: wince,
   action: archery,
-  created_at: DateTime.parse('2020-08-30 T 16:00')
+  created_at: DateTime.parse('2020-09-01 T 16:00')
 )
 
 user_action6 = UserAction.create(
   user: wince,
-  action: plant_arrangement,
-  created_at: DateTime.parse('2020-08-31 T 10:00')
+  action: paint_class,
+  created_at: DateTime.parse('2020-09-02 T 10:00')
   )
 
 user_action7 = UserAction.create(
   user: wince,
   action: archery,
-  created_at: DateTime.parse('2020-09-01 T 14:00')
+  created_at: DateTime.parse('2020-09-03 T 14:00')
   )
 
 user_action8 = UserAction.create(
   user: wince,
   action: netflix,
-  created_at: DateTime.parse('2020-09-01 T 10:00')
+  created_at: DateTime.parse('2020-09-03 T 10:00')
   )
 
 user_action9 = UserAction.create(
   user: wince,
   action: spotify,
-  created_at: DateTime.parse('2020-09-01 T 10:00')
+  created_at: DateTime.parse('2020-09-03 T 10:00')
   )
 
 user_action10 = UserAction.create(
   user: wince,
   action: headspace,
-  created_at: DateTime.parse('2020-09-01 T 10:00')
+  created_at: DateTime.parse('2020-09-03 T 10:00')
   )
 
 user_action11 = UserAction.create(
   user: wince,
   action: medium,
-  created_at: DateTime.parse('2020-09-01 T 10:00')
+  created_at: DateTime.parse('2020-09-03 T 10:00')
   )
 
 # mood
 mood1 = Mood.create(
-  sad_happy: 3,
-  angry_calm: 3,
+  sad_happy: 10,
+  angry_calm: 10,
   lowenergy_highenergy: 9,
-  anxious_social: 6,
-  created_at: DateTime.parse('2020-08-26 T 09:00'),
+  anxious_social: 8,
+  created_at: DateTime.parse('2020-08-28 T 09:00'),
   user: wince
   )
 
 mood2 = Mood.create(
   sad_happy: 7,
   angry_calm: 9,
-  lowenergy_highenergy: 7,
-  anxious_social: 6,
-  created_at: DateTime.parse('2020-08-26 T 23:00'),
+  lowenergy_highenergy: 8,
+  anxious_social: 9,
+  created_at: DateTime.parse('2020-08-28 T 23:00'),
   user_action: user_action1,
   user: wince
   )
 
 mood3 = Mood.create(
-  sad_happy: 4,
-  angry_calm: 2,
+  sad_happy:8,
+  angry_calm: 9,
   lowenergy_highenergy: 10,
   anxious_social: 8,
-  created_at: DateTime.parse('2020-08-27 T 09:00'),
+  created_at: DateTime.parse('2020-08-29 T 09:00'),
   user: wince
   )
 
@@ -443,103 +443,103 @@ mood4 = Mood.create(
   sad_happy: 9,
   angry_calm: 10,
   lowenergy_highenergy: 7,
-  anxious_social: 8,
-  created_at: DateTime.parse('2020-08-27 T 23:00'),
+  anxious_social: 7,
+  created_at: DateTime.parse('2020-08-29 T 23:00'),
   user_action: user_action2,
   user: wince
   )
 
 mood5 = Mood.create(
-  sad_happy: 8,
-  angry_calm: 4,
+  sad_happy: 9,
+  angry_calm: 8,
   lowenergy_highenergy: 8,
-  anxious_social: 4,
-  created_at: DateTime.parse('2020-08-28 T 09:00'),
+  anxious_social: 8,
+  created_at: DateTime.parse('2020-08-30 T 09:00'),
   user: wince
   )
 
 mood6 = Mood.create(
   sad_happy: 8,
   angry_calm: 10,
-  lowenergy_highenergy: 5,
-  anxious_social: 3,
-  created_at: DateTime.parse('2020-08-28 T 23:00'),
+  lowenergy_highenergy: 8,
+  anxious_social: 8,
+  created_at: DateTime.parse('2020-08-30 T 23:00'),
   user_action: user_action3,
   user: wince
   )
 
 mood7 = Mood.create(
-  sad_happy: 5,
-  angry_calm: 8,
-  lowenergy_highenergy: 5,
-  anxious_social: 5,
-  created_at: DateTime.parse('2020-08-29 T 13:00'),
+  sad_happy: 8,
+  angry_calm: 7,
+  lowenergy_highenergy: 7,
+  anxious_social: 9,
+  created_at: DateTime.parse('2020-08-31 T 13:00'),
   user: wince
   )
 
 mood8 = Mood.create(
-  sad_happy: 9,
-  angry_calm: 10,
+  sad_happy: 8,
+  angry_calm: 9,
   lowenergy_highenergy: 8,
-  anxious_social: 5,
-  created_at: DateTime.parse('2020-08-29 T 23:00'),
+  anxious_social: 8,
+  created_at: DateTime.parse('2020-08-31 T 23:00'),
   user_action: user_action4,
   user: wince
   )
 
 mood9 = Mood.create(
-  sad_happy: 8,
-  angry_calm: 9,
+  sad_happy: 7,
+  angry_calm: 6,
   lowenergy_highenergy: 7,
-  anxious_social: 6,
-  created_at: DateTime.parse('2020-08-30 T 16:00'),
+  anxious_social: 9,
+  created_at: DateTime.parse('2020-09-01 T 16:00'),
   user: wince
   )
 
 mood10 = Mood.create(
-  sad_happy: 10,
-  angry_calm: 9,
-  lowenergy_highenergy: 8,
-  anxious_social: 9,
-  created_at: DateTime.parse('2020-08-30 T 23:00'),
+  sad_happy: 6,
+  angry_calm: 6,
+  lowenergy_highenergy: 6,
+  anxious_social: 7,
+  created_at: DateTime.parse('2020-09-01 T 23:00'),
   user_action: user_action5,
   user: wince
   )
 
 mood11 = Mood.create(
   sad_happy: 6,
-  angry_calm: 7,
+  angry_calm: 5,
   lowenergy_highenergy: 6,
-  anxious_social: 6,
-  created_at: DateTime.parse('2020-08-31 T 10:00'),
+  anxious_social: 8,
+  created_at: DateTime.parse('2020-09-02 T 10:00'),
   user: wince
   )
 
 mood12 = Mood.create(
-  sad_happy: 8,
-  angry_calm: 9,
-  lowenergy_highenergy: 8,
+  sad_happy: 7,
+  angry_calm: 5,
+  lowenergy_highenergy: 6,
   anxious_social: 8,
-  created_at: DateTime.parse('2020-08-31 T 23:00'),
+  created_at: DateTime.parse('2020-09-02 T 23:00'),
   user_action: user_action6,
   user: wince
   )
 
 mood13 = Mood.create(
-  sad_happy: 6,
-  angry_calm: 8,
-  lowenergy_highenergy: 6,
-  anxious_social: 5,
-  created_at: DateTime.parse('2020-09-01 T 14:00'),
+  sad_happy: 5,
+  angry_calm: 3,
+  lowenergy_highenergy: 4,
+  anxious_social: 9,
+  created_at: DateTime.parse('2020-09-03 T 14:00'),
   user: wince
   )
 
 mood14 = Mood.create(
-  sad_happy: 9,
-  angry_calm: 8,
-  lowenergy_highenergy: 6,
-  anxious_social: 8,
-  created_at: DateTime.parse('2020-09-01 T 23:00'),
+  sad_happy: 6,
+  angry_calm: 5,
+  lowenergy_highenergy: 5,
+  anxious_social: 7,
+  created_at: DateTime.parse('2020-09-03 T 23:00'),
   user_action: user_action7,
   user: wince
   )

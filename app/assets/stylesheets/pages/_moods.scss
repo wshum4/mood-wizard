@@ -19,6 +19,10 @@
   input[type=range] {
     color: rgb(51, 51, 51);
   }
+  label {
+    line-height: 1.5rem;
+    font-size: 20px;
+  }
 }
 
 .action-group {
@@ -28,6 +32,7 @@
 
 .action-button {
   margin: 0px;
+  margin-top: 16px;
   padding: 8px 24px;
   border-radius: 50px;
   box-shadow: none;
