@@ -24,6 +24,7 @@ require("channels")
 
 // External imports
 import "bootstrap";
+import moment from "moment";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -50,7 +51,11 @@ document.addEventListener('turbolinks:load', () => {
         xAxes: [{
           type: 'time',
           time: {
-            minUnit: 'day'
+            unit: 'day',
+          },
+          ticks: {
+            min: moment().subtract(7, 'days'),
+            max: moment()
           }
         }],
         yAxes: [{

@@ -2,19 +2,34 @@
   <p class="rating-prompt">Did you complete your activity yet?<br>If so, please tell us how you feel.</p>
   <div class="rating-mood-selector">
     <div class="form-group range">
-      <label for="mood_sad_happy">Sad vs Happy</label>
+      <div class="d-flex justify-content-between">
+        <label for="mood_sad_happy">Sad</label>
+        <label for="mood_sad_happy">Happy</label>
+      </div>
       <%= range_field_tag('mood[sad_happy]', 5, { max: 10, class: "numeric range form-control-range" }) %>
     </div>
+
     <div class="form-group range">
-      <label for="mood_angry_calm">Angry vs Calm</label>
+      <div class="d-flex justify-content-between">
+        <label for="mood_sad_happy">Angry</label>
+        <label for="mood_sad_happy">Calm</label>
+      </div>
       <%= range_field_tag('mood[angry_calm]', 5, { max: 10, class: "numeric range form-control-range" }) %>
     </div>
+
     <div class="form-group range">
-      <label for="mood_lowenergy_highenergy">Low vs High Energy</label>
+      <div class="d-flex justify-content-between">
+        <label for="mood_sad_happy">Low Energy</label>
+        <label for="mood_sad_happy">High Energy</label>
+      </div>
       <%= range_field_tag('mood[lowenergy_highenergy]', 5, { max: 10, class: "numeric range form-control-range" }) %>
     </div>
+
     <div class="form-group range">
-      <label for="mood_anxious_social">Anxious vs Social</label>
+        <div class="d-flex justify-content-between">
+          <label for="mood_sad_happy">Anxious</label>
+          <label for="mood_sad_happy">Social</label>
+        </div>
       <%= range_field_tag('mood[anxious_social]', 5, { max: 10, class: "numeric range form-control-range" }) %>
     </div>
     <p>Rating</p>
