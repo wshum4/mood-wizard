@@ -2,12 +2,12 @@
 <div class="activities-container">
   <h1>Previous Activities</h1>
   <div class="activity-nav d-flex justify-content-center">
-    <%= link_to :back, class="btn btn-outline-dark" do %>
+    <%= link_to :back, class: "btn btn-outline-dark" do %>
       All
     <% end %>
     <a class="btn btn-dark">Previous</a>
   </div>
-  
+
   <div class="prev-activity-cards">
     <% @past_activities.each do |activity| %>
       <%= link_to activity_path(activity.action) do %>
