@@ -12,7 +12,7 @@ const triggerReminder = () => {
   const spotify = document.getElementById("medium-16");
   if (spotify) {
     spotify.addEventListener("click", (event) => {
-      window.setTimeout(openReminderModal, 7*1000);
+      window.setTimeout(openReminderModal, 5*1000);
     });
   }
 };
@@ -27,7 +27,7 @@ const triggerRating = () => {
   const ratingModal = document.getElementById("reminder-modal-close-btn");
   if (ratingModal) {
     ratingModal.addEventListener("click", (event) => {
-      window.setTimeout(openRatingModal, 7*1000);
+      window.setTimeout(openRatingModal, 5*1000);
     });
   }
 };
