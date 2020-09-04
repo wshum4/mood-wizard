@@ -39,7 +39,7 @@ axe = Action.create(
   angry_calm: [0, 5],
   lowenergy_highenergy: [5, 10],
   anxious_social: [0, 10],
-  start_time: convert_time("T10:00AM EST"),
+  start_time: convert_time("T11:00AM EST"),
   end_time: convert_time("T9:00PM EST"),
   company_name: 'Rage: Axe Throwing',
   price: 33,
@@ -370,7 +370,7 @@ user_action4 = UserAction.create(
 
 user_action5 = UserAction.create(
   user: wince,
-  action: archery,
+  action: boxing,
   created_at: DateTime.parse('2020-09-01 T 16:00')
 )
 
