@@ -21,30 +21,37 @@
 }
 
 .prev-action {
-  color: black;
   font-size: 17px;
   font-weight: bold;
+  text-align: left;
   margin: 0;
 }
 .card-mw p {
-  color: black;
   font-size: 12px;
   line-height: 1.4;
   margin-bottom: 0;
 }
 .cardinfos {
   padding: 16px;
+  flex-grow: 1;
   p {
   color: #262B40;
-}
-h2 {
-  color: #262B40;
   text-align: center;
+  }
+  h2 {
+    color: #262B40;
+    text-align: center;
+  }
 }
+
+.mood-date-header {
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
 }
 
 .prev-action-med {
-  color: black;
   font-size: 25px;
   font-weight: bold;
   margin: 0;
