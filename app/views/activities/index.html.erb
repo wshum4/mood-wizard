@@ -30,7 +30,7 @@
         <div class="card-mw">
           <img class='prev-act' src=<%= activity.photo_url %>>
           <div class='cardinfos'>
-            <h2 class='prev-action'>Activity: <%= activity.name %></h2>
+            <h2 class='prev-action'><%= activity.name %></h2>
             <p><strong>Company:</strong> <%= activity.company_name %></p>
             <% if @distances.present? %>
               <p><strong>Distance:</strong> <%= @distances[activity.id] %> km</p>
